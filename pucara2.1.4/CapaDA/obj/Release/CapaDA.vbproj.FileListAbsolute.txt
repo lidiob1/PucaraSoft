@@ -1,0 +1,12 @@
+C:\Users\Sancho\Documents\GitHub\pucara2.1.4\CapaDA\bin\Release\CapaDA.dll
+C:\Users\Sancho\Documents\GitHub\pucara2.1.4\CapaDA\bin\Release\CapaDA.pdb
+C:\Users\Sancho\Documents\GitHub\pucara2.1.4\CapaDA\bin\Release\CapaDA.xml
+C:\Users\Sancho\Documents\GitHub\pucara2.1.4\CapaDA\bin\Release\CapaNE.dll
+C:\Users\Sancho\Documents\GitHub\pucara2.1.4\CapaDA\bin\Release\CapaNE.pdb
+C:\Users\Sancho\Documents\GitHub\pucara2.1.4\CapaDA\bin\Release\CapaNE.xml
+C:\Users\Sancho\Documents\GitHub\pucara2.1.4\CapaDA\obj\Release\CapaDA.vbprojResolveAssemblyReference.cache
+C:\Users\Sancho\Documents\GitHub\pucara2.1.4\CapaDA\obj\Release\CapaDA.Resources.resources
+C:\Users\Sancho\Documents\GitHub\pucara2.1.4\CapaDA\obj\Release\CapaDA.vbproj.GenerateResource.Cache
+C:\Users\Sancho\Documents\GitHub\pucara2.1.4\CapaDA\obj\Release\CapaDA.dll
+C:\Users\Sancho\Documents\GitHub\pucara2.1.4\CapaDA\obj\Release\CapaDA.xml
+C:\Users\Sancho\Documents\GitHub\pucara2.1.4\CapaDA\obj\Release\CapaDA.pdb

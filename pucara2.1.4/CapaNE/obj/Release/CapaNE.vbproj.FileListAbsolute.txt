@@ -1,0 +1,8 @@
+C:\Users\Sancho\Documents\GitHub\pucara2.1.4\CapaNE\bin\Release\CapaNE.dll
+C:\Users\Sancho\Documents\GitHub\pucara2.1.4\CapaNE\bin\Release\CapaNE.pdb
+C:\Users\Sancho\Documents\GitHub\pucara2.1.4\CapaNE\bin\Release\CapaNE.xml
+C:\Users\Sancho\Documents\GitHub\pucara2.1.4\CapaNE\obj\Release\CapaNE.Resources.resources
+C:\Users\Sancho\Documents\GitHub\pucara2.1.4\CapaNE\obj\Release\CapaNE.vbproj.GenerateResource.Cache
+C:\Users\Sancho\Documents\GitHub\pucara2.1.4\CapaNE\obj\Release\CapaNE.dll
+C:\Users\Sancho\Documents\GitHub\pucara2.1.4\CapaNE\obj\Release\CapaNE.xml
+C:\Users\Sancho\Documents\GitHub\pucara2.1.4\CapaNE\obj\Release\CapaNE.pdb

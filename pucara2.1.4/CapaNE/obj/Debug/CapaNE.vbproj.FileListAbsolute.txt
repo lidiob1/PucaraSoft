@@ -1,0 +1,24 @@
+C:\Users\pc\Desktop\backup pucara\Proyecto_2017\Pucura 2.1.3\CapaNE\bin\Debug\CapaNE.dll
+C:\Users\pc\Desktop\backup pucara\Proyecto_2017\Pucura 2.1.3\CapaNE\bin\Debug\CapaNE.pdb
+C:\Users\pc\Desktop\backup pucara\Proyecto_2017\Pucura 2.1.3\CapaNE\bin\Debug\CapaNE.xml
+C:\Users\pc\Desktop\backup pucara\Proyecto_2017\Pucura 2.1.3\CapaNE\obj\Debug\CapaNE.Resources.resources
+C:\Users\pc\Desktop\backup pucara\Proyecto_2017\Pucura 2.1.3\CapaNE\obj\Debug\CapaNE.vbproj.GenerateResource.Cache
+C:\Users\pc\Desktop\backup pucara\Proyecto_2017\Pucura 2.1.3\CapaNE\obj\Debug\CapaNE.dll
+C:\Users\pc\Desktop\backup pucara\Proyecto_2017\Pucura 2.1.3\CapaNE\obj\Debug\CapaNE.xml
+C:\Users\pc\Desktop\backup pucara\Proyecto_2017\Pucura 2.1.3\CapaNE\obj\Debug\CapaNE.pdb
+C:\Users\Sancho\Desktop\Proyecto_Pucura 2.1.4\Pucura 2.1.4\CapaNE\bin\Debug\CapaNE.dll
+C:\Users\Sancho\Desktop\Proyecto_Pucura 2.1.4\Pucura 2.1.4\CapaNE\bin\Debug\CapaNE.pdb
+C:\Users\Sancho\Desktop\Proyecto_Pucura 2.1.4\Pucura 2.1.4\CapaNE\bin\Debug\CapaNE.xml
+C:\Users\Sancho\Desktop\Proyecto_Pucura 2.1.4\Pucura 2.1.4\CapaNE\obj\Debug\CapaNE.Resources.resources
+C:\Users\Sancho\Desktop\Proyecto_Pucura 2.1.4\Pucura 2.1.4\CapaNE\obj\Debug\CapaNE.vbproj.GenerateResource.Cache
+C:\Users\Sancho\Desktop\Proyecto_Pucura 2.1.4\Pucura 2.1.4\CapaNE\obj\Debug\CapaNE.dll
+C:\Users\Sancho\Desktop\Proyecto_Pucura 2.1.4\Pucura 2.1.4\CapaNE\obj\Debug\CapaNE.xml
+C:\Users\Sancho\Desktop\Proyecto_Pucura 2.1.4\Pucura 2.1.4\CapaNE\obj\Debug\CapaNE.pdb
+C:\Users\Sancho\Documents\GitHub\pucara2.1.4\CapaNE\bin\Debug\CapaNE.dll
+C:\Users\Sancho\Documents\GitHub\pucara2.1.4\CapaNE\bin\Debug\CapaNE.pdb
+C:\Users\Sancho\Documents\GitHub\pucara2.1.4\CapaNE\bin\Debug\CapaNE.xml
+C:\Users\Sancho\Documents\GitHub\pucara2.1.4\CapaNE\obj\Debug\CapaNE.Resources.resources
+C:\Users\Sancho\Documents\GitHub\pucara2.1.4\CapaNE\obj\Debug\CapaNE.vbproj.GenerateResource.Cache
+C:\Users\Sancho\Documents\GitHub\pucara2.1.4\CapaNE\obj\Debug\CapaNE.dll
+C:\Users\Sancho\Documents\GitHub\pucara2.1.4\CapaNE\obj\Debug\CapaNE.xml
+C:\Users\Sancho\Documents\GitHub\pucara2.1.4\CapaNE\obj\Debug\CapaNE.pdb
