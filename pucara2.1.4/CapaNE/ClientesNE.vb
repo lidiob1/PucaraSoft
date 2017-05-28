@@ -70,22 +70,22 @@
         End Set
     End Property
 
-    Public telefono As Integer
-    Public Property _Telefono() As Integer
+    Public telefono As String
+    Public Property _Telefono() As String
         Get
             Return telefono
         End Get
-        Set(ByVal value As Integer)
+        Set(ByVal value As String)
             telefono = value
         End Set
     End Property
 
-    Public celular As Integer
-    Public Property _Celular() As Integer
+    Public celular As String
+    Public Property _Celular() As String
         Get
             Return celular
         End Get
-        Set(ByVal value As Integer)
+        Set(ByVal value As String)
             celular = value
         End Set
     End Property
@@ -137,12 +137,12 @@
         End Set
     End Property
 
-    Public Piso As Integer
-    Public Property _Piso() As Integer
+    Public Piso As String
+    Public Property _Piso() As String
         Get
             Return Piso
         End Get
-        Set(ByVal value As Integer)
+        Set(ByVal value As String)
             Piso = value
         End Set
     End Property
@@ -155,12 +155,12 @@
             Dpto = value
         End Set
     End Property
-    Public CP As Integer
-    Public Property _CP() As Integer
+    Public CP As String
+    Public Property _CP() As String
         Get
             Return CP
         End Get
-        Set(ByVal value As Integer)
+        Set(ByVal value As String)
             CP = value
         End Set
     End Property
@@ -202,12 +202,30 @@
             Ciudad = value
         End Set
     End Property
+    Public RazonSocial As String
+    Public Property _RazonSocial() As String
+        Get
+            Return RazonSocial
+        End Get
+        Set(ByVal value As String)
+            RazonSocial = value
+        End Set
+    End Property
+    Public Fantasia As String
+    Public Property _Fantasia() As String
+        Get
+            Return Fantasia
+        End Get
+        Set(ByVal value As String)
+            Fantasia = value
+        End Set
+    End Property
     'constructores 1 en blanco y otro con los datos
     Public Sub New()
 
     End Sub
 
-    Public Sub New(ByVal Nro_Doc As Integer, ByVal Tipo_dni As String, ByVal Nombre As String, ByVal Apellido As String, ByVal Calle As String, ByVal Telefono As Integer, ByVal Celular As Integer, ByVal mail As String, ByVal fecha_nac As Date, ByVal fecha_alta As Date, ByVal habilitado As Integer, ByVal TipoCliente As String, ByVal NumCalle As Integer, ByVal Edificio As String, ByVal Piso As Integer, ByVal Dpto As String, ByVal CP As Integer, ByVal Barrio As String, ByVal Pais As String, ByVal Provincia As String, ByVal Ciudad As String)
+    Public Sub New(ByVal Nro_Doc As Integer, ByVal Tipo_dni As String, ByVal Nombre As String, ByVal Apellido As String, ByVal Calle As String, ByVal Telefono As Integer, ByVal Celular As Integer, ByVal mail As String, ByVal fecha_nac As Date, ByVal fecha_alta As Date, ByVal habilitado As Integer, ByVal TipoCliente As String, ByVal NumCalle As Integer, ByVal Edificio As String, ByVal Piso As Integer, ByVal Dpto As String, ByVal CP As Integer, ByVal Barrio As String, ByVal Pais As String, ByVal Provincia As String, ByVal Ciudad As String, ByVal RazonSocial As String, ByVal Fantasia As String)
         _Nro_Doc = Nro_Doc
         _Tipo_dni = Tipo_dni
         _Nombre = Nombre
@@ -229,6 +247,7 @@
         _Pais = Pais
         _Provincia = Provincia
         _Ciudad = Ciudad
-
+        _RazonSocial = RazonSocial
+        _Fantasia = fantasia
     End Sub
 End Class

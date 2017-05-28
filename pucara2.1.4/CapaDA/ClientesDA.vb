@@ -6,12 +6,14 @@ Imports CapaDA
 Public Class ClientesDA
     Inherits conexion 'Incluimos la clase conexion 
     Dim cmd As New SqlCommand 'Variable para enviar peticiones a la BD
+    Private da As SqlDataAdapter
+    Private ds As DataSet
 
     Public Function mostrar() As DataTable
         Try
             conectado()
 
-            cmd = New SqlCommand("select nro_doc'DNI',nombre'Nombre',Apellido,fecha_nac'Fecha Nacimiento',fecha_alta 'Fecha de Alta' ,Calle,Telefono,Celular,Mail,TipoCliente,NumCalle 'Numero',Edificio,Piso, Dpto,CP,Barrio,Pais,Provincia,Ciudad from Cliente order by nro_doc")
+            cmd = New SqlCommand("select nro_doc'DNI',id_tipo_dni 'Tipo DNI',nombre'Nombre',Apellido,fecha_nac'Fecha Nacimiento',Calle,Telefono,Celular,Mail,fecha_alta 'Fecha de Alta',NumeroCalle 'Numero',Edificio,Piso, Dpto,CP,Barrio,Pais,Provincia,Ciudad,habilitado from Cliente order by nro_doc")
             cmd.CommandType = CommandType.Text
             cmd.Connection = cnn
 
@@ -23,7 +25,6 @@ Public Class ClientesDA
             Else
                 Return Nothing
             End If
-
         Catch ex As Exception
             MsgBox(ex.Message)
             Return Nothing
@@ -44,7 +45,7 @@ Public Class ClientesDA
             cmd.Parameters.AddWithValue("@apellido", dts.apellido)
             cmd.Parameters.AddWithValue("@fecha_nac", dts.Fecha_nac)
             cmd.Parameters.AddWithValue("@fecha_alta", dts.fecha_alta)
-            cmd.Parameters.AddWithValue("@direccion", dts.Calle)
+            cmd.Parameters.AddWithValue("@Calle", dts.Calle)
             cmd.Parameters.AddWithValue("@telefono", dts.Telefono)
             cmd.Parameters.AddWithValue("@celular", dts.Celular)
             cmd.Parameters.AddWithValue("@mail", dts.Mail)
@@ -65,7 +66,6 @@ Public Class ClientesDA
                 Return False
             End If
 
-
         Catch ex As Exception
             MsgBox(ex.Message)
             Return False
@@ -74,22 +74,22 @@ Public Class ClientesDA
         End Try
     End Function
 
+    '************************************ Funcion Editar CLiente******************************
     Public Function editar(ByVal dts As ClientesNE) As Boolean
         Try
             conectado()
-            cmd = New SqlCommand("update cliente set nro_doc=@nro_doc,nombre=@nombre,apellido=@apellido,fecha_nac=@fecha_nac,direccion=@direccion,telefono=@telefono,celular=@celular,mail=@mail,NumCalle=@NumCalle,Edificio=@Edificio,Piso=@Piso,Dpto=@Dpto,CP=@CP,Barrio=@Barrio,Pais=@Pais,Provincia=@Provincia,Ciudad=@Ciudad where nro_doc=@nro_doc")
+            cmd = New SqlCommand("update cliente set nombre=@nombre,apellido=@apellido,fecha_nac=@fecha_nac,Calle=@Calle,telefono=@telefono,celular=@celular,mail=@mail,NumeroCalle=@NumeroCalle,Edificio=@Edificio,Piso=@Piso,Dpto=@Dpto,CP=@CP,Barrio=@Barrio,Pais=@Pais,Provincia=@Provincia,Ciudad=@Ciudad where nro_doc=@nro_doc")
             cmd.CommandType = CommandType.Text
             cmd.Connection = cnn
 
-            cmd.Parameters.AddWithValue("@nro_doc", dts.Nro_Doc)
-            cmd.Parameters.AddWithValue("@nombre", dts.Nombre)
+            cmd.Parameters.AddWithValue("@nombre", dts.nombre)
             cmd.Parameters.AddWithValue("@apellido", dts.apellido)
-            cmd.Parameters.AddWithValue("@fecha_nac", dts.Fecha_nac)
-            cmd.Parameters.AddWithValue("@calle", dts.Calle)
-            cmd.Parameters.AddWithValue("@telefono", dts.Telefono)
-            cmd.Parameters.AddWithValue("@celular", dts.Celular)
-            cmd.Parameters.AddWithValue("@mail", dts.Mail)
-            cmd.Parameters.AddWithValue("@NumCalle", dts.NumCalle)
+            cmd.Parameters.AddWithValue("@fecha_nac", dts.fecha_nac)
+            cmd.Parameters.AddWithValue("@Calle", dts.Calle)
+            cmd.Parameters.AddWithValue("@telefono", dts.telefono)
+            cmd.Parameters.AddWithValue("@celular", dts.celular)
+            cmd.Parameters.AddWithValue("@mail", dts.mail)
+            cmd.Parameters.AddWithValue("@NumeroCalle", dts.NumCalle)
             cmd.Parameters.AddWithValue("@Edificio", dts.Edificio)
             cmd.Parameters.AddWithValue("@Piso", dts.Piso)
             cmd.Parameters.AddWithValue("@Dpto", dts.Dpto)
@@ -99,20 +99,39 @@ Public Class ClientesDA
             cmd.Parameters.AddWithValue("@Provincia", dts.Provincia)
             cmd.Parameters.AddWithValue("@Ciudad", dts.Ciudad)
 
-
             If cmd.ExecuteNonQuery Then
                 Return True
             Else
                 Return False
             End If
-
-
         Catch ex As Exception
             MsgBox(ex.Message)
             Return False
         Finally
             desconectado()
         End Try
+    End Function
+    '--------------------------------------------------------------------------------
+    ' Buscar nombre y apellido de cliente desde su numero de documento
+    '--------------------------------------------------------------------------------
+    Public Function buscarCliente(ByVal nro_doc As Long) As DataRow
+        Dim dr As DataRow
+        da = New SqlDataAdapter("select Nombre,Apellido,id_tipo_dni,fecha_nac,fecha_alta,calle,telefono,celular,mail,NumeroCalle,Edificio,Piso,Dpto,CP,Barrio,Pais,Provincia,Ciudad from Cliente where nro_doc='" & nro_doc & "'", cnn)
+        ds = New DataSet
+        Try
+            da.Fill(ds)
+            dr = ds.Tables(0).Rows(0)
+            Return dr
+        Catch ex As Exception
+            Return Nothing
+        End Try
+    End Function
+    '--------------------------------------------------------------------------------
+    ' Buscar nombre y apellido de cliente
+    '--------------------------------------------------------------------------------
+    Private objClienteDA As ClientesDA
+    Public Function buscarCliente2(ByVal nro_doc As Long) As DataRow
+        Return objClienteDA.buscarCliente(nro_doc)
     End Function
 
     Public Function buscar_cliente(ByVal texto As String) As DataTable

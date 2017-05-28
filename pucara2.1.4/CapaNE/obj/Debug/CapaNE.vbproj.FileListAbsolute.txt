@@ -22,3 +22,11 @@ C:\Users\Sancho\Documents\GitHub\pucara2.1.4\CapaNE\obj\Debug\CapaNE.vbproj.Gene
 C:\Users\Sancho\Documents\GitHub\pucara2.1.4\CapaNE\obj\Debug\CapaNE.dll
 C:\Users\Sancho\Documents\GitHub\pucara2.1.4\CapaNE\obj\Debug\CapaNE.xml
 C:\Users\Sancho\Documents\GitHub\pucara2.1.4\CapaNE\obj\Debug\CapaNE.pdb
+C:\Users\Sancho\Documents\GitHub\PucaraSoft\PucaraSoft\pucara2.1.4\CapaNE\bin\Debug\CapaNE.dll
+C:\Users\Sancho\Documents\GitHub\PucaraSoft\PucaraSoft\pucara2.1.4\CapaNE\bin\Debug\CapaNE.pdb
+C:\Users\Sancho\Documents\GitHub\PucaraSoft\PucaraSoft\pucara2.1.4\CapaNE\bin\Debug\CapaNE.xml
+C:\Users\Sancho\Documents\GitHub\PucaraSoft\PucaraSoft\pucara2.1.4\CapaNE\obj\Debug\CapaNE.Resources.resources
+C:\Users\Sancho\Documents\GitHub\PucaraSoft\PucaraSoft\pucara2.1.4\CapaNE\obj\Debug\CapaNE.vbproj.GenerateResource.Cache
+C:\Users\Sancho\Documents\GitHub\PucaraSoft\PucaraSoft\pucara2.1.4\CapaNE\obj\Debug\CapaNE.dll
+C:\Users\Sancho\Documents\GitHub\PucaraSoft\PucaraSoft\pucara2.1.4\CapaNE\obj\Debug\CapaNE.xml
+C:\Users\Sancho\Documents\GitHub\PucaraSoft\PucaraSoft\pucara2.1.4\CapaNE\obj\Debug\CapaNE.pdb

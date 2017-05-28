@@ -29,9 +29,9 @@ Partial Class frmCliente
         Me.btnNuevo = New System.Windows.Forms.Button()
         Me.btnCancelar = New System.Windows.Forms.Button()
         Me.BtnHabilitar_cli = New System.Windows.Forms.Button()
-        Me.btnGuardar = New System.Windows.Forms.Button()
         Me.btnEditar = New System.Windows.Forms.Button()
         Me.BtnInhabilitar_cli = New System.Windows.Forms.Button()
+        Me.btnGuardar = New System.Windows.Forms.Button()
         Me.Label22 = New System.Windows.Forms.Label()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
         Me.Label64 = New System.Windows.Forms.Label()
@@ -83,6 +83,7 @@ Partial Class frmCliente
         Me.Label35 = New System.Windows.Forms.Label()
         Me.Label34 = New System.Windows.Forms.Label()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.txtNroDoc = New System.Windows.Forms.TextBox()
         Me.Label55 = New System.Windows.Forms.Label()
         Me.Label54 = New System.Windows.Forms.Label()
         Me.GroupBox6 = New System.Windows.Forms.GroupBox()
@@ -126,7 +127,6 @@ Partial Class frmCliente
         Me.MtxtCelular = New System.Windows.Forms.MaskedTextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.BtnBuscar = New System.Windows.Forms.Button()
-        Me.txtNroDoc = New System.Windows.Forms.TextBox()
         Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.txtApellido = New System.Windows.Forms.TextBox()
         Me.txtMail = New System.Windows.Forms.TextBox()
@@ -218,17 +218,6 @@ Partial Class frmCliente
         Me.BtnHabilitar_cli.Text = "Habilitar"
         Me.BtnHabilitar_cli.UseVisualStyleBackColor = True
         '
-        'btnGuardar
-        '
-        Me.btnGuardar.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.btnGuardar.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.btnGuardar.Location = New System.Drawing.Point(108, 15)
-        Me.btnGuardar.Name = "btnGuardar"
-        Me.btnGuardar.Size = New System.Drawing.Size(96, 23)
-        Me.btnGuardar.TabIndex = 9
-        Me.btnGuardar.Text = "Guardar"
-        Me.btnGuardar.UseVisualStyleBackColor = True
-        '
         'btnEditar
         '
         Me.btnEditar.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -250,6 +239,17 @@ Partial Class frmCliente
         Me.BtnInhabilitar_cli.TabIndex = 11
         Me.BtnInhabilitar_cli.Text = "Inhabilitar"
         Me.BtnInhabilitar_cli.UseVisualStyleBackColor = True
+        '
+        'btnGuardar
+        '
+        Me.btnGuardar.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.btnGuardar.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.btnGuardar.Location = New System.Drawing.Point(108, 15)
+        Me.btnGuardar.Name = "btnGuardar"
+        Me.btnGuardar.Size = New System.Drawing.Size(96, 23)
+        Me.btnGuardar.TabIndex = 9
+        Me.btnGuardar.Text = "Guardar"
+        Me.btnGuardar.UseVisualStyleBackColor = True
         '
         'Label22
         '
@@ -772,6 +772,7 @@ Partial Class frmCliente
         '
         'GroupBox4
         '
+        Me.GroupBox4.Controls.Add(Me.txtNroDoc)
         Me.GroupBox4.Controls.Add(Me.Label55)
         Me.GroupBox4.Controls.Add(Me.Label54)
         Me.GroupBox4.Controls.Add(Me.GroupBox6)
@@ -790,7 +791,6 @@ Partial Class frmCliente
         Me.GroupBox4.Controls.Add(Me.MtxtCelular)
         Me.GroupBox4.Controls.Add(Me.Label6)
         Me.GroupBox4.Controls.Add(Me.BtnBuscar)
-        Me.GroupBox4.Controls.Add(Me.txtNroDoc)
         Me.GroupBox4.Controls.Add(Me.txtNombre)
         Me.GroupBox4.Controls.Add(Me.txtApellido)
         Me.GroupBox4.Controls.Add(Me.txtMail)
@@ -804,6 +804,13 @@ Partial Class frmCliente
         Me.GroupBox4.Size = New System.Drawing.Size(576, 294)
         Me.GroupBox4.TabIndex = 87
         Me.GroupBox4.TabStop = False
+        '
+        'txtNroDoc
+        '
+        Me.txtNroDoc.Location = New System.Drawing.Point(81, 24)
+        Me.txtNroDoc.Name = "txtNroDoc"
+        Me.txtNroDoc.Size = New System.Drawing.Size(166, 22)
+        Me.txtNroDoc.TabIndex = 77
         '
         'Label55
         '
@@ -1248,14 +1255,6 @@ Partial Class frmCliente
         Me.BtnBuscar.Text = "Buscar"
         Me.BtnBuscar.UseVisualStyleBackColor = True
         '
-        'txtNroDoc
-        '
-        Me.txtNroDoc.Location = New System.Drawing.Point(81, 25)
-        Me.txtNroDoc.MaxLength = 8
-        Me.txtNroDoc.Name = "txtNroDoc"
-        Me.txtNroDoc.Size = New System.Drawing.Size(166, 22)
-        Me.txtNroDoc.TabIndex = 8
-        '
         'txtNombre
         '
         Me.txtNombre.Location = New System.Drawing.Point(81, 53)
@@ -1446,7 +1445,6 @@ Partial Class frmCliente
     Friend WithEvents txtCalle As System.Windows.Forms.TextBox
     Friend WithEvents txtApellido As System.Windows.Forms.TextBox
     Friend WithEvents txtNombre As System.Windows.Forms.TextBox
-    Friend WithEvents txtNroDoc As System.Windows.Forms.TextBox
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents Label8 As System.Windows.Forms.Label
@@ -1561,4 +1559,5 @@ Partial Class frmCliente
     Friend WithEvents Label23 As System.Windows.Forms.Label
     Friend WithEvents Label19 As System.Windows.Forms.Label
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
+    Friend WithEvents txtNroDoc As System.Windows.Forms.TextBox
 End Class

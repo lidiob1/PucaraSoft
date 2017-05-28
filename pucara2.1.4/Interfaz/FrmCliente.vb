@@ -164,18 +164,36 @@ Public Class frmCliente
         MtxtCelular.Text = dgvListado.SelectedCells.Item(9).Value
         txtMail.Text = dgvListado.SelectedCells.Item(10).Value
         DTPFecAlta.Text = dgvListado.SelectedCells.Item(11).Value
+        TxtNumero.Text = dgvListado.SelectedCells.Item(12).Value
+        TxtEdificio.Text = dgvListado.SelectedCells.Item(13).Value
+        txtPiso.Text = dgvListado.SelectedCells.Item(14).Value
+        TxtDpto.Text = dgvListado.SelectedCells.Item(15).Value
+        TxtCP.Text = dgvListado.SelectedCells.Item(16).Value
+        TxtBarrio.Text = dgvListado.SelectedCells.Item(17).Value
+        TxtPais.Text = dgvListado.SelectedCells.Item(18).Value
+        TxtProvincia.Text = dgvListado.SelectedCells.Item(19).Value
+        TxtCiudad.Text = dgvListado.SelectedCells.Item(20).Value
 
-        If dgvListado.SelectedCells.Item(12).Value = 0 Then
+        If dgvListado.SelectedCells.Item(21).Value = 0 Then
             txtNroDoc.Enabled = False
             cbTipoDoc.Enabled = False
             txtNombre.Enabled = False
             txtApellido.Enabled = False
+            DTPFecNac.Enabled = False
             txtCalle.Enabled = False
             MtxtTel.Enabled = False
             MtxtCelular.Enabled = False
             txtMail.Enabled = False
-            DTPFecNac.Enabled = False
             DTPFecAlta.Enabled = False
+            TxtNumero.Enabled = False
+            TxtEdificio.Enabled = False
+            txtPiso.Enabled = False
+            TxtDpto.Enabled = False
+            TxtCP.Enabled = False
+            TxtBarrio.Enabled = False
+            TxtPais.Enabled = False
+            TxtProvincia.Enabled = False
+            TxtCiudad.Enabled = False
 
             BtnHabilitar_cli.Visible = True
             BtnInhabilitar_cli.Visible = False
@@ -189,7 +207,16 @@ Public Class frmCliente
             MtxtCelular.Enabled = True
             txtMail.Enabled = True
             DTPFecNac.Enabled = True
-            DTPFecAlta.Enabled = False
+            DTPFecAlta.Enabled = True
+            TxtNumero.Enabled = True
+            TxtEdificio.Enabled = True
+            txtPiso.Enabled = True
+            TxtDpto.Enabled = True
+            TxtCP.Enabled = True
+            TxtBarrio.Enabled = True
+            TxtPais.Enabled = True
+            TxtProvincia.Enabled = True
+            TxtCiudad.Enabled = True
 
             BtnHabilitar_cli.Visible = False
             BtnInhabilitar_cli.Visible = True
@@ -201,20 +228,16 @@ Public Class frmCliente
     End Sub
 
     Private Sub btnEditar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEditar.Click
-
         Dim result As DialogResult
-
         result = MessageBox.Show("Relmente desea editar los datos del cliente", "Modificando Registros", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
 
         If result = DialogResult.OK Then
-
-
             If DTPFecAlta.Value.Date <= DTPFecNac.Value.Date Then
                 MessageBox.Show("La fecha de nacimiento no puede ser mayor a la fecha de alta!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 Return
             End If
 
-            If Me.ValidateChildren = True And txtNroDoc.Text <> "" And txtNombre.Text <> "" And txtApellido.Text <> "" And MtxtTel.Text <> "" And MtxtCelular.Text <> "" And txtMail.Text <> "" Then
+            If Me.ValidateChildren = True And txtNombre.Text <> "" And txtApellido.Text <> "" And MtxtTel.Text <> "" And MtxtCelular.Text <> "" And txtMail.Text <> "" Then
                 Try
                     Dim dts As New ClientesNE
                     Dim func As New ClientesDA
@@ -222,11 +245,21 @@ Public Class frmCliente
                     dts.Nro_Doc = txtNroDoc.Text
                     dts.nombre = txtNombre.Text
                     dts.apellido = txtApellido.Text
+                    dts.fecha_nac = DTPFecNac.Value
                     dts.Calle = txtCalle.Text
                     dts.telefono = MtxtTel.Text
                     dts.celular = MtxtCelular.Text
                     dts.mail = txtMail.Text
-                    dts.fecha_nac = DTPFecNac.Value
+                    dts.NumCalle = TxtNumero.Text
+                    dts.Edificio = TxtEdificio.Text
+                    dts.Piso = txtPiso.Text
+                    dts.Dpto = TxtDpto.Text
+                    dts.CP = TxtCP.Text
+                    dts.Barrio = TxtBarrio.Text
+                    dts.Pais = TxtPais.Text
+                    dts.Provincia = TxtProvincia.Text
+                    dts.Ciudad = TxtCiudad.Text
+
 
                     If func.editar(dts) Then
                         MessageBox.Show("Cliente modificado correctamente!", "Modificando registros", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -237,13 +270,11 @@ Public Class frmCliente
                         mostrar()
                         limpiar()
                     End If
-
                 Catch ex As Exception
                     MsgBox(ex.Message)
                 End Try
             Else
                 MessageBox.Show("Falta ingresar algunos datos!", "Modificando registros", MessageBoxButtons.OK, MessageBoxIcon.Information)
-
             End If
         End If
     End Sub
@@ -353,7 +384,7 @@ Public Class frmCliente
     End Sub
 
     Private Sub txtNroDoc_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtNroDoc.KeyPress
-        e.Handled = Fg_SoloNumeros(e.KeyChar, MtxtCelular.Text & CChar(e.KeyChar))
+        e.Handled = Fg_SoloNumeros(e.KeyChar, txtNroDoc.Text & CChar(e.KeyChar))
     End Sub
 
     '*******************************BUSCAR CLIENTES****************************
@@ -373,6 +404,48 @@ Public Class frmCliente
             End If
         Catch ex As Exception
             MsgBox(ex.Message)
+        End Try
+    End Sub
+
+    '********************************************BUSCAR CLIENTE *************************************
+    Private Sub BtnBuscar_Click(sender As Object, e As EventArgs) Handles BtnBuscar.Click
+        buscarCliente()
+    End Sub
+
+    '--------------------------------------------------------------------------------
+    ' Buscar nombre y apellido de cliente desde su numero de documento
+    '--------------------------------------------------------------------------------
+    Private Sub buscarCliente()
+        Dim objCliente As New ClientesNE
+        'Dim objPresupuestoDA As New ClientesDA
+        Dim objClienteDA As New ClientesDA
+        Dim dr As DataRow
+
+        Try
+            objCliente.Nro_Doc = txtNroDoc.Text
+            dr = objClienteDA.buscarCliente(objCliente.Nro_Doc)
+
+            txtNombre.Text = CStr(dr("Nombre"))
+            txtApellido.Text = CStr(dr("Apellido"))
+            cbTipoDoc.Text = CStr(dr("Id_Tipo_Dni"))
+            txtCalle.Text = CStr(dr("Calle"))
+            TxtNumero.Text = CStr(dr("Calle"))
+            TxtEdificio.Text = CStr(dr("Edificio"))
+            txtPiso.Text = CStr(dr("Piso"))
+            TxtDpto.Text = CStr(dr("Dpto"))
+            TxtCP.Text = CStr(dr("CP"))
+            TxtBarrio.Text = CStr(dr("Barrio"))
+            TxtPais.Text = CStr(dr("Pais"))
+            TxtProvincia.Text = CStr(dr("Provincia"))
+            TxtCiudad.Text = CStr(dr("Ciudad"))
+            MtxtTel.Text = CStr(dr("Telefono"))
+            MtxtCelular.Text = CStr(dr("Celular"))
+            txtMail.Text = CStr(dr("Mail"))
+            DTPFecAlta.Text = CStr(dr("Fecha_Alta"))
+            DTPFecNac.Text = CStr(dr("Fecha_Nac"))
+
+        Catch ex As Exception
+            MessageBox.Show("No existe el cliente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End Try
     End Sub
 
@@ -536,5 +609,5 @@ Public Class frmCliente
         DTPFecNac2.Enabled = True
 
     End Sub
-
+    
 End Class
