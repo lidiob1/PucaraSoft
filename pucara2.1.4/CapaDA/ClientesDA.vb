@@ -13,7 +13,7 @@ Public Class ClientesDA
         Try
             conectado()
 
-            cmd = New SqlCommand("select nro_doc'DNI',id_tipo_dni 'Tipo DNI',nombre'Nombre',Apellido,fecha_nac'Fecha Nacimiento',Calle,Telefono,Celular,Mail,fecha_alta 'Fecha de Alta',NumeroCalle 'Numero',Edificio,Piso, Dpto,CP,Barrio,Pais,Provincia,Ciudad,habilitado from Cliente order by nro_doc")
+            cmd = New SqlCommand("select nro_doc'DNI',id_tipo_dni 'Tipo DNI',nombre'Nombre',Apellido,RazonSocial 'Razon Social', Fantasia 'Nombre Fantasia',fecha_nac'Fecha Nacimiento',Calle,Telefono,Celular,Mail,fecha_alta 'Fecha de Alta',NumeroCalle 'Numero',Edificio,Piso, Dpto,CP,Barrio,Pais,Provincia,Ciudad,habilitado,TipoCliente 'Tipo de Cliente' from Cliente order by nro_doc")
             cmd.CommandType = CommandType.Text
             cmd.Connection = cnn
 
@@ -36,7 +36,7 @@ Public Class ClientesDA
     Public Function insertar(ByVal dts As ClientesNE) As Boolean
         Try
             conectado()
-            cmd = New SqlCommand("insert into cliente(nro_doc,nombre,apellido,fecha_nac,fecha_alta,calle,telefono,celular,mail,TipoCliente,NumCalle,Edificio,Piso, Dpto,CP,Barrio,Pais,Provincia,Ciudad)values (@nro_doc,@nombre,@apellido,@fecha_nac,@fecha_alta,@calle,@telefono,@celular,@mail,@tipoCliente,@NumCalle,@Edificio,@Piso, @Dpto,@CP,@Barrio,@Pais,@Provincia,@Ciudad)")
+            cmd = New SqlCommand("insert into cliente(nro_doc,nombre,apellido,fecha_nac,fecha_alta,calle,telefono,celular,mail,TipoCliente,NumeroCalle,Edificio,Piso, Dpto,CP,Barrio,Pais,Provincia,Ciudad,habilitado)values (@nro_doc,@nombre,@apellido,@fecha_nac,@fecha_alta,@calle,@telefono,@celular,@mail,@tipoCliente,@NumeroCalle,@Edificio,@Piso, @Dpto,@CP,@Barrio,@Pais,@Provincia,@Ciudad,@habilitado)")
             cmd.CommandType = CommandType.Text
             cmd.Connection = cnn
 
@@ -50,7 +50,7 @@ Public Class ClientesDA
             cmd.Parameters.AddWithValue("@celular", dts.Celular)
             cmd.Parameters.AddWithValue("@mail", dts.Mail)
             cmd.Parameters.AddWithValue("@tipocliente", dts.TipoCliente)
-            cmd.Parameters.AddWithValue("@NumCalle", dts.NumCalle)
+            cmd.Parameters.AddWithValue("@NumeroCalle", dts.NumCalle)
             cmd.Parameters.AddWithValue("@Edificio", dts.Edificio)
             cmd.Parameters.AddWithValue("@Piso", dts.Piso)
             cmd.Parameters.AddWithValue("@Dpto", dts.Dpto)
@@ -59,6 +59,7 @@ Public Class ClientesDA
             cmd.Parameters.AddWithValue("@Pais", dts.Pais)
             cmd.Parameters.AddWithValue("@Provincia", dts.Provincia)
             cmd.Parameters.AddWithValue("@Ciudad", dts.Ciudad)
+            cmd.Parameters.AddWithValue("@habilitado", dts.habilitado)
 
             If cmd.ExecuteNonQuery Then
                 Return True
@@ -81,6 +82,7 @@ Public Class ClientesDA
             cmd = New SqlCommand("update cliente set nombre=@nombre,apellido=@apellido,fecha_nac=@fecha_nac,Calle=@Calle,telefono=@telefono,celular=@celular,mail=@mail,NumeroCalle=@NumeroCalle,Edificio=@Edificio,Piso=@Piso,Dpto=@Dpto,CP=@CP,Barrio=@Barrio,Pais=@Pais,Provincia=@Provincia,Ciudad=@Ciudad where nro_doc=@nro_doc")
             cmd.CommandType = CommandType.Text
             cmd.Connection = cnn
+            cmd.Parameters.Add("@nro_doc", SqlDbType.NVarChar, 50).Value = dts.Nro_Doc
 
             cmd.Parameters.AddWithValue("@nombre", dts.nombre)
             cmd.Parameters.AddWithValue("@apellido", dts.apellido)

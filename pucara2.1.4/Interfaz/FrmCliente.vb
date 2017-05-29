@@ -10,11 +10,12 @@ Public Class frmCliente
     Private Sub frmCliente_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         mostrar()
     End Sub
+    '************************METODO LIMPIAR**********************
     Public Sub limpiar()
         btnGuardar.Visible = True
         btnEditar.Visible = False
         txtNroDoc.Text = ""
-        cbTipoDoc.SelectedIndex = -1
+        cbTipoDoc.Text = "Seleccione una opcion..."
         txtNombre.Text = ""
         txtApellido.Text = ""
         txtCalle.Text = ""
@@ -23,11 +24,59 @@ Public Class frmCliente
         txtMail.Text = ""
         DTPFecNac.Text = ""
         DTPFecAlta.Text = ""
+        TxtNumero.Text = ""
+        TxtEdificio.Text = ""
+        txtPiso.Text = ""
+        TxtDpto.Text = ""
+        TxtCP.Text = ""
+        TxtBarrio.Text = ""
+        CbPais.Text = "Seleccione una opcion..."
+        TxtProvincia.Text = ""
+        TxtCiudad.Text = ""
+        DTPFecAlta.Text = ""
 
-        DTPFecAlta.Enabled = True
+        MtxtCuit.Text = ""
+        TxtRazSocial.Text = ""
+        TxtFantasia.Text = ""
+        TxtCalle2.Text = ""
+        TxtNumero2.Text = ""
+        TxtEdificio2.Text = ""
+        TxtPiso2.Text = ""
+        TxtDPto2.Text = ""
+        TxtCP2.Text = ""
+        TxtBarrio2.Text = ""
+        CbPais2.Text = "Seleccione una opcion..."
+        TxtProvincia2.Text = ""
+        TxtCiudad2.Text = ""
+        MtxtTel2.Text = ""
+        MtxtCelular2.Text = ""
+        TxtMail2.Text = ""
+        DTPFecAlta2.Text = ""
+        DTPFecNac2.Text = ""
+
+        MtxtCuit.Enabled = False
+        TxtRazSocial.Enabled = False
+        TxtFantasia.Enabled = False
+        TxtCalle2.Enabled = False
+        TxtNumero2.Enabled = False
+        TxtEdificio2.Enabled = False
+        TxtPiso2.Enabled = False
+        TxtDPto2.Enabled = False
+        TxtCP2.Enabled = False
+        TxtBarrio2.Enabled = False
+        CbPais2.Enabled = False
+        TxtProvincia2.Enabled = False
+        TxtCiudad2.Enabled = False
+        MtxtTel2.Enabled = False
+        MtxtCelular2.Enabled = False
+        TxtMail2.Enabled = False
+        DTPFecAlta2.Enabled = False
+        DTPFecNac2.Enabled = False
+
+
 
     End Sub
-
+    '************************METODO MOSTRAR****************
     Private Sub mostrar()
         Try
             Dim func As New ClientesDA
@@ -68,12 +117,12 @@ Public Class frmCliente
         LimpiarCheckBox_cli()
 
     End Sub
-
+    '**************LIMPIAR CHKBOX HAB-INH***************
     Public Sub LimpiarCheckBox_cli()
         CbHabilitar_cli.Checked = False
         CbInhabilitar_cli.Checked = False
     End Sub
-
+    '********************************BUSCAR CLIENTE (SIN FUNCIONAR)*******************
     Private Sub buscar_cli()
         Try
             Dim ds As New DataSet
@@ -95,19 +144,19 @@ Public Class frmCliente
 
         End Try
     End Sub
-
+    '**********************************OCULTAR COLUMNAS*************************
     Private Sub ocultar_columnas()
         dgvListado.Columns(1).Visible = False
 
     End Sub
 
-
+    '*************************BOTON NUEVO****************************
     Private Sub btnNuevo_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnNuevo.Click
         limpiar()
         mostrar()
 
     End Sub
-
+    '******************************** BOTON GUARDAR *************************************
     Private Sub btnGuardar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnGuardar.Click
 
         If DTPFecAlta.Value.Date <= DTPFecNac.Value.Date Then
@@ -120,17 +169,54 @@ Public Class frmCliente
                 Dim dts As New ClientesNE
                 Dim func As New ClientesDA
 
-                dts.Nro_Doc = txtNroDoc.Text
-                dts.Tipo_dni = cbTipoDoc.SelectedItem
-                dts.nombre = txtNombre.Text
-                dts.apellido = txtApellido.Text
-                dts.Calle = txtCalle.Text
-                dts.telefono = MtxtTel.Text
-                dts.celular = MtxtCelular.Text
-                dts.mail = txtMail.Text
-                dts.fecha_nac = DTPFecNac.Value
-                dts.fecha_alta = DTPFecAlta.Value
-                dts.habilitado = 1 'predeterminado a habilitado al crearse 
+                If CHkFisica.Checked = True Then
+
+                    dts.TipoCliente = 1
+                    dts.Nro_Doc = txtNroDoc.Text
+                    dts.nombre = txtNombre.Text
+                    dts.apellido = txtApellido.Text
+                    dts.fecha_nac = DTPFecNac.Value
+                    dts.fecha_alta = DTPFecAlta.Value
+                    dts.Calle = txtCalle.Text
+                    dts.telefono = MtxtTel.Text
+                    dts.celular = MtxtCelular.Text
+                    dts.mail = txtMail.Text
+                    dts.NumCalle = TxtNumero.Text
+                    dts.Edificio = TxtEdificio.Text
+                    dts.Piso = txtPiso.Text
+                    dts.Dpto = TxtDpto.Text
+                    dts.CP = TxtCP.Text
+                    dts.Barrio = TxtBarrio.Text
+                    dts.Pais = CbPais.Text
+                    dts.Provincia = TxtProvincia.Text
+                    dts.Ciudad = TxtCiudad.Text
+                    dts.habilitado = 1 'predeterminado a habilitado al crearse 
+
+                ElseIf CHkJuridica.Checked = True Then
+
+                    dts.TipoCliente = 2
+                    dts.Nro_Doc = MtxtCuit.Text
+                    dts.RazonSocial = TxtRazSocial.Text
+                    dts.Fantasia = TxtFantasia.Text
+                    dts.fecha_nac = DTPFecNac2.Value
+                    dts.fecha_alta = DTPFecAlta2.Value
+                    dts.Calle = TxtCalle2.Text
+                    dts.telefono = MtxtTel2.Text
+                    dts.celular = MtxtCelular2.Text
+                    dts.mail = TxtMail2.Text
+                    dts.NumCalle = TxtNumero2.Text
+                    dts.Edificio = TxtEdificio2.Text
+                    dts.Piso = TxtPiso2.Text
+                    dts.Dpto = TxtDPto2.Text
+                    dts.CP = TxtCP2.Text
+                    dts.Barrio = TxtBarrio2.Text
+                    dts.Pais = CbPais2.Text
+                    dts.Provincia = TxtProvincia2.Text
+                    dts.Ciudad = TxtCiudad2.Text
+                    dts.habilitado = 1 'predeterminado a habilitado al crearse 
+
+                End If
+                
 
                 If func.insertar(dts) Then
                     MessageBox.Show("Cliente cargado correctamente!", "Guardando registros", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -152,29 +238,75 @@ Public Class frmCliente
 
         End If
     End Sub
-
+    '***************************************CONF DE GRILLA*******************************
+    Private Sub dgvListado_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvListado.CellContentClick
+        If e.ColumnIndex = Me.dgvListado.Columns.Item("Inhabilitar").Index Then
+            Dim chkCell As DataGridViewCheckBoxCell = Me.dgvListado.Rows(e.RowIndex).Cells("Inhabilitar")
+            chkCell.Value = Not chkCell.Value
+        End If
+        If e.ColumnIndex = Me.dgvListado.Columns.Item("Habilitar").Index Then
+            Dim chkCell As DataGridViewCheckBoxCell = Me.dgvListado.Rows(e.RowIndex).Cells("Habilitar")
+            chkCell.Value = Not chkCell.Value
+        End If
+    End Sub
     Private Sub dgvListado_CellClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvListado.CellClick
-        txtNroDoc.Text = dgvListado.SelectedCells.Item(2).Value
-        cbTipoDoc.SelectedItem = dgvListado.SelectedCells.Item(3).Value
-        txtNombre.Text = dgvListado.SelectedCells.Item(4).Value
-        txtApellido.Text = dgvListado.SelectedCells.Item(5).Value
-        DTPFecNac.Text = dgvListado.SelectedCells.Item(6).Value
-        txtCalle.Text = dgvListado.SelectedCells.Item(7).Value
-        MtxtTel.Text = dgvListado.SelectedCells.Item(8).Value
-        MtxtCelular.Text = dgvListado.SelectedCells.Item(9).Value
-        txtMail.Text = dgvListado.SelectedCells.Item(10).Value
-        DTPFecAlta.Text = dgvListado.SelectedCells.Item(11).Value
-        TxtNumero.Text = dgvListado.SelectedCells.Item(12).Value
-        TxtEdificio.Text = dgvListado.SelectedCells.Item(13).Value
-        txtPiso.Text = dgvListado.SelectedCells.Item(14).Value
-        TxtDpto.Text = dgvListado.SelectedCells.Item(15).Value
-        TxtCP.Text = dgvListado.SelectedCells.Item(16).Value
-        TxtBarrio.Text = dgvListado.SelectedCells.Item(17).Value
-        TxtPais.Text = dgvListado.SelectedCells.Item(18).Value
-        TxtProvincia.Text = dgvListado.SelectedCells.Item(19).Value
-        TxtCiudad.Text = dgvListado.SelectedCells.Item(20).Value
 
-        If dgvListado.SelectedCells.Item(21).Value = 0 Then
+        If dgvListado.SelectedCells.Item(24).Value = 1 Then
+
+            LimpInhJuridica()
+
+            txtNroDoc.Text = dgvListado.SelectedCells.Item(2).Value
+            cbTipoDoc.SelectedItem = dgvListado.SelectedCells.Item(3).Value
+            txtNombre.Text = dgvListado.SelectedCells.Item(4).Value
+            txtApellido.Text = dgvListado.SelectedCells.Item(5).Value
+            'TxtRazSocial.Text = dgvListado.SelectedCells.Item(6).Value
+            'TxtFantasia.Text = dgvListado.SelectedCells.Item(7).Value
+            DTPFecNac.Text = dgvListado.SelectedCells.Item(8).Value
+            txtCalle.Text = dgvListado.SelectedCells.Item(9).Value
+            MtxtTel.Text = dgvListado.SelectedCells.Item(10).Value
+            MtxtCelular.Text = dgvListado.SelectedCells.Item(11).Value
+            txtMail.Text = dgvListado.SelectedCells.Item(12).Value
+            DTPFecAlta.Text = dgvListado.SelectedCells.Item(13).Value
+            TxtNumero.Text = dgvListado.SelectedCells.Item(14).Value
+            TxtEdificio.Text = dgvListado.SelectedCells.Item(15).Value
+            txtPiso.Text = dgvListado.SelectedCells.Item(16).Value
+            TxtDpto.Text = dgvListado.SelectedCells.Item(17).Value
+            TxtCP.Text = dgvListado.SelectedCells.Item(18).Value
+            TxtBarrio.Text = dgvListado.SelectedCells.Item(19).Value
+            CbPais.Text = dgvListado.SelectedCells.Item(20).Value
+            TxtProvincia.Text = dgvListado.SelectedCells.Item(21).Value
+            TxtCiudad.Text = dgvListado.SelectedCells.Item(22).Value
+
+        ElseIf dgvListado.SelectedCells.Item(24).Value = 2 Then
+
+            LimpInhFisica()
+
+            MtxtCuit.Text = dgvListado.SelectedCells.Item(2).Value
+            'cbTipoDoc.SelectedItem = dgvListado.SelectedCells.Item(3).Value
+            'txtNombre.Text = dgvListado.SelectedCells.Item(4).Value
+            'txtApellido.Text = dgvListado.SelectedCells.Item(5).Value
+            TxtRazSocial.Text = dgvListado.SelectedCells.Item(6).Value
+            TxtFantasia.Text = dgvListado.SelectedCells.Item(7).Value
+            DTPFecNac2.Text = dgvListado.SelectedCells.Item(8).Value
+            TxtCalle2.Text = dgvListado.SelectedCells.Item(9).Value
+            MtxtTel2.Text = dgvListado.SelectedCells.Item(10).Value
+            MtxtCelular2.Text = dgvListado.SelectedCells.Item(11).Value
+            TxtMail2.Text = dgvListado.SelectedCells.Item(12).Value
+            DTPFecAlta2.Text = dgvListado.SelectedCells.Item(13).Value
+            TxtNumero2.Text = dgvListado.SelectedCells.Item(14).Value
+            TxtEdificio2.Text = dgvListado.SelectedCells.Item(15).Value
+            TxtPiso2.Text = dgvListado.SelectedCells.Item(16).Value
+            TxtDPto2.Text = dgvListado.SelectedCells.Item(17).Value
+            TxtCP2.Text = dgvListado.SelectedCells.Item(18).Value
+            TxtBarrio2.Text = dgvListado.SelectedCells.Item(19).Value
+            CbPais2.Text = dgvListado.SelectedCells.Item(20).Value
+            TxtProvincia2.Text = dgvListado.SelectedCells.Item(21).Value
+            TxtCiudad2.Text = dgvListado.SelectedCells.Item(22).Value
+
+        End If
+        
+
+        If dgvListado.SelectedCells.Item(23).Value = 0 Then
             txtNroDoc.Enabled = False
             cbTipoDoc.Enabled = False
             txtNombre.Enabled = False
@@ -191,7 +323,7 @@ Public Class frmCliente
             TxtDpto.Enabled = False
             TxtCP.Enabled = False
             TxtBarrio.Enabled = False
-            TxtPais.Enabled = False
+            CbPais.Enabled = False
             TxtProvincia.Enabled = False
             TxtCiudad.Enabled = False
 
@@ -214,7 +346,7 @@ Public Class frmCliente
             TxtDpto.Enabled = True
             TxtCP.Enabled = True
             TxtBarrio.Enabled = True
-            TxtPais.Enabled = True
+            CbPais.Enabled = True
             TxtProvincia.Enabled = True
             TxtCiudad.Enabled = True
 
@@ -226,7 +358,7 @@ Public Class frmCliente
         btnGuardar.Visible = False
 
     End Sub
-
+    '************************************BOTON EDITAR********************
     Private Sub btnEditar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEditar.Click
         Dim result As DialogResult
         result = MessageBox.Show("Relmente desea editar los datos del cliente", "Modificando Registros", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
@@ -256,7 +388,7 @@ Public Class frmCliente
                     dts.Dpto = TxtDpto.Text
                     dts.CP = TxtCP.Text
                     dts.Barrio = TxtBarrio.Text
-                    dts.Pais = TxtPais.Text
+                    dts.Pais = CbPais.Text
                     dts.Provincia = TxtProvincia.Text
                     dts.Ciudad = TxtCiudad.Text
 
@@ -279,17 +411,7 @@ Public Class frmCliente
         End If
     End Sub
 
-    Private Sub dgvListado_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvListado.CellContentClick
-        If e.ColumnIndex = Me.dgvListado.Columns.Item("Inhabilitar").Index Then
-            Dim chkCell As DataGridViewCheckBoxCell = Me.dgvListado.Rows(e.RowIndex).Cells("Inhabilitar")
-            chkCell.Value = Not chkCell.Value
-        End If
-        If e.ColumnIndex = Me.dgvListado.Columns.Item("Habilitar").Index Then
-            Dim chkCell As DataGridViewCheckBoxCell = Me.dgvListado.Rows(e.RowIndex).Cells("Habilitar")
-            chkCell.Value = Not chkCell.Value
-        End If
-    End Sub
-
+    '*********************CHKBOX HABILITAR E INHABILITAR***********
     Private Sub CbInhabilitar_cli_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CbInhabilitar_cli.CheckedChanged
         If CbInhabilitar_cli.CheckState = CheckState.Checked Then
             dgvListado.Columns.Item("Inhabilitar").Visible = True
@@ -435,7 +557,7 @@ Public Class frmCliente
             TxtDpto.Text = CStr(dr("Dpto"))
             TxtCP.Text = CStr(dr("CP"))
             TxtBarrio.Text = CStr(dr("Barrio"))
-            TxtPais.Text = CStr(dr("Pais"))
+            CbPais.Text = CStr(dr("Pais"))
             TxtProvincia.Text = CStr(dr("Provincia"))
             TxtCiudad.Text = CStr(dr("Ciudad"))
             MtxtTel.Text = CStr(dr("Telefono"))
@@ -448,7 +570,7 @@ Public Class frmCliente
             MessageBox.Show("No existe el cliente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End Try
     End Sub
-
+    '********************************BOTON INHABILITAR****************
     Private Sub BtnInhabilitar_cli_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnInhabilitar_cli.Click
         Dim result As DialogResult
         result = MessageBox.Show("Realmente desea inhabilitar el/los Cliente seleccionados?", "Inhabilitando Registros", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
@@ -484,7 +606,7 @@ Public Class frmCliente
         Call limpiar()
 
     End Sub
-
+    '********************************BOTON HABILITAR****************
     Private Sub BtnHabilitar_cli_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnHabilitar_cli.Click
         Dim result As DialogResult
         result = MessageBox.Show("Realmente desea Habilitar el/los Clientes seleccionados?", "Habilitando Registros", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
@@ -519,11 +641,29 @@ Public Class frmCliente
         End If
         Call limpiar()
     End Sub
-    '**********************************************CHEKED PERSONAS***************************************
-
-    Private Sub CHkFisica_CheckedChanged(sender As Object, e As EventArgs) Handles CHkFisica.CheckedChanged
-
+    '*************************LIMPIAR E INHABILITAR JURIDICA*******************
+    Public Sub LimpInhJuridica()
         CHkJuridica.Checked = False
+        CHkFisica.Checked = True
+
+        MtxtCuit.Text = ""
+        TxtRazSocial.Text = ""
+        TxtFantasia.Text = ""
+        TxtCalle2.Text = ""
+        TxtNumero2.Text = ""
+        TxtEdificio2.Text = ""
+        TxtPiso2.Text = ""
+        TxtDPto2.Text = ""
+        TxtCP2.Text = ""
+        TxtBarrio2.Text = ""
+        CbPais2.Text = "Seleccione una opcion..."
+        TxtProvincia2.Text = ""
+        TxtCiudad2.Text = ""
+        MtxtTel2.Text = ""
+        MtxtCelular2.Text = ""
+        TxtMail2.Text = ""
+        DTPFecAlta2.Text = ""
+        DTPFecNac2.Text = ""
 
         txtNroDoc.Enabled = True
         cbTipoDoc.Enabled = True
@@ -536,7 +676,7 @@ Public Class frmCliente
         TxtDpto.Enabled = True
         TxtCP.Enabled = True
         TxtBarrio.Enabled = True
-        TxtPais.Enabled = True
+        CbPais.Enabled = True
         TxtProvincia.Enabled = True
         TxtCiudad.Enabled = True
         MtxtTel.Enabled = True
@@ -555,7 +695,121 @@ Public Class frmCliente
         TxtDPto2.Enabled = False
         TxtCP2.Enabled = False
         TxtBarrio2.Enabled = False
-        TxtPais2.Enabled = False
+        CbPais2.Enabled = False
+        TxtProvincia2.Enabled = False
+        TxtCiudad2.Enabled = False
+        MtxtTel2.Enabled = False
+        MtxtCelular2.Enabled = False
+        TxtMail2.Enabled = False
+        DTPFecAlta2.Enabled = False
+        DTPFecNac2.Enabled = False
+
+    End Sub
+    '*************************LIMPIAR E INHABILITAR FISICA*********************
+    Public Sub LimpInhFisica()
+        CHkFisica.Checked = False
+        CHkJuridica.Checked = True
+
+        txtNroDoc.Enabled = False
+        cbTipoDoc.Enabled = False
+        txtNombre.Enabled = False
+        txtApellido.Enabled = False
+        txtCalle.Enabled = False
+        TxtNumero.Enabled = False
+        TxtEdificio.Enabled = False
+        txtPiso.Enabled = False
+        TxtDpto.Enabled = False
+        TxtCP.Enabled = False
+        TxtBarrio.Enabled = False
+        CbPais.Enabled = False
+        TxtProvincia.Enabled = False
+        TxtCiudad.Enabled = False
+        MtxtTel.Enabled = False
+        MtxtCelular.Enabled = False
+        txtMail.Enabled = False
+        DTPFecAlta.Enabled = False
+        DTPFecNac.Enabled = False
+
+        txtNroDoc.Text = ""
+        cbTipoDoc.Text = "Seleccione una opcion..."
+        txtNombre.Text = ""
+        txtApellido.Text = ""
+        txtCalle.Text = ""
+        MtxtTel.Text = ""
+        MtxtCelular.Text = ""
+        txtMail.Text = ""
+        DTPFecNac.Text = ""
+        DTPFecAlta.Text = ""
+        TxtNumero.Text = ""
+        TxtEdificio.Text = ""
+        txtPiso.Text = ""
+        TxtDpto.Text = ""
+        TxtCP.Text = ""
+        TxtBarrio.Text = ""
+        CbPais.Text = "Seleccione una opcion..."
+        TxtProvincia.Text = ""
+        TxtCiudad.Text = ""
+        DTPFecAlta.Text = ""
+
+        MtxtCuit.Enabled = True
+        TxtRazSocial.Enabled = True
+        TxtFantasia.Enabled = True
+        TxtCalle2.Enabled = True
+        TxtNumero2.Enabled = True
+        TxtEdificio2.Enabled = True
+        TxtPiso2.Enabled = True
+        TxtDPto2.Enabled = True
+        TxtCP2.Enabled = True
+        TxtBarrio2.Enabled = True
+        CbPais2.Enabled = True
+        TxtProvincia2.Enabled = True
+        TxtCiudad2.Enabled = True
+        MtxtTel2.Enabled = True
+        MtxtCelular2.Enabled = True
+        TxtMail2.Enabled = True
+        DTPFecAlta2.Enabled = True
+        DTPFecNac2.Enabled = True
+
+    End Sub
+
+    '**********************************************CHEKED PERSONAS***************************************
+    Private Sub CHkFisica_CheckedChanged(sender As Object, e As EventArgs) Handles CHkFisica.CheckedChanged
+        FisicaChequeado()
+    End Sub
+    Public Sub FisicaChequeado()
+        CHkJuridica.Checked = False
+
+        txtNroDoc.Enabled = True
+        cbTipoDoc.Enabled = True
+        txtNombre.Enabled = True
+        txtApellido.Enabled = True
+        txtCalle.Enabled = True
+        TxtNumero.Enabled = True
+        TxtEdificio.Enabled = True
+        txtPiso.Enabled = True
+        TxtDpto.Enabled = True
+        TxtCP.Enabled = True
+        TxtBarrio.Enabled = True
+        CbPais.Enabled = True
+        TxtProvincia.Enabled = True
+        TxtCiudad.Enabled = True
+        MtxtTel.Enabled = True
+        MtxtCelular.Enabled = True
+        txtMail.Enabled = True
+        DTPFecAlta.Enabled = True
+        DTPFecNac.Enabled = True
+
+        MtxtCuit.Enabled = False
+        TxtRazSocial.Enabled = False
+        TxtFantasia.Enabled = False
+        TxtCalle2.Enabled = False
+        TxtNumero2.Enabled = False
+        TxtEdificio2.Enabled = False
+        TxtPiso2.Enabled = False
+        TxtDPto2.Enabled = False
+        TxtCP2.Enabled = False
+        TxtBarrio2.Enabled = False
+        CbPais2.Enabled = False
         TxtProvincia2.Enabled = False
         TxtCiudad2.Enabled = False
         MtxtTel2.Enabled = False
@@ -564,9 +818,11 @@ Public Class frmCliente
         DTPFecAlta2.Enabled = False
         DTPFecNac2.Enabled = False
     End Sub
-
     Private Sub CHkJuridica_CheckedChanged(sender As Object, e As EventArgs) Handles CHkJuridica.CheckedChanged
+        juridicaChequeado()
+    End Sub
 
+    Public Sub juridicaChequeado()
         CHkFisica.Checked = False
 
         txtNroDoc.Enabled = False
@@ -580,7 +836,7 @@ Public Class frmCliente
         TxtDpto.Enabled = False
         TxtCP.Enabled = False
         TxtBarrio.Enabled = False
-        TxtPais.Enabled = False
+        CbPais.Enabled = False
         TxtProvincia.Enabled = False
         TxtCiudad.Enabled = False
         MtxtTel.Enabled = False
@@ -599,7 +855,7 @@ Public Class frmCliente
         TxtDPto2.Enabled = True
         TxtCP2.Enabled = True
         TxtBarrio2.Enabled = True
-        TxtPais2.Enabled = True
+        CbPais2.Enabled = True
         TxtProvincia2.Enabled = True
         TxtCiudad2.Enabled = True
         MtxtTel2.Enabled = True
@@ -607,7 +863,6 @@ Public Class frmCliente
         TxtMail2.Enabled = True
         DTPFecAlta2.Enabled = True
         DTPFecNac2.Enabled = True
-
     End Sub
-    
+
 End Class

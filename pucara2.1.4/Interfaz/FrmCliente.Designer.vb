@@ -49,7 +49,6 @@ Partial Class frmCliente
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.TxtProvincia2 = New System.Windows.Forms.TextBox()
-        Me.TxtPais2 = New System.Windows.Forms.TextBox()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.TxtBarrio2 = New System.Windows.Forms.TextBox()
         Me.Label14 = New System.Windows.Forms.Label()
@@ -97,7 +96,6 @@ Partial Class frmCliente
         Me.Label49 = New System.Windows.Forms.Label()
         Me.Label48 = New System.Windows.Forms.Label()
         Me.TxtProvincia = New System.Windows.Forms.TextBox()
-        Me.TxtPais = New System.Windows.Forms.TextBox()
         Me.Label47 = New System.Windows.Forms.Label()
         Me.TxtBarrio = New System.Windows.Forms.TextBox()
         Me.Label46 = New System.Windows.Forms.Label()
@@ -144,6 +142,8 @@ Partial Class frmCliente
         Me.txtBuscar = New System.Windows.Forms.TextBox()
         Me.CboCampo = New System.Windows.Forms.ComboBox()
         Me.Erroricono = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.CbPais2 = New System.Windows.Forms.ComboBox()
+        Me.CbPais = New System.Windows.Forms.ComboBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
@@ -338,6 +338,7 @@ Partial Class frmCliente
         '
         'GroupBox7
         '
+        Me.GroupBox7.Controls.Add(Me.CbPais2)
         Me.GroupBox7.Controls.Add(Me.Label63)
         Me.GroupBox7.Controls.Add(Me.Label62)
         Me.GroupBox7.Controls.Add(Me.Label61)
@@ -348,7 +349,6 @@ Partial Class frmCliente
         Me.GroupBox7.Controls.Add(Me.Label11)
         Me.GroupBox7.Controls.Add(Me.Label12)
         Me.GroupBox7.Controls.Add(Me.TxtProvincia2)
-        Me.GroupBox7.Controls.Add(Me.TxtPais2)
         Me.GroupBox7.Controls.Add(Me.Label13)
         Me.GroupBox7.Controls.Add(Me.TxtBarrio2)
         Me.GroupBox7.Controls.Add(Me.Label14)
@@ -472,13 +472,6 @@ Partial Class frmCliente
         Me.TxtProvincia2.Name = "TxtProvincia2"
         Me.TxtProvincia2.Size = New System.Drawing.Size(146, 22)
         Me.TxtProvincia2.TabIndex = 27
-        '
-        'TxtPais2
-        '
-        Me.TxtPais2.Location = New System.Drawing.Point(297, 72)
-        Me.TxtPais2.Name = "TxtPais2"
-        Me.TxtPais2.Size = New System.Drawing.Size(245, 22)
-        Me.TxtPais2.TabIndex = 26
         '
         'Label13
         '
@@ -702,7 +695,7 @@ Partial Class frmCliente
         'Button1
         '
         Me.Button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Button1.Location = New System.Drawing.Point(143, 32)
+        Me.Button1.Location = New System.Drawing.Point(144, 31)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(50, 23)
         Me.Button1.TabIndex = 81
@@ -836,6 +829,7 @@ Partial Class frmCliente
         '
         'GroupBox6
         '
+        Me.GroupBox6.Controls.Add(Me.CbPais)
         Me.GroupBox6.Controls.Add(Me.Label53)
         Me.GroupBox6.Controls.Add(Me.Label52)
         Me.GroupBox6.Controls.Add(Me.Label51)
@@ -846,7 +840,6 @@ Partial Class frmCliente
         Me.GroupBox6.Controls.Add(Me.Label49)
         Me.GroupBox6.Controls.Add(Me.Label48)
         Me.GroupBox6.Controls.Add(Me.TxtProvincia)
-        Me.GroupBox6.Controls.Add(Me.TxtPais)
         Me.GroupBox6.Controls.Add(Me.Label47)
         Me.GroupBox6.Controls.Add(Me.TxtBarrio)
         Me.GroupBox6.Controls.Add(Me.Label46)
@@ -970,13 +963,6 @@ Partial Class frmCliente
         Me.TxtProvincia.Name = "TxtProvincia"
         Me.TxtProvincia.Size = New System.Drawing.Size(147, 22)
         Me.TxtProvincia.TabIndex = 27
-        '
-        'TxtPais
-        '
-        Me.TxtPais.Location = New System.Drawing.Point(297, 72)
-        Me.TxtPais.Name = "TxtPais"
-        Me.TxtPais.Size = New System.Drawing.Size(241, 22)
-        Me.TxtPais.TabIndex = 26
         '
         'Label47
         '
@@ -1408,6 +1394,24 @@ Partial Class frmCliente
         '
         Me.Erroricono.ContainerControl = Me
         '
+        'CbPais2
+        '
+        Me.CbPais2.FormattingEnabled = True
+        Me.CbPais2.Items.AddRange(New Object() {"Argentina", "Afganistán", "Albania", "Alemania", "Andorra", "Angola", "Antigua y Barbuda", "Arabia Saudita", "Argelia", "Armenia", "Australia", "Austria", "Azerbaiyán", "Bahamas", "Bangladés", "Barbados", "Baréin", "Bélgica", "Belice", "Benín", "Bielorrusia", "Birmania", "Bolivia", "Bosnia y Herzegovina", "Botsuana", "Brasil", "Brunéi", "Bulgaria", "Burkina Faso", "Burundi", "Bután", "Cabo Verde", "Camboya", "Camerún", "Canadá", "Catar", "Chad", "Chile", "China", "Chipre", "Ciudad del Vaticano", "Colombia", "Comoras", "Corea del Norte", "Corea del Sur", "Costa de Marfil", "Costa Rica", "Croacia", "Cuba", "Dinamarca", "Dominica", "Ecuador", "Egipto", "El Salvador", "Emiratos Árabes Unidos", "Eritrea", "Eslovaquia", "Eslovenia", "España", "Estados Unidos", "Estonia", "Etiopía", "Filipinas", "Finlandia", "Fiyi", "Francia", "Gabón", "Gambia", "Georgia", "Ghana", "Granada", "Grecia", "Guatemala", "Guyana", "Guinea", "Guinea ecuatorial", "Guinea-Bisáu", "Haití", "Honduras", "Hungría", "India", "Indonesia", "Irak", "Irán", "Irlanda", "Islandia", "Islas Marshall", "Islas Salomón", "Israel", "Italia", "Jamaica", "Japón", "Jordania", "Kazajistán", "Kenia", "Kirguistán", "Kiribati", "Kuwait", "Laos", "Lesoto", "Letonia", "Líbano", "Liberia", "Libia", "Liechtenstein", "Lituania", "Luxemburgo", "Madagascar", "Malasia", "Malaui", "Maldivas", "Malí", "Malta", "Marruecos", "Mauricio", "Mauritania", "México", "Micronesia", "Moldavia", "Mónaco", "Mongolia", "Montenegro", "Mozambique", "Namibia", "Nauru", "Nepal", "Nicaragua", "Níger", "Nigeria", "Noruega", "Nueva Zelanda", "Omán", "Países Bajos", "Pakistán", "Palaos", "Panamá", "Papúa Nueva Guinea", "Paraguay", "Perú", "Polonia", "Portugal", "Reino Unido", "República Centroafricana", "República Checa", "República de Macedonia", "República del Congo", "República Democrática del Congo", "República Dominicana", "República Sudafricana", "Ruanda", "Rumanía", "Rusia", "Samoa", "San Cristóbal y Nieves", "San Marino", "San Vicente y las Granadinas", "Santa Lucía", "Santo Tomé y Príncipe", "Senegal", "Serbia", "Seychelles", "Sierra Leona", "Singapur", "Siria", "Somalia", "Sri Lanka", "Suazilandia", "Sudán", "Sudán del Sur", "Suecia", "Suiza", "Surinam", "Tailandia", "Tanzania", "Tayikistán", "Timor Oriental", "Togo", "Tonga", "Trinidad y Tobago", "Túnez", "Turkmenistán", "Turquía", "Tuvalu", "Ucrania", "Uganda", "Uruguay", "Uzbekistán", "Vanuatu", "Venezuela", "Vietnam", "Yemen", "Yibuti", "Zambia", "Zimbabue"})
+        Me.CbPais2.Location = New System.Drawing.Point(297, 71)
+        Me.CbPais2.Name = "CbPais2"
+        Me.CbPais2.Size = New System.Drawing.Size(245, 22)
+        Me.CbPais2.TabIndex = 78
+        '
+        'CbPais
+        '
+        Me.CbPais.FormattingEnabled = True
+        Me.CbPais.Items.AddRange(New Object() {"Argentina", "Afganistán", "Albania", "Alemania", "Andorra", "Angola", "Antigua y Barbuda", "Arabia Saudita", "Argelia", "Armenia", "Australia", "Austria", "Azerbaiyán", "Bahamas", "Bangladés", "Barbados", "Baréin", "Bélgica", "Belice", "Benín", "Bielorrusia", "Birmania", "Bolivia", "Bosnia y Herzegovina", "Botsuana", "Brasil", "Brunéi", "Bulgaria", "Burkina Faso", "Burundi", "Bután", "Cabo Verde", "Camboya", "Camerún", "Canadá", "Catar", "Chad", "Chile", "China", "Chipre", "Ciudad del Vaticano", "Colombia", "Comoras", "Corea del Norte", "Corea del Sur", "Costa de Marfil", "Costa Rica", "Croacia", "Cuba", "Dinamarca", "Dominica", "Ecuador", "Egipto", "El Salvador", "Emiratos Árabes Unidos", "Eritrea", "Eslovaquia", "Eslovenia", "España", "Estados Unidos", "Estonia", "Etiopía", "Filipinas", "Finlandia", "Fiyi", "Francia", "Gabón", "Gambia", "Georgia", "Ghana", "Granada", "Grecia", "Guatemala", "Guyana", "Guinea", "Guinea ecuatorial", "Guinea-Bisáu", "Haití", "Honduras", "Hungría", "India", "Indonesia", "Irak", "Irán", "Irlanda", "Islandia", "Islas Marshall", "Islas Salomón", "Israel", "Italia", "Jamaica", "Japón", "Jordania", "Kazajistán", "Kenia", "Kirguistán", "Kiribati", "Kuwait", "Laos", "Lesoto", "Letonia", "Líbano", "Liberia", "Libia", "Liechtenstein", "Lituania", "Luxemburgo", "Madagascar", "Malasia", "Malaui", "Maldivas", "Malí", "Malta", "Marruecos", "Mauricio", "Mauritania", "México", "Micronesia", "Moldavia", "Mónaco", "Mongolia", "Montenegro", "Mozambique", "Namibia", "Nauru", "Nepal", "Nicaragua", "Níger", "Nigeria", "Noruega", "Nueva Zelanda", "Omán", "Países Bajos", "Pakistán", "Palaos", "Panamá", "Papúa Nueva Guinea", "Paraguay", "Perú", "Polonia", "Portugal", "Reino Unido", "República Centroafricana", "República Checa", "República de Macedonia", "República del Congo", "República Democrática del Congo", "República Dominicana", "República Sudafricana", "Ruanda", "Rumanía", "Rusia", "Samoa", "San Cristóbal y Nieves", "San Marino", "San Vicente y las Granadinas", "Santa Lucía", "Santo Tomé y Príncipe", "Senegal", "Serbia", "Seychelles", "Sierra Leona", "Singapur", "Siria", "Somalia", "Sri Lanka", "Suazilandia", "Sudán", "Sudán del Sur", "Suecia", "Suiza", "Surinam", "Tailandia", "Tanzania", "Tayikistán", "Timor Oriental", "Togo", "Tonga", "Trinidad y Tobago", "Túnez", "Turkmenistán", "Turquía", "Tuvalu", "Ucrania", "Uganda", "Uruguay", "Uzbekistán", "Vanuatu", "Venezuela", "Vietnam", "Yemen", "Yibuti", "Zambia", "Zimbabue"})
+        Me.CbPais.Location = New System.Drawing.Point(296, 72)
+        Me.CbPais.Name = "CbPais"
+        Me.CbPais.Size = New System.Drawing.Size(242, 22)
+        Me.CbPais.TabIndex = 79
+        '
         'frmCliente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1496,7 +1500,6 @@ Partial Class frmCliente
     Friend WithEvents CHkJuridica As System.Windows.Forms.CheckBox
     Friend WithEvents CHkFisica As System.Windows.Forms.CheckBox
     Friend WithEvents GroupBox6 As System.Windows.Forms.GroupBox
-    Friend WithEvents TxtPais As System.Windows.Forms.TextBox
     Friend WithEvents Label47 As System.Windows.Forms.Label
     Friend WithEvents TxtBarrio As System.Windows.Forms.TextBox
     Friend WithEvents Label46 As System.Windows.Forms.Label
@@ -1514,7 +1517,6 @@ Partial Class frmCliente
     Friend WithEvents Label11 As System.Windows.Forms.Label
     Friend WithEvents Label12 As System.Windows.Forms.Label
     Friend WithEvents TxtProvincia2 As System.Windows.Forms.TextBox
-    Friend WithEvents TxtPais2 As System.Windows.Forms.TextBox
     Friend WithEvents Label13 As System.Windows.Forms.Label
     Friend WithEvents TxtBarrio2 As System.Windows.Forms.TextBox
     Friend WithEvents Label14 As System.Windows.Forms.Label
@@ -1560,4 +1562,6 @@ Partial Class frmCliente
     Friend WithEvents Label19 As System.Windows.Forms.Label
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
     Friend WithEvents txtNroDoc As System.Windows.Forms.TextBox
+    Friend WithEvents CbPais2 As System.Windows.Forms.ComboBox
+    Friend WithEvents CbPais As System.Windows.Forms.ComboBox
 End Class
