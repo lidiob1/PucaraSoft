@@ -32,23 +32,23 @@ Public Class ClientesDA
             desconectado()
         End Try
     End Function
-
-    Public Function insertar(ByVal dts As ClientesNE) As Boolean
+    Public Function insertarJuridica(ByVal dts As ClientesNE) As Boolean
         Try
             conectado()
-            cmd = New SqlCommand("insert into cliente(nro_doc,nombre,apellido,fecha_nac,fecha_alta,calle,telefono,celular,mail,TipoCliente,NumeroCalle,Edificio,Piso, Dpto,CP,Barrio,Pais,Provincia,Ciudad,habilitado)values (@nro_doc,@nombre,@apellido,@fecha_nac,@fecha_alta,@calle,@telefono,@celular,@mail,@tipoCliente,@NumeroCalle,@Edificio,@Piso, @Dpto,@CP,@Barrio,@Pais,@Provincia,@Ciudad,@habilitado)")
+
+            cmd = New SqlCommand("insert into cliente(nro_doc,id_tipo_dni,RazonSocial,Fantasia,fecha_nac,fecha_alta,calle,telefono,celular,mail,TipoCliente,NumeroCalle,Edificio,Piso, Dpto,CP,Barrio,Pais,Provincia,Ciudad,habilitado,nombre,apellido)values (@nro_doc,@id_tipo_dni,@RazonSocial,@Fantasia,@fecha_nac,@fecha_alta,@calle,@telefono,@celular,@mail,@tipoCliente,@NumeroCalle,@Edificio,@Piso, @Dpto,@CP,@Barrio,@Pais,@Provincia,@Ciudad,@habilitado,@nombre,@apellido)")
             cmd.CommandType = CommandType.Text
             cmd.Connection = cnn
 
             cmd.Parameters.AddWithValue("@nro_doc", dts.Nro_Doc)
-            cmd.Parameters.AddWithValue("@nombre", dts.Nombre)
-            cmd.Parameters.AddWithValue("@apellido", dts.apellido)
-            cmd.Parameters.AddWithValue("@fecha_nac", dts.Fecha_nac)
+            cmd.Parameters.AddWithValue("@RazonSocial", dts.RazonSocial)
+            cmd.Parameters.AddWithValue("@Fantasia", dts.Fantasia)
+            cmd.Parameters.AddWithValue("@fecha_nac", dts.fecha_nac)
             cmd.Parameters.AddWithValue("@fecha_alta", dts.fecha_alta)
             cmd.Parameters.AddWithValue("@Calle", dts.Calle)
-            cmd.Parameters.AddWithValue("@telefono", dts.Telefono)
-            cmd.Parameters.AddWithValue("@celular", dts.Celular)
-            cmd.Parameters.AddWithValue("@mail", dts.Mail)
+            cmd.Parameters.AddWithValue("@telefono", dts.telefono)
+            cmd.Parameters.AddWithValue("@celular", dts.celular)
+            cmd.Parameters.AddWithValue("@mail", dts.mail)
             cmd.Parameters.AddWithValue("@tipocliente", dts.TipoCliente)
             cmd.Parameters.AddWithValue("@NumeroCalle", dts.NumCalle)
             cmd.Parameters.AddWithValue("@Edificio", dts.Edificio)
@@ -60,6 +60,54 @@ Public Class ClientesDA
             cmd.Parameters.AddWithValue("@Provincia", dts.Provincia)
             cmd.Parameters.AddWithValue("@Ciudad", dts.Ciudad)
             cmd.Parameters.AddWithValue("@habilitado", dts.habilitado)
+            cmd.Parameters.AddWithValue("@id_tipo_dni", dts.habilitado)
+            cmd.Parameters.AddWithValue("@Nombre", dts.nombre)
+            cmd.Parameters.AddWithValue("@Apellido", dts.apellido)
+
+            If cmd.ExecuteNonQuery Then
+                Return True
+            Else
+                Return False
+            End If
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return False
+        Finally
+            desconectado()
+        End Try
+    End Function
+    Public Function insertar(ByVal dts As ClientesNE) As Boolean
+        Try
+            conectado()
+
+            cmd = New SqlCommand("insert into cliente(nro_doc,id_tipo_dni,nombre,apellido,fecha_nac,fecha_alta,calle,telefono,celular,mail,TipoCliente,NumeroCalle,Edificio,Piso, Dpto,CP,Barrio,Pais,Provincia,Ciudad,habilitado,razonsocial,fantasia)values (@nro_doc,@id_tipo_dni,@nombre,@apellido,@fecha_nac,@fecha_alta,@calle,@telefono,@celular,@mail,@tipoCliente,@NumeroCalle,@Edificio,@Piso, @Dpto,@CP,@Barrio,@Pais,@Provincia,@Ciudad,@habilitado,@razonsocial,@fantasia)")
+            cmd.CommandType = CommandType.Text
+            cmd.Connection = cnn
+
+            cmd.Parameters.AddWithValue("@nro_doc", dts.Nro_Doc)
+            cmd.Parameters.AddWithValue("@id_tipo_dni", dts.Tipo_dni)
+            cmd.Parameters.AddWithValue("@nombre", dts.nombre)
+            cmd.Parameters.AddWithValue("@apellido", dts.apellido)
+            cmd.Parameters.AddWithValue("@fecha_nac", dts.fecha_nac)
+            cmd.Parameters.AddWithValue("@fecha_alta", dts.fecha_alta)
+            cmd.Parameters.AddWithValue("@Calle", dts.Calle)
+            cmd.Parameters.AddWithValue("@telefono", dts.telefono)
+            cmd.Parameters.AddWithValue("@celular", dts.celular)
+            cmd.Parameters.AddWithValue("@mail", dts.mail)
+            cmd.Parameters.AddWithValue("@tipocliente", dts.TipoCliente)
+            cmd.Parameters.AddWithValue("@NumeroCalle", dts.NumCalle)
+            cmd.Parameters.AddWithValue("@Edificio", dts.Edificio)
+            cmd.Parameters.AddWithValue("@Piso", dts.Piso)
+            cmd.Parameters.AddWithValue("@Dpto", dts.Dpto)
+            cmd.Parameters.AddWithValue("@CP", dts.CP)
+            cmd.Parameters.AddWithValue("@Barrio", dts.Barrio)
+            cmd.Parameters.AddWithValue("@Pais", dts.Pais)
+            cmd.Parameters.AddWithValue("@Provincia", dts.Provincia)
+            cmd.Parameters.AddWithValue("@Ciudad", dts.Ciudad)
+            cmd.Parameters.AddWithValue("@habilitado", dts.habilitado)
+            cmd.Parameters.AddWithValue("@RazonSocial", dts.RazonSocial)
+            cmd.Parameters.AddWithValue("@Fantasia", dts.Fantasia)
 
             If cmd.ExecuteNonQuery Then
                 Return True
@@ -76,6 +124,43 @@ Public Class ClientesDA
     End Function
 
     '************************************ Funcion Editar CLiente******************************
+    Public Function editarJuridica(ByVal dts As ClientesNE) As Boolean
+        Try
+            conectado()
+            cmd = New SqlCommand("update cliente set RazonSocial=@RazonSocial,Fantasia=@Fantasia,fecha_nac=@fecha_nac,Calle=@Calle,telefono=@telefono,celular=@celular,mail=@mail,NumeroCalle=@NumeroCalle,Edificio=@Edificio,Piso=@Piso,Dpto=@Dpto,CP=@CP,Barrio=@Barrio,Pais=@Pais,Provincia=@Provincia,Ciudad=@Ciudad where nro_doc=@nro_doc")
+            cmd.CommandType = CommandType.Text
+            cmd.Connection = cnn
+            cmd.Parameters.Add("@nro_doc", SqlDbType.NVarChar, 50).Value = dts.Nro_Doc
+
+            cmd.Parameters.AddWithValue("@RazonSocial", dts.RazonSocial)
+            cmd.Parameters.AddWithValue("@Fantasia", dts.Fantasia)
+            cmd.Parameters.AddWithValue("@fecha_nac", dts.fecha_nac)
+            cmd.Parameters.AddWithValue("@Calle", dts.Calle)
+            cmd.Parameters.AddWithValue("@telefono", dts.telefono)
+            cmd.Parameters.AddWithValue("@celular", dts.celular)
+            cmd.Parameters.AddWithValue("@mail", dts.mail)
+            cmd.Parameters.AddWithValue("@NumeroCalle", dts.NumCalle)
+            cmd.Parameters.AddWithValue("@Edificio", dts.Edificio)
+            cmd.Parameters.AddWithValue("@Piso", dts.Piso)
+            cmd.Parameters.AddWithValue("@Dpto", dts.Dpto)
+            cmd.Parameters.AddWithValue("@CP", dts.CP)
+            cmd.Parameters.AddWithValue("@Barrio", dts.Barrio)
+            cmd.Parameters.AddWithValue("@Pais", dts.Pais)
+            cmd.Parameters.AddWithValue("@Provincia", dts.Provincia)
+            cmd.Parameters.AddWithValue("@Ciudad", dts.Ciudad)
+
+            If cmd.ExecuteNonQuery Then
+                Return True
+            Else
+                Return False
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return False
+        Finally
+            desconectado()
+        End Try
+    End Function
     Public Function editar(ByVal dts As ClientesNE) As Boolean
         Try
             conectado()

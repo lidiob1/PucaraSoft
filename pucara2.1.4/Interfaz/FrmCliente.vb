@@ -54,6 +54,26 @@ Public Class frmCliente
         DTPFecAlta2.Text = ""
         DTPFecNac2.Text = ""
 
+        txtNroDoc.Enabled = True
+        cbTipoDoc.Enabled = True
+        txtNombre.Enabled = True
+        txtApellido.Enabled = True
+        txtCalle.Enabled = True
+        TxtNumero.Enabled = True
+        TxtEdificio.Enabled = True
+        txtPiso.Enabled = True
+        TxtDpto.Enabled = True
+        TxtCP.Enabled = True
+        TxtBarrio.Enabled = True
+        CbPais.Enabled = True
+        TxtProvincia.Enabled = True
+        TxtCiudad.Enabled = True
+        MtxtTel.Enabled = True
+        MtxtCelular.Enabled = True
+        txtMail.Enabled = True
+        DTPFecAlta.Enabled = True
+        DTPFecNac.Enabled = True
+
         MtxtCuit.Enabled = False
         TxtRazSocial.Enabled = False
         TxtFantasia.Enabled = False
@@ -84,36 +104,27 @@ Public Class frmCliente
             dgvListado.Columns.Item("Inhabilitar").Visible = False
             dgvListado.Columns.Item("Habilitar").Visible = False
 
-
-
             If dt.Rows.Count <> 0 Then
-
                 dgvListado.DataSource = dt
                 txtBuscar.Enabled = True
                 dgvListado.ColumnHeadersVisible = True
                 lkNoexiste.Visible = False
-
             Else
-
                 dgvListado.DataSource = Nothing
                 txtBuscar.Enabled = False
                 dgvListado.ColumnHeadersVisible = False
                 lkNoexiste.Visible = True
-
-
             End If
-
         Catch ex As Exception
             MsgBox(ex.Message)
 
         End Try
-
         btnNuevo.Visible = True
         btnEditar.Visible = False
 
         buscar_cli()
         AlineadoDerecha()
-        limpiar()
+        'limpiar()
         LimpiarCheckBox_cli()
 
     End Sub
@@ -149,7 +160,17 @@ Public Class frmCliente
         dgvListado.Columns(1).Visible = False
 
     End Sub
+    '**************************BOTON CANCELAR************************
+    Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
+        Dim result As DialogResult
+        result = MessageBox.Show("Relmente desea cancelar la carga de registros", "Cancelando Registros", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
 
+        If result = DialogResult.OK Then
+            Me.Close()
+        Else
+            mostrar()
+        End If
+    End Sub
     '*************************BOTON NUEVO****************************
     Private Sub btnNuevo_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnNuevo.Click
         limpiar()
@@ -157,22 +178,25 @@ Public Class frmCliente
 
     End Sub
     '******************************** BOTON GUARDAR *************************************
-    Private Sub btnGuardar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnGuardar.Click
+    Public Sub btnGuardar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnGuardar.Click
 
         If DTPFecAlta.Value.Date <= DTPFecNac.Value.Date Then
             MessageBox.Show("La fecha de nacimiento no puede ser mayor a la fecha de alta!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Return
         End If
 
-        If Me.ValidateChildren = True And txtNroDoc.Text <> "" And txtNombre.Text <> "" And txtApellido.Text <> "" And MtxtTel.Text <> "" And MtxtCelular.Text <> "" And txtMail.Text <> "" Then
+        If Me.ValidateChildren = True Then
             Try
                 Dim dts As New ClientesNE
                 Dim func As New ClientesDA
 
                 If CHkFisica.Checked = True Then
 
+                    dts.RazonSocial = "-"
+                    dts.Fantasia = "-"
                     dts.TipoCliente = 1
                     dts.Nro_Doc = txtNroDoc.Text
+                    dts.Tipo_dni = cbTipoDoc.Text
                     dts.nombre = txtNombre.Text
                     dts.apellido = txtApellido.Text
                     dts.fecha_nac = DTPFecNac.Value
@@ -214,11 +238,20 @@ Public Class frmCliente
                     dts.Provincia = TxtProvincia2.Text
                     dts.Ciudad = TxtCiudad2.Text
                     dts.habilitado = 1 'predeterminado a habilitado al crearse 
+                    dts.Tipo_dni = "-"
+                    dts.nombre = "-"
+                    dts.apellido = "-"
 
                 End If
-                
 
-                If func.insertar(dts) Then
+
+                If CHkFisica.Checked = True Then
+                    func.insertar(dts)
+                    MessageBox.Show("Cliente cargado correctamente!", "Guardando registros", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    mostrar()
+                    limpiar()
+                ElseIf CHkJuridica.Checked = True Then
+                    func.insertarJuridica(dts)
                     MessageBox.Show("Cliente cargado correctamente!", "Guardando registros", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     mostrar()
                     limpiar()
@@ -226,7 +259,6 @@ Public Class frmCliente
                     MessageBox.Show("Cliente no fue registrado, intente nuevamente!", "Guardando registros", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     mostrar()
                     limpiar()
-
                 End If
 
 
@@ -369,35 +401,59 @@ Public Class frmCliente
                 Return
             End If
 
-            If Me.ValidateChildren = True And txtNombre.Text <> "" And txtApellido.Text <> "" And MtxtTel.Text <> "" And MtxtCelular.Text <> "" And txtMail.Text <> "" Then
+            If Me.ValidateChildren = True Then
                 Try
                     Dim dts As New ClientesNE
                     Dim func As New ClientesDA
 
-                    dts.Nro_Doc = txtNroDoc.Text
-                    dts.nombre = txtNombre.Text
-                    dts.apellido = txtApellido.Text
-                    dts.fecha_nac = DTPFecNac.Value
-                    dts.Calle = txtCalle.Text
-                    dts.telefono = MtxtTel.Text
-                    dts.celular = MtxtCelular.Text
-                    dts.mail = txtMail.Text
-                    dts.NumCalle = TxtNumero.Text
-                    dts.Edificio = TxtEdificio.Text
-                    dts.Piso = txtPiso.Text
-                    dts.Dpto = TxtDpto.Text
-                    dts.CP = TxtCP.Text
-                    dts.Barrio = TxtBarrio.Text
-                    dts.Pais = CbPais.Text
-                    dts.Provincia = TxtProvincia.Text
-                    dts.Ciudad = TxtCiudad.Text
+                    If CHkFisica.Checked = True Then
+
+                        dts.Tipo_dni = cbTipoDoc.Text
+                        dts.nombre = txtNombre.Text
+                        dts.apellido = txtApellido.Text
+                        dts.fecha_nac = DTPFecNac.Value
+                        dts.Calle = txtCalle.Text
+                        dts.telefono = MtxtTel.Text
+                        dts.celular = MtxtCelular.Text
+                        dts.mail = txtMail.Text
+                        dts.NumCalle = TxtNumero.Text
+                        dts.Edificio = TxtEdificio.Text
+                        dts.Piso = txtPiso.Text
+                        dts.Dpto = TxtDpto.Text
+                        dts.CP = TxtCP.Text
+                        dts.Barrio = TxtBarrio.Text
+                        dts.Pais = CbPais.Text
+                        dts.Provincia = TxtProvincia.Text
+                        dts.Ciudad = TxtCiudad.Text
 
 
-                    If func.editar(dts) Then
+                    ElseIf CHkJuridica.Checked = True Then
+
+                        dts.RazonSocial = TxtRazSocial.Text
+                        dts.Fantasia = TxtFantasia.Text
+                        dts.fecha_nac = DTPFecNac2.Value
+                        dts.Calle = TxtCalle2.Text
+                        dts.telefono = MtxtTel2.Text
+                        dts.celular = MtxtCelular2.Text
+                        dts.mail = TxtMail2.Text
+                        dts.NumCalle = TxtNumero2.Text
+                        dts.Edificio = TxtEdificio2.Text
+                        dts.Piso = TxtPiso2.Text
+                        dts.Dpto = TxtDPto2.Text
+                        dts.CP = TxtCP2.Text
+                        dts.Barrio = TxtBarrio2.Text
+                        dts.Pais = CbPais2.Text
+                        dts.Provincia = TxtProvincia2.Text
+                        dts.Ciudad = TxtCiudad2.Text
+
+                    End If
+
+                    If CHkFisica.Checked = True Then
+                        func.editar(dts)
                         MessageBox.Show("Cliente modificado correctamente!", "Modificando registros", MessageBoxButtons.OK, MessageBoxIcon.Information)
                         mostrar()
                         limpiar()
-                    Else
+                    ElseIf CHkJuridica.Checked = True Then
                         MessageBox.Show("Cliente no fue modificado, intente nuevamente!", "Modificando registros", MessageBoxButtons.OK, MessageBoxIcon.Error)
                         mostrar()
                         limpiar()
@@ -420,7 +476,6 @@ Public Class frmCliente
         End If
     End Sub
 
-
     Private Sub CbHabilitar_cli_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CbHabilitar_cli.CheckedChanged
         If CbHabilitar_cli.CheckState = CheckState.Checked Then
             dgvListado.Columns.Item("Habilitar").Visible = True
@@ -428,7 +483,6 @@ Public Class frmCliente
             dgvListado.Columns.Item("Habilitar").Visible = False
         End If
     End Sub
-
     '**************************ALINEADO A LA DERECHA********************************************
     Public Sub AlineadoDerecha()
         'Me.DataListado_cli.Columns(10).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
@@ -456,6 +510,15 @@ Public Class frmCliente
             txtMail.SelectAll()
         End If
     End Sub
+
+    Private Sub TxtMail2_Leave(sender As Object, e As EventArgs) Handles TxtMail2.Leave
+        If validar_Mail(LCase(TxtMail2.Text)) = False Then
+            MessageBox.Show("Dirección de correo electronico no valida, el correo debe tener el formato: nombre@dominio.com, " & _
+            " por favor seleccione un correo valido", "Validación de correo electronico", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            TxtMail2.Focus()
+            TxtMail2.SelectAll()
+        End If
+    End Sub
     '******************************************VALIDAR NOMBRE SOLO LETRAS***********************************
     Private Sub txtNombre_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtNombre.KeyPress
         If Char.IsLetter(e.KeyChar) Then
@@ -468,7 +531,6 @@ Public Class frmCliente
             e.Handled = True
         End If
     End Sub
-
     Private Sub txtApellido_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtApellido.KeyPress
         If Char.IsLetter(e.KeyChar) Then
             e.Handled = False
@@ -480,11 +542,8 @@ Public Class frmCliente
             e.Handled = True
         End If
     End Sub
-    '*************************************VALIDAR TELEFONO, CELULAR, DNI (SOLO NUMEROS)******************************
-    Private Sub MtxtTel_KeyPress(sender As Object, e As KeyPressEventArgs) Handles MtxtTel.KeyPress
-        e.Handled = Fg_SoloNumeros(e.KeyChar, MtxtTel.Text & CChar(e.KeyChar))
-    End Sub
 
+    '*************************************VALIDAR TELEFONO, CELULAR, DNI (SOLO NUMEROS)******************************
     Function Fg_SoloNumeros(ByVal Digito As String, ByVal Texto As String) As Boolean
         Dim Dt_Entero As Integer = CInt(Asc(Digito))
         If Dt_Entero = 8 Then
@@ -500,17 +559,29 @@ Public Class frmCliente
         End If
         Return Fg_SoloNumeros
     End Function
-
+    Private Sub MtxtTel_KeyPress(sender As Object, e As KeyPressEventArgs) Handles MtxtTel.KeyPress
+        e.Handled = Fg_SoloNumeros(e.KeyChar, MtxtTel.Text & CChar(e.KeyChar))
+    End Sub
     Private Sub MtxtCelular_KeyPress(sender As Object, e As KeyPressEventArgs) Handles MtxtCelular.KeyPress
         e.Handled = Fg_SoloNumeros(e.KeyChar, MtxtCelular.Text & CChar(e.KeyChar))
     End Sub
-
     Private Sub txtNroDoc_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtNroDoc.KeyPress
+        e.Handled = Fg_SoloNumeros(e.KeyChar, txtNroDoc.Text & CChar(e.KeyChar))
+    End Sub
+    Private Sub TxtNumero_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtNumero.KeyPress
+        e.Handled = Fg_SoloNumeros(e.KeyChar, txtNroDoc.Text & CChar(e.KeyChar))
+    End Sub
+    Private Sub TxtNumero2_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtNumero2.KeyPress
+        e.Handled = Fg_SoloNumeros(e.KeyChar, txtNroDoc.Text & CChar(e.KeyChar))
+    End Sub
+    Private Sub TxtCP_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtCP.KeyPress
+        e.Handled = Fg_SoloNumeros(e.KeyChar, txtNroDoc.Text & CChar(e.KeyChar))
+    End Sub
+    Private Sub TxtCP2_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtCP2.KeyPress
         e.Handled = Fg_SoloNumeros(e.KeyChar, txtNroDoc.Text & CChar(e.KeyChar))
     End Sub
 
     '*******************************BUSCAR CLIENTES****************************
-
     Private Sub txtBuscar_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtBuscar.TextChanged
         Try
             Dim ds As New DataSet
@@ -536,7 +607,6 @@ Public Class frmCliente
 
     '--------------------------------------------------------------------------------
     ' Buscar nombre y apellido de cliente desde su numero de documento
-    '--------------------------------------------------------------------------------
     Private Sub buscarCliente()
         Dim objCliente As New ClientesNE
         'Dim objPresupuestoDA As New ClientesDA
@@ -581,7 +651,7 @@ Public Class frmCliente
                     Dim marcado As Boolean = Convert.ToBoolean(row.Cells("Inhabilitar").Value)
 
                     If marcado Then
-                        Dim oneKey As Integer = Convert.ToInt32(row.Cells("Nro_DNI").Value)
+                        Dim oneKey As Integer = Convert.ToInt32(row.Cells("DNI").Value)
                         Dim cdb As New ClientesNE
                         Dim func As New ClientesDA
                         cdb._Nro_Doc = oneKey
@@ -617,7 +687,7 @@ Public Class frmCliente
                     Dim marcado As Boolean = Convert.ToBoolean(row.Cells("Habilitar").Value)
 
                     If marcado Then
-                        Dim oneKey As Integer = Convert.ToInt32(row.Cells("Nro_DNI").Value)
+                        Dim oneKey As Integer = Convert.ToInt32(row.Cells("DNI").Value)
                         Dim vdb As New ClientesNE
                         Dim func As New ClientesDA
                         vdb._Nro_Doc = oneKey
@@ -709,26 +779,6 @@ Public Class frmCliente
     Public Sub LimpInhFisica()
         CHkFisica.Checked = False
         CHkJuridica.Checked = True
-
-        txtNroDoc.Enabled = False
-        cbTipoDoc.Enabled = False
-        txtNombre.Enabled = False
-        txtApellido.Enabled = False
-        txtCalle.Enabled = False
-        TxtNumero.Enabled = False
-        TxtEdificio.Enabled = False
-        txtPiso.Enabled = False
-        TxtDpto.Enabled = False
-        TxtCP.Enabled = False
-        TxtBarrio.Enabled = False
-        CbPais.Enabled = False
-        TxtProvincia.Enabled = False
-        TxtCiudad.Enabled = False
-        MtxtTel.Enabled = False
-        MtxtCelular.Enabled = False
-        txtMail.Enabled = False
-        DTPFecAlta.Enabled = False
-        DTPFecNac.Enabled = False
 
         txtNroDoc.Text = ""
         cbTipoDoc.Text = "Seleccione una opcion..."
@@ -865,4 +915,5 @@ Public Class frmCliente
         DTPFecNac2.Enabled = True
     End Sub
 
+    
 End Class

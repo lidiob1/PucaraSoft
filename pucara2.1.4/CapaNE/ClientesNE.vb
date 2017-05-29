@@ -1,11 +1,11 @@
 ﻿Public Class ClientesNE
 
-    Public Nro_Doc As Integer
-    Public Property _Nro_Doc() As Integer
+    Public Nro_Doc As String
+    Public Property _Nro_Doc() As String
         Get
             Return Nro_Doc
         End Get
-        Set(ByVal value As Integer)
+        Set(ByVal value As String)
             Nro_Doc = value
         End Set
     End Property

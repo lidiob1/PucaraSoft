@@ -39,6 +39,7 @@ Partial Class frmCliente
         Me.Label58 = New System.Windows.Forms.Label()
         Me.Label56 = New System.Windows.Forms.Label()
         Me.GroupBox7 = New System.Windows.Forms.GroupBox()
+        Me.CbPais2 = New System.Windows.Forms.ComboBox()
         Me.Label63 = New System.Windows.Forms.Label()
         Me.Label62 = New System.Windows.Forms.Label()
         Me.Label61 = New System.Windows.Forms.Label()
@@ -86,6 +87,7 @@ Partial Class frmCliente
         Me.Label55 = New System.Windows.Forms.Label()
         Me.Label54 = New System.Windows.Forms.Label()
         Me.GroupBox6 = New System.Windows.Forms.GroupBox()
+        Me.CbPais = New System.Windows.Forms.ComboBox()
         Me.Label53 = New System.Windows.Forms.Label()
         Me.Label52 = New System.Windows.Forms.Label()
         Me.Label51 = New System.Windows.Forms.Label()
@@ -142,8 +144,6 @@ Partial Class frmCliente
         Me.txtBuscar = New System.Windows.Forms.TextBox()
         Me.CboCampo = New System.Windows.Forms.ComboBox()
         Me.Erroricono = New System.Windows.Forms.ErrorProvider(Me.components)
-        Me.CbPais2 = New System.Windows.Forms.ComboBox()
-        Me.CbPais = New System.Windows.Forms.ComboBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
@@ -192,7 +192,7 @@ Partial Class frmCliente
         Me.btnNuevo.Location = New System.Drawing.Point(6, 15)
         Me.btnNuevo.Name = "btnNuevo"
         Me.btnNuevo.Size = New System.Drawing.Size(96, 23)
-        Me.btnNuevo.TabIndex = 6
+        Me.btnNuevo.TabIndex = 0
         Me.btnNuevo.Text = "Nuevo"
         Me.btnNuevo.UseVisualStyleBackColor = True
         '
@@ -203,7 +203,7 @@ Partial Class frmCliente
         Me.btnCancelar.Location = New System.Drawing.Point(210, 15)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(96, 23)
-        Me.btnCancelar.TabIndex = 8
+        Me.btnCancelar.TabIndex = 3
         Me.btnCancelar.Text = "Cancelar"
         Me.btnCancelar.UseVisualStyleBackColor = True
         '
@@ -211,10 +211,10 @@ Partial Class frmCliente
         '
         Me.BtnHabilitar_cli.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnHabilitar_cli.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.BtnHabilitar_cli.Location = New System.Drawing.Point(311, 15)
+        Me.BtnHabilitar_cli.Location = New System.Drawing.Point(312, 15)
         Me.BtnHabilitar_cli.Name = "BtnHabilitar_cli"
         Me.BtnHabilitar_cli.Size = New System.Drawing.Size(96, 23)
-        Me.BtnHabilitar_cli.TabIndex = 10
+        Me.BtnHabilitar_cli.TabIndex = 4
         Me.BtnHabilitar_cli.Text = "Habilitar"
         Me.BtnHabilitar_cli.UseVisualStyleBackColor = True
         '
@@ -225,7 +225,7 @@ Partial Class frmCliente
         Me.btnEditar.Location = New System.Drawing.Point(108, 15)
         Me.btnEditar.Name = "btnEditar"
         Me.btnEditar.Size = New System.Drawing.Size(96, 23)
-        Me.btnEditar.TabIndex = 7
+        Me.btnEditar.TabIndex = 1
         Me.btnEditar.Text = "Editar"
         Me.btnEditar.UseVisualStyleBackColor = True
         '
@@ -236,7 +236,7 @@ Partial Class frmCliente
         Me.BtnInhabilitar_cli.Location = New System.Drawing.Point(312, 15)
         Me.BtnInhabilitar_cli.Name = "BtnInhabilitar_cli"
         Me.BtnInhabilitar_cli.Size = New System.Drawing.Size(96, 23)
-        Me.BtnInhabilitar_cli.TabIndex = 11
+        Me.BtnInhabilitar_cli.TabIndex = 5
         Me.BtnInhabilitar_cli.Text = "Inhabilitar"
         Me.BtnInhabilitar_cli.UseVisualStyleBackColor = True
         '
@@ -247,7 +247,7 @@ Partial Class frmCliente
         Me.btnGuardar.Location = New System.Drawing.Point(108, 15)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(96, 23)
-        Me.btnGuardar.TabIndex = 9
+        Me.btnGuardar.TabIndex = 2
         Me.btnGuardar.Text = "Guardar"
         Me.btnGuardar.UseVisualStyleBackColor = True
         '
@@ -371,6 +371,15 @@ Partial Class frmCliente
         Me.GroupBox7.TabStop = False
         Me.GroupBox7.Text = "Dirección"
         '
+        'CbPais2
+        '
+        Me.CbPais2.FormattingEnabled = True
+        Me.CbPais2.Items.AddRange(New Object() {"Argentina", "Afganistán", "Albania", "Alemania", "Andorra", "Angola", "Antigua y Barbuda", "Arabia Saudita", "Argelia", "Armenia", "Australia", "Austria", "Azerbaiyán", "Bahamas", "Bangladés", "Barbados", "Baréin", "Bélgica", "Belice", "Benín", "Bielorrusia", "Birmania", "Bolivia", "Bosnia y Herzegovina", "Botsuana", "Brasil", "Brunéi", "Bulgaria", "Burkina Faso", "Burundi", "Bután", "Cabo Verde", "Camboya", "Camerún", "Canadá", "Catar", "Chad", "Chile", "China", "Chipre", "Ciudad del Vaticano", "Colombia", "Comoras", "Corea del Norte", "Corea del Sur", "Costa de Marfil", "Costa Rica", "Croacia", "Cuba", "Dinamarca", "Dominica", "Ecuador", "Egipto", "El Salvador", "Emiratos Árabes Unidos", "Eritrea", "Eslovaquia", "Eslovenia", "España", "Estados Unidos", "Estonia", "Etiopía", "Filipinas", "Finlandia", "Fiyi", "Francia", "Gabón", "Gambia", "Georgia", "Ghana", "Granada", "Grecia", "Guatemala", "Guyana", "Guinea", "Guinea ecuatorial", "Guinea-Bisáu", "Haití", "Honduras", "Hungría", "India", "Indonesia", "Irak", "Irán", "Irlanda", "Islandia", "Islas Marshall", "Islas Salomón", "Israel", "Italia", "Jamaica", "Japón", "Jordania", "Kazajistán", "Kenia", "Kirguistán", "Kiribati", "Kuwait", "Laos", "Lesoto", "Letonia", "Líbano", "Liberia", "Libia", "Liechtenstein", "Lituania", "Luxemburgo", "Madagascar", "Malasia", "Malaui", "Maldivas", "Malí", "Malta", "Marruecos", "Mauricio", "Mauritania", "México", "Micronesia", "Moldavia", "Mónaco", "Mongolia", "Montenegro", "Mozambique", "Namibia", "Nauru", "Nepal", "Nicaragua", "Níger", "Nigeria", "Noruega", "Nueva Zelanda", "Omán", "Países Bajos", "Pakistán", "Palaos", "Panamá", "Papúa Nueva Guinea", "Paraguay", "Perú", "Polonia", "Portugal", "Reino Unido", "República Centroafricana", "República Checa", "República de Macedonia", "República del Congo", "República Democrática del Congo", "República Dominicana", "República Sudafricana", "Ruanda", "Rumanía", "Rusia", "Samoa", "San Cristóbal y Nieves", "San Marino", "San Vicente y las Granadinas", "Santa Lucía", "Santo Tomé y Príncipe", "Senegal", "Serbia", "Seychelles", "Sierra Leona", "Singapur", "Siria", "Somalia", "Sri Lanka", "Suazilandia", "Sudán", "Sudán del Sur", "Suecia", "Suiza", "Surinam", "Tailandia", "Tanzania", "Tayikistán", "Timor Oriental", "Togo", "Tonga", "Trinidad y Tobago", "Túnez", "Turkmenistán", "Turquía", "Tuvalu", "Ucrania", "Uganda", "Uruguay", "Uzbekistán", "Vanuatu", "Venezuela", "Vietnam", "Yemen", "Yibuti", "Zambia", "Zimbabue"})
+        Me.CbPais2.Location = New System.Drawing.Point(297, 71)
+        Me.CbPais2.Name = "CbPais2"
+        Me.CbPais2.Size = New System.Drawing.Size(245, 22)
+        Me.CbPais2.TabIndex = 7
+        '
         'Label63
         '
         Me.Label63.AutoSize = True
@@ -442,7 +451,7 @@ Partial Class frmCliente
         Me.TxtCiudad2.Location = New System.Drawing.Point(297, 99)
         Me.TxtCiudad2.Name = "TxtCiudad2"
         Me.TxtCiudad2.Size = New System.Drawing.Size(245, 22)
-        Me.TxtCiudad2.TabIndex = 30
+        Me.TxtCiudad2.TabIndex = 9
         '
         'Label11
         '
@@ -471,7 +480,7 @@ Partial Class frmCliente
         Me.TxtProvincia2.Location = New System.Drawing.Point(74, 99)
         Me.TxtProvincia2.Name = "TxtProvincia2"
         Me.TxtProvincia2.Size = New System.Drawing.Size(146, 22)
-        Me.TxtProvincia2.TabIndex = 27
+        Me.TxtProvincia2.TabIndex = 8
         '
         'Label13
         '
@@ -489,7 +498,7 @@ Partial Class frmCliente
         Me.TxtBarrio2.Location = New System.Drawing.Point(74, 72)
         Me.TxtBarrio2.Name = "TxtBarrio2"
         Me.TxtBarrio2.Size = New System.Drawing.Size(163, 22)
-        Me.TxtBarrio2.TabIndex = 24
+        Me.TxtBarrio2.TabIndex = 6
         '
         'Label14
         '
@@ -507,7 +516,7 @@ Partial Class frmCliente
         Me.TxtCP2.Location = New System.Drawing.Point(496, 44)
         Me.TxtCP2.Name = "TxtCP2"
         Me.TxtCP2.Size = New System.Drawing.Size(58, 22)
-        Me.TxtCP2.TabIndex = 22
+        Me.TxtCP2.TabIndex = 5
         '
         'Label15
         '
@@ -525,7 +534,7 @@ Partial Class frmCliente
         Me.TxtDPto2.Location = New System.Drawing.Point(394, 45)
         Me.TxtDPto2.Name = "TxtDPto2"
         Me.TxtDPto2.Size = New System.Drawing.Size(58, 22)
-        Me.TxtDPto2.TabIndex = 20
+        Me.TxtDPto2.TabIndex = 4
         '
         'Label16
         '
@@ -543,7 +552,7 @@ Partial Class frmCliente
         Me.TxtPiso2.Location = New System.Drawing.Point(289, 45)
         Me.TxtPiso2.Name = "TxtPiso2"
         Me.TxtPiso2.Size = New System.Drawing.Size(54, 22)
-        Me.TxtPiso2.TabIndex = 18
+        Me.TxtPiso2.TabIndex = 3
         '
         'Label17
         '
@@ -561,7 +570,7 @@ Partial Class frmCliente
         Me.TxtEdificio2.Location = New System.Drawing.Point(74, 45)
         Me.TxtEdificio2.Name = "TxtEdificio2"
         Me.TxtEdificio2.Size = New System.Drawing.Size(163, 22)
-        Me.TxtEdificio2.TabIndex = 16
+        Me.TxtEdificio2.TabIndex = 2
         '
         'Label18
         '
@@ -579,14 +588,14 @@ Partial Class frmCliente
         Me.TxtNumero2.Location = New System.Drawing.Point(387, 17)
         Me.TxtNumero2.Name = "TxtNumero2"
         Me.TxtNumero2.Size = New System.Drawing.Size(117, 22)
-        Me.TxtNumero2.TabIndex = 13
+        Me.TxtNumero2.TabIndex = 1
         '
         'TxtCalle2
         '
         Me.TxtCalle2.Location = New System.Drawing.Point(74, 18)
         Me.TxtCalle2.Name = "TxtCalle2"
         Me.TxtCalle2.Size = New System.Drawing.Size(242, 22)
-        Me.TxtCalle2.TabIndex = 12
+        Me.TxtCalle2.TabIndex = 0
         '
         'Label20
         '
@@ -605,7 +614,7 @@ Partial Class frmCliente
         Me.MtxtCuit.Mask = "00-00000000-0"
         Me.MtxtCuit.Name = "MtxtCuit"
         Me.MtxtCuit.Size = New System.Drawing.Size(110, 22)
-        Me.MtxtCuit.TabIndex = 88
+        Me.MtxtCuit.TabIndex = 0
         '
         'CHkJuridica
         '
@@ -622,7 +631,7 @@ Partial Class frmCliente
         Me.DTPFecAlta2.Location = New System.Drawing.Point(355, 264)
         Me.DTPFecAlta2.Name = "DTPFecAlta2"
         Me.DTPFecAlta2.Size = New System.Drawing.Size(163, 22)
-        Me.DTPFecAlta2.TabIndex = 87
+        Me.DTPFecAlta2.TabIndex = 7
         '
         'DTPFecNac2
         '
@@ -630,7 +639,7 @@ Partial Class frmCliente
         Me.DTPFecNac2.Location = New System.Drawing.Point(83, 264)
         Me.DTPFecNac2.Name = "DTPFecNac2"
         Me.DTPFecNac2.Size = New System.Drawing.Size(163, 22)
-        Me.DTPFecNac2.TabIndex = 56
+        Me.DTPFecNac2.TabIndex = 6
         '
         'Label42
         '
@@ -671,7 +680,7 @@ Partial Class frmCliente
         Me.MtxtTel2.Mask = "(9999)000-0000"
         Me.MtxtTel2.Name = "MtxtTel2"
         Me.MtxtTel2.Size = New System.Drawing.Size(163, 22)
-        Me.MtxtTel2.TabIndex = 83
+        Me.MtxtTel2.TabIndex = 3
         '
         'MtxtCelular2
         '
@@ -679,7 +688,7 @@ Partial Class frmCliente
         Me.MtxtCelular2.Mask = "(9999)000-000000"
         Me.MtxtCelular2.Name = "MtxtCelular2"
         Me.MtxtCelular2.Size = New System.Drawing.Size(163, 22)
-        Me.MtxtCelular2.TabIndex = 82
+        Me.MtxtCelular2.TabIndex = 4
         '
         'Label38
         '
@@ -729,21 +738,21 @@ Partial Class frmCliente
         Me.TxtRazSocial.Location = New System.Drawing.Point(199, 33)
         Me.TxtRazSocial.Name = "TxtRazSocial"
         Me.TxtRazSocial.Size = New System.Drawing.Size(344, 22)
-        Me.TxtRazSocial.TabIndex = 65
+        Me.TxtRazSocial.TabIndex = 1
         '
         'TxtFantasia
         '
         Me.TxtFantasia.Location = New System.Drawing.Point(108, 61)
         Me.TxtFantasia.Name = "TxtFantasia"
         Me.TxtFantasia.Size = New System.Drawing.Size(422, 22)
-        Me.TxtFantasia.TabIndex = 66
+        Me.TxtFantasia.TabIndex = 2
         '
         'TxtMail2
         '
         Me.TxtMail2.Location = New System.Drawing.Point(83, 236)
         Me.TxtMail2.Name = "TxtMail2"
         Me.TxtMail2.Size = New System.Drawing.Size(223, 22)
-        Me.TxtMail2.TabIndex = 68
+        Me.TxtMail2.TabIndex = 5
         '
         'Label35
         '
@@ -801,9 +810,10 @@ Partial Class frmCliente
         'txtNroDoc
         '
         Me.txtNroDoc.Location = New System.Drawing.Point(81, 24)
+        Me.txtNroDoc.MaxLength = 8
         Me.txtNroDoc.Name = "txtNroDoc"
         Me.txtNroDoc.Size = New System.Drawing.Size(166, 22)
-        Me.txtNroDoc.TabIndex = 77
+        Me.txtNroDoc.TabIndex = 0
         '
         'Label55
         '
@@ -861,6 +871,15 @@ Partial Class frmCliente
         Me.GroupBox6.TabIndex = 57
         Me.GroupBox6.TabStop = False
         Me.GroupBox6.Text = "Dirección"
+        '
+        'CbPais
+        '
+        Me.CbPais.FormattingEnabled = True
+        Me.CbPais.Items.AddRange(New Object() {"Argentina", "Afganistán", "Albania", "Alemania", "Andorra", "Angola", "Antigua y Barbuda", "Arabia Saudita", "Argelia", "Armenia", "Australia", "Austria", "Azerbaiyán", "Bahamas", "Bangladés", "Barbados", "Baréin", "Bélgica", "Belice", "Benín", "Bielorrusia", "Birmania", "Bolivia", "Bosnia y Herzegovina", "Botsuana", "Brasil", "Brunéi", "Bulgaria", "Burkina Faso", "Burundi", "Bután", "Cabo Verde", "Camboya", "Camerún", "Canadá", "Catar", "Chad", "Chile", "China", "Chipre", "Ciudad del Vaticano", "Colombia", "Comoras", "Corea del Norte", "Corea del Sur", "Costa de Marfil", "Costa Rica", "Croacia", "Cuba", "Dinamarca", "Dominica", "Ecuador", "Egipto", "El Salvador", "Emiratos Árabes Unidos", "Eritrea", "Eslovaquia", "Eslovenia", "España", "Estados Unidos", "Estonia", "Etiopía", "Filipinas", "Finlandia", "Fiyi", "Francia", "Gabón", "Gambia", "Georgia", "Ghana", "Granada", "Grecia", "Guatemala", "Guyana", "Guinea", "Guinea ecuatorial", "Guinea-Bisáu", "Haití", "Honduras", "Hungría", "India", "Indonesia", "Irak", "Irán", "Irlanda", "Islandia", "Islas Marshall", "Islas Salomón", "Israel", "Italia", "Jamaica", "Japón", "Jordania", "Kazajistán", "Kenia", "Kirguistán", "Kiribati", "Kuwait", "Laos", "Lesoto", "Letonia", "Líbano", "Liberia", "Libia", "Liechtenstein", "Lituania", "Luxemburgo", "Madagascar", "Malasia", "Malaui", "Maldivas", "Malí", "Malta", "Marruecos", "Mauricio", "Mauritania", "México", "Micronesia", "Moldavia", "Mónaco", "Mongolia", "Montenegro", "Mozambique", "Namibia", "Nauru", "Nepal", "Nicaragua", "Níger", "Nigeria", "Noruega", "Nueva Zelanda", "Omán", "Países Bajos", "Pakistán", "Palaos", "Panamá", "Papúa Nueva Guinea", "Paraguay", "Perú", "Polonia", "Portugal", "Reino Unido", "República Centroafricana", "República Checa", "República de Macedonia", "República del Congo", "República Democrática del Congo", "República Dominicana", "República Sudafricana", "Ruanda", "Rumanía", "Rusia", "Samoa", "San Cristóbal y Nieves", "San Marino", "San Vicente y las Granadinas", "Santa Lucía", "Santo Tomé y Príncipe", "Senegal", "Serbia", "Seychelles", "Sierra Leona", "Singapur", "Siria", "Somalia", "Sri Lanka", "Suazilandia", "Sudán", "Sudán del Sur", "Suecia", "Suiza", "Surinam", "Tailandia", "Tanzania", "Tayikistán", "Timor Oriental", "Togo", "Tonga", "Trinidad y Tobago", "Túnez", "Turkmenistán", "Turquía", "Tuvalu", "Ucrania", "Uganda", "Uruguay", "Uzbekistán", "Vanuatu", "Venezuela", "Vietnam", "Yemen", "Yibuti", "Zambia", "Zimbabue"})
+        Me.CbPais.Location = New System.Drawing.Point(296, 72)
+        Me.CbPais.Name = "CbPais"
+        Me.CbPais.Size = New System.Drawing.Size(242, 22)
+        Me.CbPais.TabIndex = 7
         '
         'Label53
         '
@@ -933,7 +952,7 @@ Partial Class frmCliente
         Me.TxtCiudad.Location = New System.Drawing.Point(297, 99)
         Me.TxtCiudad.Name = "TxtCiudad"
         Me.TxtCiudad.Size = New System.Drawing.Size(241, 22)
-        Me.TxtCiudad.TabIndex = 30
+        Me.TxtCiudad.TabIndex = 9
         '
         'Label49
         '
@@ -962,7 +981,7 @@ Partial Class frmCliente
         Me.TxtProvincia.Location = New System.Drawing.Point(74, 99)
         Me.TxtProvincia.Name = "TxtProvincia"
         Me.TxtProvincia.Size = New System.Drawing.Size(147, 22)
-        Me.TxtProvincia.TabIndex = 27
+        Me.TxtProvincia.TabIndex = 8
         '
         'Label47
         '
@@ -980,7 +999,7 @@ Partial Class frmCliente
         Me.TxtBarrio.Location = New System.Drawing.Point(74, 72)
         Me.TxtBarrio.Name = "TxtBarrio"
         Me.TxtBarrio.Size = New System.Drawing.Size(163, 22)
-        Me.TxtBarrio.TabIndex = 24
+        Me.TxtBarrio.TabIndex = 6
         '
         'Label46
         '
@@ -998,7 +1017,7 @@ Partial Class frmCliente
         Me.TxtCP.Location = New System.Drawing.Point(496, 44)
         Me.TxtCP.Name = "TxtCP"
         Me.TxtCP.Size = New System.Drawing.Size(58, 22)
-        Me.TxtCP.TabIndex = 22
+        Me.TxtCP.TabIndex = 5
         '
         'Label45
         '
@@ -1016,7 +1035,7 @@ Partial Class frmCliente
         Me.TxtDpto.Location = New System.Drawing.Point(394, 45)
         Me.TxtDpto.Name = "TxtDpto"
         Me.TxtDpto.Size = New System.Drawing.Size(58, 22)
-        Me.TxtDpto.TabIndex = 20
+        Me.TxtDpto.TabIndex = 4
         '
         'Label44
         '
@@ -1034,7 +1053,7 @@ Partial Class frmCliente
         Me.txtPiso.Location = New System.Drawing.Point(289, 45)
         Me.txtPiso.Name = "txtPiso"
         Me.txtPiso.Size = New System.Drawing.Size(54, 22)
-        Me.txtPiso.TabIndex = 18
+        Me.txtPiso.TabIndex = 3
         '
         'Label43
         '
@@ -1052,7 +1071,7 @@ Partial Class frmCliente
         Me.TxtEdificio.Location = New System.Drawing.Point(75, 45)
         Me.TxtEdificio.Name = "TxtEdificio"
         Me.TxtEdificio.Size = New System.Drawing.Size(162, 22)
-        Me.TxtEdificio.TabIndex = 16
+        Me.TxtEdificio.TabIndex = 2
         '
         'Label32
         '
@@ -1070,14 +1089,14 @@ Partial Class frmCliente
         Me.TxtNumero.Location = New System.Drawing.Point(372, 17)
         Me.TxtNumero.Name = "TxtNumero"
         Me.TxtNumero.Size = New System.Drawing.Size(117, 22)
-        Me.TxtNumero.TabIndex = 13
+        Me.TxtNumero.TabIndex = 1
         '
         'txtCalle
         '
         Me.txtCalle.Location = New System.Drawing.Point(75, 18)
         Me.txtCalle.Name = "txtCalle"
         Me.txtCalle.Size = New System.Drawing.Size(231, 22)
-        Me.txtCalle.TabIndex = 12
+        Me.txtCalle.TabIndex = 0
         '
         'Label3
         '
@@ -1117,7 +1136,7 @@ Partial Class frmCliente
         Me.DTPFecAlta.Location = New System.Drawing.Point(364, 264)
         Me.DTPFecAlta.Name = "DTPFecAlta"
         Me.DTPFecAlta.Size = New System.Drawing.Size(170, 22)
-        Me.DTPFecAlta.TabIndex = 55
+        Me.DTPFecAlta.TabIndex = 9
         '
         'DTPFecNac
         '
@@ -1125,7 +1144,7 @@ Partial Class frmCliente
         Me.DTPFecNac.Location = New System.Drawing.Point(79, 264)
         Me.DTPFecNac.Name = "DTPFecNac"
         Me.DTPFecNac.Size = New System.Drawing.Size(185, 22)
-        Me.DTPFecNac.TabIndex = 54
+        Me.DTPFecNac.TabIndex = 8
         '
         'Label1
         '
@@ -1146,7 +1165,7 @@ Partial Class frmCliente
         Me.Label2.Location = New System.Drawing.Point(19, 56)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(56, 15)
-        Me.Label2.TabIndex = 1
+        Me.Label2.TabIndex = 2
         Me.Label2.Text = "Nombres"
         '
         'Label4
@@ -1199,7 +1218,7 @@ Partial Class frmCliente
         Me.MtxtTel.Mask = "(9999)000-0000"
         Me.MtxtTel.Name = "MtxtTel"
         Me.MtxtTel.Size = New System.Drawing.Size(184, 22)
-        Me.MtxtTel.TabIndex = 50
+        Me.MtxtTel.TabIndex = 5
         '
         'Label7
         '
@@ -1218,7 +1237,7 @@ Partial Class frmCliente
         Me.MtxtCelular.Mask = "(9999)000-000000"
         Me.MtxtCelular.Name = "MtxtCelular"
         Me.MtxtCelular.Size = New System.Drawing.Size(227, 22)
-        Me.MtxtCelular.TabIndex = 49
+        Me.MtxtCelular.TabIndex = 6
         '
         'Label6
         '
@@ -1237,7 +1256,7 @@ Partial Class frmCliente
         Me.BtnBuscar.Location = New System.Drawing.Point(270, 24)
         Me.BtnBuscar.Name = "BtnBuscar"
         Me.BtnBuscar.Size = New System.Drawing.Size(52, 23)
-        Me.BtnBuscar.TabIndex = 48
+        Me.BtnBuscar.TabIndex = 1
         Me.BtnBuscar.Text = "Buscar"
         Me.BtnBuscar.UseVisualStyleBackColor = True
         '
@@ -1246,21 +1265,21 @@ Partial Class frmCliente
         Me.txtNombre.Location = New System.Drawing.Point(81, 53)
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(166, 22)
-        Me.txtNombre.TabIndex = 10
+        Me.txtNombre.TabIndex = 3
         '
         'txtApellido
         '
         Me.txtApellido.Location = New System.Drawing.Point(335, 53)
         Me.txtApellido.Name = "txtApellido"
         Me.txtApellido.Size = New System.Drawing.Size(209, 22)
-        Me.txtApellido.TabIndex = 11
+        Me.txtApellido.TabIndex = 4
         '
         'txtMail
         '
         Me.txtMail.Location = New System.Drawing.Point(80, 236)
         Me.txtMail.Name = "txtMail"
         Me.txtMail.Size = New System.Drawing.Size(184, 22)
-        Me.txtMail.TabIndex = 15
+        Me.txtMail.TabIndex = 7
         '
         'Label9
         '
@@ -1296,7 +1315,7 @@ Partial Class frmCliente
         Me.cbTipoDoc.Location = New System.Drawing.Point(390, 25)
         Me.cbTipoDoc.Name = "cbTipoDoc"
         Me.cbTipoDoc.Size = New System.Drawing.Size(170, 22)
-        Me.cbTipoDoc.TabIndex = 9
+        Me.cbTipoDoc.TabIndex = 2
         Me.cbTipoDoc.Text = "Seleccione una opcion..."
         '
         'GroupBox3
@@ -1394,24 +1413,6 @@ Partial Class frmCliente
         '
         Me.Erroricono.ContainerControl = Me
         '
-        'CbPais2
-        '
-        Me.CbPais2.FormattingEnabled = True
-        Me.CbPais2.Items.AddRange(New Object() {"Argentina", "Afganistán", "Albania", "Alemania", "Andorra", "Angola", "Antigua y Barbuda", "Arabia Saudita", "Argelia", "Armenia", "Australia", "Austria", "Azerbaiyán", "Bahamas", "Bangladés", "Barbados", "Baréin", "Bélgica", "Belice", "Benín", "Bielorrusia", "Birmania", "Bolivia", "Bosnia y Herzegovina", "Botsuana", "Brasil", "Brunéi", "Bulgaria", "Burkina Faso", "Burundi", "Bután", "Cabo Verde", "Camboya", "Camerún", "Canadá", "Catar", "Chad", "Chile", "China", "Chipre", "Ciudad del Vaticano", "Colombia", "Comoras", "Corea del Norte", "Corea del Sur", "Costa de Marfil", "Costa Rica", "Croacia", "Cuba", "Dinamarca", "Dominica", "Ecuador", "Egipto", "El Salvador", "Emiratos Árabes Unidos", "Eritrea", "Eslovaquia", "Eslovenia", "España", "Estados Unidos", "Estonia", "Etiopía", "Filipinas", "Finlandia", "Fiyi", "Francia", "Gabón", "Gambia", "Georgia", "Ghana", "Granada", "Grecia", "Guatemala", "Guyana", "Guinea", "Guinea ecuatorial", "Guinea-Bisáu", "Haití", "Honduras", "Hungría", "India", "Indonesia", "Irak", "Irán", "Irlanda", "Islandia", "Islas Marshall", "Islas Salomón", "Israel", "Italia", "Jamaica", "Japón", "Jordania", "Kazajistán", "Kenia", "Kirguistán", "Kiribati", "Kuwait", "Laos", "Lesoto", "Letonia", "Líbano", "Liberia", "Libia", "Liechtenstein", "Lituania", "Luxemburgo", "Madagascar", "Malasia", "Malaui", "Maldivas", "Malí", "Malta", "Marruecos", "Mauricio", "Mauritania", "México", "Micronesia", "Moldavia", "Mónaco", "Mongolia", "Montenegro", "Mozambique", "Namibia", "Nauru", "Nepal", "Nicaragua", "Níger", "Nigeria", "Noruega", "Nueva Zelanda", "Omán", "Países Bajos", "Pakistán", "Palaos", "Panamá", "Papúa Nueva Guinea", "Paraguay", "Perú", "Polonia", "Portugal", "Reino Unido", "República Centroafricana", "República Checa", "República de Macedonia", "República del Congo", "República Democrática del Congo", "República Dominicana", "República Sudafricana", "Ruanda", "Rumanía", "Rusia", "Samoa", "San Cristóbal y Nieves", "San Marino", "San Vicente y las Granadinas", "Santa Lucía", "Santo Tomé y Príncipe", "Senegal", "Serbia", "Seychelles", "Sierra Leona", "Singapur", "Siria", "Somalia", "Sri Lanka", "Suazilandia", "Sudán", "Sudán del Sur", "Suecia", "Suiza", "Surinam", "Tailandia", "Tanzania", "Tayikistán", "Timor Oriental", "Togo", "Tonga", "Trinidad y Tobago", "Túnez", "Turkmenistán", "Turquía", "Tuvalu", "Ucrania", "Uganda", "Uruguay", "Uzbekistán", "Vanuatu", "Venezuela", "Vietnam", "Yemen", "Yibuti", "Zambia", "Zimbabue"})
-        Me.CbPais2.Location = New System.Drawing.Point(297, 71)
-        Me.CbPais2.Name = "CbPais2"
-        Me.CbPais2.Size = New System.Drawing.Size(245, 22)
-        Me.CbPais2.TabIndex = 78
-        '
-        'CbPais
-        '
-        Me.CbPais.FormattingEnabled = True
-        Me.CbPais.Items.AddRange(New Object() {"Argentina", "Afganistán", "Albania", "Alemania", "Andorra", "Angola", "Antigua y Barbuda", "Arabia Saudita", "Argelia", "Armenia", "Australia", "Austria", "Azerbaiyán", "Bahamas", "Bangladés", "Barbados", "Baréin", "Bélgica", "Belice", "Benín", "Bielorrusia", "Birmania", "Bolivia", "Bosnia y Herzegovina", "Botsuana", "Brasil", "Brunéi", "Bulgaria", "Burkina Faso", "Burundi", "Bután", "Cabo Verde", "Camboya", "Camerún", "Canadá", "Catar", "Chad", "Chile", "China", "Chipre", "Ciudad del Vaticano", "Colombia", "Comoras", "Corea del Norte", "Corea del Sur", "Costa de Marfil", "Costa Rica", "Croacia", "Cuba", "Dinamarca", "Dominica", "Ecuador", "Egipto", "El Salvador", "Emiratos Árabes Unidos", "Eritrea", "Eslovaquia", "Eslovenia", "España", "Estados Unidos", "Estonia", "Etiopía", "Filipinas", "Finlandia", "Fiyi", "Francia", "Gabón", "Gambia", "Georgia", "Ghana", "Granada", "Grecia", "Guatemala", "Guyana", "Guinea", "Guinea ecuatorial", "Guinea-Bisáu", "Haití", "Honduras", "Hungría", "India", "Indonesia", "Irak", "Irán", "Irlanda", "Islandia", "Islas Marshall", "Islas Salomón", "Israel", "Italia", "Jamaica", "Japón", "Jordania", "Kazajistán", "Kenia", "Kirguistán", "Kiribati", "Kuwait", "Laos", "Lesoto", "Letonia", "Líbano", "Liberia", "Libia", "Liechtenstein", "Lituania", "Luxemburgo", "Madagascar", "Malasia", "Malaui", "Maldivas", "Malí", "Malta", "Marruecos", "Mauricio", "Mauritania", "México", "Micronesia", "Moldavia", "Mónaco", "Mongolia", "Montenegro", "Mozambique", "Namibia", "Nauru", "Nepal", "Nicaragua", "Níger", "Nigeria", "Noruega", "Nueva Zelanda", "Omán", "Países Bajos", "Pakistán", "Palaos", "Panamá", "Papúa Nueva Guinea", "Paraguay", "Perú", "Polonia", "Portugal", "Reino Unido", "República Centroafricana", "República Checa", "República de Macedonia", "República del Congo", "República Democrática del Congo", "República Dominicana", "República Sudafricana", "Ruanda", "Rumanía", "Rusia", "Samoa", "San Cristóbal y Nieves", "San Marino", "San Vicente y las Granadinas", "Santa Lucía", "Santo Tomé y Príncipe", "Senegal", "Serbia", "Seychelles", "Sierra Leona", "Singapur", "Siria", "Somalia", "Sri Lanka", "Suazilandia", "Sudán", "Sudán del Sur", "Suecia", "Suiza", "Surinam", "Tailandia", "Tanzania", "Tayikistán", "Timor Oriental", "Togo", "Tonga", "Trinidad y Tobago", "Túnez", "Turkmenistán", "Turquía", "Tuvalu", "Ucrania", "Uganda", "Uruguay", "Uzbekistán", "Vanuatu", "Venezuela", "Vietnam", "Yemen", "Yibuti", "Zambia", "Zimbabue"})
-        Me.CbPais.Location = New System.Drawing.Point(296, 72)
-        Me.CbPais.Name = "CbPais"
-        Me.CbPais.Size = New System.Drawing.Size(242, 22)
-        Me.CbPais.TabIndex = 79
-        '
         'frmCliente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1425,6 +1426,7 @@ Partial Class frmCliente
         Me.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmCliente"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Cliente"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
@@ -1497,8 +1499,6 @@ Partial Class frmCliente
     Friend WithEvents DTPFecNac2 As System.Windows.Forms.DateTimePicker
     Friend WithEvents DTPFecAlta As System.Windows.Forms.DateTimePicker
     Friend WithEvents DTPFecNac As System.Windows.Forms.DateTimePicker
-    Friend WithEvents CHkJuridica As System.Windows.Forms.CheckBox
-    Friend WithEvents CHkFisica As System.Windows.Forms.CheckBox
     Friend WithEvents GroupBox6 As System.Windows.Forms.GroupBox
     Friend WithEvents Label47 As System.Windows.Forms.Label
     Friend WithEvents TxtBarrio As System.Windows.Forms.TextBox
@@ -1564,4 +1564,6 @@ Partial Class frmCliente
     Friend WithEvents txtNroDoc As System.Windows.Forms.TextBox
     Friend WithEvents CbPais2 As System.Windows.Forms.ComboBox
     Friend WithEvents CbPais As System.Windows.Forms.ComboBox
+    Public WithEvents CHkJuridica As System.Windows.Forms.CheckBox
+    Public WithEvents CHkFisica As System.Windows.Forms.CheckBox
 End Class
