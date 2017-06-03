@@ -175,13 +175,11 @@ Partial Class frmCliente
         '
         Me.GroupBox2.Controls.Add(Me.btnNuevo)
         Me.GroupBox2.Controls.Add(Me.btnCancelar)
-        Me.GroupBox2.Controls.Add(Me.BtnHabilitar_cli)
         Me.GroupBox2.Controls.Add(Me.btnEditar)
-        Me.GroupBox2.Controls.Add(Me.BtnInhabilitar_cli)
         Me.GroupBox2.Controls.Add(Me.btnGuardar)
-        Me.GroupBox2.Location = New System.Drawing.Point(758, 318)
+        Me.GroupBox2.Location = New System.Drawing.Point(858, 318)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(415, 44)
+        Me.GroupBox2.Size = New System.Drawing.Size(315, 44)
         Me.GroupBox2.TabIndex = 89
         Me.GroupBox2.TabStop = False
         '
@@ -211,7 +209,7 @@ Partial Class frmCliente
         '
         Me.BtnHabilitar_cli.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnHabilitar_cli.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.BtnHabilitar_cli.Location = New System.Drawing.Point(312, 15)
+        Me.BtnHabilitar_cli.Location = New System.Drawing.Point(530, 19)
         Me.BtnHabilitar_cli.Name = "BtnHabilitar_cli"
         Me.BtnHabilitar_cli.Size = New System.Drawing.Size(96, 23)
         Me.BtnHabilitar_cli.TabIndex = 4
@@ -233,7 +231,7 @@ Partial Class frmCliente
         '
         Me.BtnInhabilitar_cli.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnInhabilitar_cli.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.BtnInhabilitar_cli.Location = New System.Drawing.Point(312, 15)
+        Me.BtnInhabilitar_cli.Location = New System.Drawing.Point(530, 19)
         Me.BtnInhabilitar_cli.Name = "BtnInhabilitar_cli"
         Me.BtnInhabilitar_cli.Size = New System.Drawing.Size(96, 23)
         Me.BtnInhabilitar_cli.TabIndex = 5
@@ -1323,6 +1321,8 @@ Partial Class frmCliente
         Me.GroupBox3.BackColor = System.Drawing.Color.LightGreen
         Me.GroupBox3.Controls.Add(Me.CbHabilitar_cli)
         Me.GroupBox3.Controls.Add(Me.CbInhabilitar_cli)
+        Me.GroupBox3.Controls.Add(Me.BtnHabilitar_cli)
+        Me.GroupBox3.Controls.Add(Me.BtnInhabilitar_cli)
         Me.GroupBox3.Controls.Add(Me.lkNoexiste)
         Me.GroupBox3.Controls.Add(Me.dgvListado)
         Me.GroupBox3.Controls.Add(Me.txtBuscar)

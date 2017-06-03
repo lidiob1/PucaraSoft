@@ -180,10 +180,10 @@ Public Class frmCliente
     '******************************** BOTON GUARDAR *************************************
     Public Sub btnGuardar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnGuardar.Click
 
-        If DTPFecAlta.Value.Date <= DTPFecNac.Value.Date Then
-            MessageBox.Show("La fecha de nacimiento no puede ser mayor a la fecha de alta!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            Return
-        End If
+        'If DTPFecAlta.Value.Date <= DTPFecNac.Value.Date Then
+        'MessageBox.Show("La fecha de nacimiento no puede ser mayor a la fecha de alta!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        'Return
+        'End If
 
         If Me.ValidateChildren = True Then
             Try
@@ -358,6 +358,25 @@ Public Class frmCliente
             CbPais.Enabled = False
             TxtProvincia.Enabled = False
             TxtCiudad.Enabled = False
+
+            MtxtCuit.Enabled = False
+            TxtRazSocial.Enabled = False
+            TxtFantasia.Enabled = False
+            TxtCalle2.Enabled = False
+            TxtNumero2.Enabled = False
+            TxtEdificio2.Enabled = False
+            TxtPiso2.Enabled = False
+            TxtDPto2.Enabled = False
+            TxtCP2.Enabled = False
+            TxtBarrio2.Enabled = False
+            CbPais2.Enabled = False
+            TxtProvincia2.Enabled = False
+            TxtCiudad2.Enabled = False
+            MtxtTel2.Enabled = False
+            MtxtCelular2.Enabled = False
+            TxtMail2.Enabled = False
+            DTPFecAlta2.Enabled = False
+            DTPFecNac2.Enabled = False
 
             BtnHabilitar_cli.Visible = True
             BtnInhabilitar_cli.Visible = False
@@ -615,13 +634,14 @@ Public Class frmCliente
 
         Try
             objCliente.Nro_Doc = txtNroDoc.Text
+
             dr = objClienteDA.buscarCliente(objCliente.Nro_Doc)
 
             txtNombre.Text = CStr(dr("Nombre"))
             txtApellido.Text = CStr(dr("Apellido"))
-            cbTipoDoc.Text = CStr(dr("Id_Tipo_Dni"))
+            cbTipoDoc.Text = dr("Id_Tipo_Dni")
             txtCalle.Text = CStr(dr("Calle"))
-            TxtNumero.Text = CStr(dr("Calle"))
+            TxtNumero.Text = CStr(dr("NumeroCalle"))
             TxtEdificio.Text = CStr(dr("Edificio"))
             txtPiso.Text = CStr(dr("Piso"))
             TxtDpto.Text = CStr(dr("Dpto"))
@@ -637,6 +657,7 @@ Public Class frmCliente
             DTPFecNac.Text = CStr(dr("Fecha_Nac"))
 
         Catch ex As Exception
+            'MsgBox(ex.Message)
             MessageBox.Show("No existe el cliente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End Try
     End Sub
