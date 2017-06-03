@@ -23,156 +23,192 @@ Partial Class FrmCanchasLibres
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmCanchasLibres))
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.btnCerrar = New System.Windows.Forms.Button()
-        Me.btnTomar = New System.Windows.Forms.Button()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.dgvCanchasLibres = New System.Windows.Forms.DataGridView()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.txtFechaReserva = New System.Windows.Forms.TextBox()
-        Me.txtTipoCancha = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.txtHoraFin = New System.Windows.Forms.MaskedTextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.txtHoraInicio = New System.Windows.Forms.MaskedTextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Panel2.SuspendLayout()
-        Me.Panel1.SuspendLayout()
-        CType(Me.dgvCanchasLibres, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox1.SuspendLayout()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.DateTimePicker4 = New System.Windows.Forms.DateTimePicker()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.DateTimePicker3 = New System.Windows.Forms.DateTimePicker()
+        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Panel3.SuspendLayout()
+        Me.Panel4.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
-        'Panel2
+        'Panel3
         '
-        Me.Panel2.BackColor = System.Drawing.Color.PaleGreen
-        Me.Panel2.Controls.Add(Me.btnCerrar)
-        Me.Panel2.Controls.Add(Me.btnTomar)
-        Me.Panel2.Location = New System.Drawing.Point(15, 291)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(358, 47)
-        Me.Panel2.TabIndex = 5
+        Me.Panel3.BackColor = System.Drawing.Color.PaleGreen
+        Me.Panel3.Controls.Add(Me.Button1)
+        Me.Panel3.Controls.Add(Me.Button2)
+        Me.Panel3.Location = New System.Drawing.Point(15, 333)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(358, 47)
+        Me.Panel3.TabIndex = 11
         '
-        'btnCerrar
+        'Button1
         '
-        Me.btnCerrar.Location = New System.Drawing.Point(170, 12)
-        Me.btnCerrar.Name = "btnCerrar"
-        Me.btnCerrar.Size = New System.Drawing.Size(75, 23)
-        Me.btnCerrar.TabIndex = 1
-        Me.btnCerrar.Text = "Cerrar"
-        Me.btnCerrar.UseVisualStyleBackColor = True
+        Me.Button1.Location = New System.Drawing.Point(170, 12)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 1
+        Me.Button1.Text = "Cerrar"
+        Me.Button1.UseVisualStyleBackColor = True
         '
-        'btnTomar
+        'Button2
         '
-        Me.btnTomar.Location = New System.Drawing.Point(86, 12)
-        Me.btnTomar.Name = "btnTomar"
-        Me.btnTomar.Size = New System.Drawing.Size(75, 23)
-        Me.btnTomar.TabIndex = 0
-        Me.btnTomar.Text = "Tomar"
-        Me.btnTomar.UseVisualStyleBackColor = True
+        Me.Button2.Location = New System.Drawing.Point(86, 12)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.TabIndex = 0
+        Me.Button2.Text = "Tomar"
+        Me.Button2.UseVisualStyleBackColor = True
         '
-        'Panel1
+        'Panel4
         '
-        Me.Panel1.BackColor = System.Drawing.Color.PaleGreen
-        Me.Panel1.Controls.Add(Me.dgvCanchasLibres)
-        Me.Panel1.Location = New System.Drawing.Point(14, 132)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(359, 146)
-        Me.Panel1.TabIndex = 4
+        Me.Panel4.BackColor = System.Drawing.Color.PaleGreen
+        Me.Panel4.Controls.Add(Me.DataGridView1)
+        Me.Panel4.Location = New System.Drawing.Point(14, 174)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(359, 146)
+        Me.Panel4.TabIndex = 10
         '
-        'dgvCanchasLibres
+        'DataGridView1
         '
-        Me.dgvCanchasLibres.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvCanchasLibres.Location = New System.Drawing.Point(3, 3)
-        Me.dgvCanchasLibres.Name = "dgvCanchasLibres"
-        Me.dgvCanchasLibres.Size = New System.Drawing.Size(353, 140)
-        Me.dgvCanchasLibres.TabIndex = 0
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(3, 3)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(353, 140)
+        Me.DataGridView1.TabIndex = 0
         '
-        'GroupBox1
+        'GroupBox2
         '
-        Me.GroupBox1.BackColor = System.Drawing.Color.PaleGreen
-        Me.GroupBox1.Controls.Add(Me.txtFechaReserva)
-        Me.GroupBox1.Controls.Add(Me.txtTipoCancha)
-        Me.GroupBox1.Controls.Add(Me.Label4)
-        Me.GroupBox1.Controls.Add(Me.txtHoraFin)
-        Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Controls.Add(Me.txtHoraInicio)
-        Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(361, 111)
-        Me.GroupBox1.TabIndex = 3
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Filtro"
+        Me.GroupBox2.BackColor = System.Drawing.Color.PaleGreen
+        Me.GroupBox2.Controls.Add(Me.DateTimePicker4)
+        Me.GroupBox2.Controls.Add(Me.Button3)
+        Me.GroupBox2.Controls.Add(Me.DateTimePicker3)
+        Me.GroupBox2.Controls.Add(Me.DateTimePicker2)
+        Me.GroupBox2.Controls.Add(Me.DateTimePicker1)
+        Me.GroupBox2.Controls.Add(Me.ComboBox1)
+        Me.GroupBox2.Controls.Add(Me.Label5)
+        Me.GroupBox2.Controls.Add(Me.Label6)
+        Me.GroupBox2.Controls.Add(Me.Label7)
+        Me.GroupBox2.Controls.Add(Me.Label8)
+        Me.GroupBox2.Controls.Add(Me.Label9)
+        Me.GroupBox2.Location = New System.Drawing.Point(12, 12)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(361, 156)
+        Me.GroupBox2.TabIndex = 9
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "Filtro"
         '
-        'txtFechaReserva
+        'DateTimePicker4
         '
-        Me.txtFechaReserva.Location = New System.Drawing.Point(18, 37)
-        Me.txtFechaReserva.Name = "txtFechaReserva"
-        Me.txtFechaReserva.Size = New System.Drawing.Size(175, 20)
-        Me.txtFechaReserva.TabIndex = 8
+        Me.DateTimePicker4.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DateTimePicker4.Location = New System.Drawing.Point(213, 77)
+        Me.DateTimePicker4.Name = "DateTimePicker4"
+        Me.DateTimePicker4.Size = New System.Drawing.Size(137, 20)
+        Me.DateTimePicker4.TabIndex = 14
         '
-        'txtTipoCancha
+        'Button3
         '
-        Me.txtTipoCancha.Location = New System.Drawing.Point(18, 76)
-        Me.txtTipoCancha.Name = "txtTipoCancha"
-        Me.txtTipoCancha.Size = New System.Drawing.Size(175, 20)
-        Me.txtTipoCancha.TabIndex = 7
+        Me.Button3.Location = New System.Drawing.Point(275, 116)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(75, 34)
+        Me.Button3.TabIndex = 13
+        Me.Button3.Text = "Buscar"
+        Me.Button3.UseVisualStyleBackColor = True
         '
-        'Label4
+        'DateTimePicker3
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(15, 60)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(82, 13)
-        Me.Label4.TabIndex = 6
-        Me.Label4.Text = "Tipo de cancha"
+        Me.DateTimePicker3.CustomFormat = "HH:00"
+        Me.DateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.DateTimePicker3.Location = New System.Drawing.Point(286, 36)
+        Me.DateTimePicker3.Name = "DateTimePicker3"
+        Me.DateTimePicker3.ShowUpDown = True
+        Me.DateTimePicker3.Size = New System.Drawing.Size(64, 20)
+        Me.DateTimePicker3.TabIndex = 12
         '
-        'txtHoraFin
+        'DateTimePicker2
         '
-        Me.txtHoraFin.Location = New System.Drawing.Point(278, 37)
-        Me.txtHoraFin.Mask = "00:00"
-        Me.txtHoraFin.Name = "txtHoraFin"
-        Me.txtHoraFin.Size = New System.Drawing.Size(61, 20)
-        Me.txtHoraFin.TabIndex = 5
-        Me.txtHoraFin.ValidatingType = GetType(Date)
+        Me.DateTimePicker2.CustomFormat = "HH:00"
+        Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.DateTimePicker2.Location = New System.Drawing.Point(213, 36)
+        Me.DateTimePicker2.Name = "DateTimePicker2"
+        Me.DateTimePicker2.ShowUpDown = True
+        Me.DateTimePicker2.Size = New System.Drawing.Size(67, 20)
+        Me.DateTimePicker2.TabIndex = 11
         '
-        'Label3
+        'DateTimePicker1
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(277, 21)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(44, 13)
-        Me.Label3.TabIndex = 4
-        Me.Label3.Text = "Hora fin"
+        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DateTimePicker1.Location = New System.Drawing.Point(20, 77)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(137, 20)
+        Me.DateTimePicker1.TabIndex = 10
         '
-        'txtHoraInicio
+        'ComboBox1
         '
-        Me.txtHoraInicio.Location = New System.Drawing.Point(211, 37)
-        Me.txtHoraInicio.Mask = "00:00"
-        Me.txtHoraInicio.Name = "txtHoraInicio"
-        Me.txtHoraInicio.Size = New System.Drawing.Size(61, 20)
-        Me.txtHoraInicio.TabIndex = 3
-        Me.txtHoraInicio.ValidatingType = GetType(Date)
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(18, 35)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(139, 21)
+        Me.ComboBox1.TabIndex = 9
         '
-        'Label2
+        'Label5
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(210, 21)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(57, 13)
-        Me.Label2.TabIndex = 2
-        Me.Label2.Text = "Hora inicio"
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(15, 19)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(82, 13)
+        Me.Label5.TabIndex = 6
+        Me.Label5.Text = "Tipo de cancha"
         '
-        'Label1
+        'Label6
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(15, 21)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(90, 13)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Fecha de reserva"
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(285, 20)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(44, 13)
+        Me.Label6.TabIndex = 4
+        Me.Label6.Text = "Hora fin"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(168, 80)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(33, 13)
+        Me.Label7.TabIndex = 2
+        Me.Label7.Text = "hasta"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(210, 20)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(57, 13)
+        Me.Label8.TabIndex = 2
+        Me.Label8.Text = "Hora inicio"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(17, 61)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(90, 13)
+        Me.Label9.TabIndex = 0
+        Me.Label9.Text = "Fecha de reserva"
         '
         'FrmCanchasLibres
         '
@@ -180,33 +216,36 @@ Partial Class FrmCanchasLibres
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(387, 353)
-        Me.Controls.Add(Me.Panel2)
-        Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.GroupBox1)
+        Me.ClientSize = New System.Drawing.Size(391, 393)
+        Me.Controls.Add(Me.Panel3)
+        Me.Controls.Add(Me.Panel4)
+        Me.Controls.Add(Me.GroupBox2)
         Me.Name = "FrmCanchasLibres"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Canchas Libres"
-        Me.Panel2.ResumeLayout(False)
-        Me.Panel1.ResumeLayout(False)
-        CType(Me.dgvCanchasLibres, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
+        Me.Panel3.ResumeLayout(False)
+        Me.Panel4.ResumeLayout(False)
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox2.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents Panel2 As System.Windows.Forms.Panel
-    Friend WithEvents btnCerrar As System.Windows.Forms.Button
-    Friend WithEvents btnTomar As System.Windows.Forms.Button
-    Friend WithEvents Panel1 As System.Windows.Forms.Panel
-    Friend WithEvents dgvCanchasLibres As System.Windows.Forms.DataGridView
-    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
-    Friend WithEvents txtFechaReserva As System.Windows.Forms.TextBox
-    Friend WithEvents txtTipoCancha As System.Windows.Forms.TextBox
-    Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents txtHoraFin As System.Windows.Forms.MaskedTextBox
-    Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents txtHoraInicio As System.Windows.Forms.MaskedTextBox
-    Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents Panel3 As System.Windows.Forms.Panel
+    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents Panel4 As System.Windows.Forms.Panel
+    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
+    Friend WithEvents DateTimePicker4 As System.Windows.Forms.DateTimePicker
+    Friend WithEvents Button3 As System.Windows.Forms.Button
+    Friend WithEvents DateTimePicker3 As System.Windows.Forms.DateTimePicker
+    Friend WithEvents DateTimePicker2 As System.Windows.Forms.DateTimePicker
+    Friend WithEvents DateTimePicker1 As System.Windows.Forms.DateTimePicker
+    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
+    Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents Label8 As System.Windows.Forms.Label
+    Friend WithEvents Label9 As System.Windows.Forms.Label
 End Class

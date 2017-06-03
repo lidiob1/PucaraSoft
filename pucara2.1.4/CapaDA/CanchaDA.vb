@@ -8,6 +8,18 @@ Public Class CanchaDA
     Private ds As DataSet
     Private con As New SqlConnection
 
+    Private com As New SqlCommand
+
+    '-------------------------------------------------
+    'Constructor sin parametros
+    '-------------------------------------------------
+    Public Sub New()
+        'Abrimos conexion
+        Dim objcon As New Conexion
+        con = objcon.abrir
+        com.Connection = con
+    End Sub
+
     '************************ FUNCION MOSTRAR Cancha*******************
     Public Function Mostrar_cancha() As DataTable
         Try
@@ -181,6 +193,21 @@ Public Class CanchaDA
         Finally
             desconectado()
         End Try
+    End Function
+
+    '--------------------------------------------------------------------------------
+    ' Buscamos las canchas dependiendo del tipo de cancha seleccionado
+    '--------------------------------------------------------------------------------
+    Public Function cargar_cb_canchas(ByVal tipo_cancha As TipoCanchaNE) As DataSet
+        da = New SqlDataAdapter("select c.Num_cancha, c.Descripcion from Cancha c, TipoCancha t where t.Id_cancha = c.Num_cancha and t.Descripcion = '" & tipo_cancha._descripcion & "'", con)
+        ds = New DataSet
+
+        Try
+            da.Fill(ds, "tabCanchas")
+        Catch ex As Exception
+            MsgBox(ex, MsgBoxStyle.Critical, "ERROR")
+        End Try
+        Return ds
     End Function
 
 End Class

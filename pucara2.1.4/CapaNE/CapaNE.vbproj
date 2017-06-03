@@ -66,6 +66,7 @@
   <ItemGroup>
     <Compile Include="CanchaNE.vb" />
     <Compile Include="ClientesNE.vb" />
+    <Compile Include="HorarioNE.vb" />
     <Compile Include="LoginNE.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -83,6 +84,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="ProveedoresNE.vb" />
+    <Compile Include="TipoCanchaNE.vb" />
     <Compile Include="UsuariosNE.vb" />
   </ItemGroup>
   <ItemGroup>
