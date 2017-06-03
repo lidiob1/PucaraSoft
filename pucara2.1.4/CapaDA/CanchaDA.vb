@@ -199,7 +199,7 @@ Public Class CanchaDA
     ' Buscamos las canchas dependiendo del tipo de cancha seleccionado
     '--------------------------------------------------------------------------------
     Public Function cargar_cb_canchas(ByVal tipo_cancha As TipoCanchaNE) As DataSet
-        da = New SqlDataAdapter("select c.Num_cancha, c.Descripcion from Cancha c, TipoCancha t where t.Id_cancha = c.Num_cancha and t.Descripcion = '" & tipo_cancha._descripcion & "'", con)
+        da = New SqlDataAdapter("select c.Num_cancha, c.Descripcion from Cancha c, TipoCancha t where t.num_cancha = c.Num_cancha and t.Descripcion = '" & tipo_cancha._descripcion & "'", con)
         ds = New DataSet
 
         Try
