@@ -98,3 +98,6 @@ C:\Users\Sancho\Documents\GitHub\PucaraSoft\PucaraSoft\pucara2.1.4\Interfaz\bin\
 C:\Users\Sancho\Documents\GitHub\PucaraSoft\PucaraSoft\pucara2.1.4\Interfaz\bin\Debug\CapaDA.xml
 C:\Users\Sancho\Documents\GitHub\PucaraSoft\PucaraSoft\pucara2.1.4\Interfaz\bin\Debug\CapaNE.pdb
 C:\Users\Sancho\Documents\GitHub\PucaraSoft\PucaraSoft\pucara2.1.4\Interfaz\bin\Debug\CapaNE.xml
+C:\Users\Lidio\Documents\GitHub\PucaraSoft\pucara2.1.4\Interfaz\obj\x86\Debug\Interfaz.exe
+C:\Users\Lidio\Documents\GitHub\PucaraSoft\pucara2.1.4\Interfaz\obj\x86\Debug\Interfaz.xml
+C:\Users\Lidio\Documents\GitHub\PucaraSoft\pucara2.1.4\Interfaz\obj\x86\Debug\Interfaz.pdb
