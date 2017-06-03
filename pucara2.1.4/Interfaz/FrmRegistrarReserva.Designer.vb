@@ -33,7 +33,6 @@ Partial Class FrmRegistrarReserva
         Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.txtCuit = New System.Windows.Forms.TextBox()
         Me.btnBuscarCuit = New System.Windows.Forms.Button()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
@@ -77,6 +76,7 @@ Partial Class FrmRegistrarReserva
         Me.txtNroReserva = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.txtCuil = New System.Windows.Forms.MaskedTextBox()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -173,7 +173,7 @@ Partial Class FrmRegistrarReserva
         'TabPage2
         '
         Me.TabPage2.BackColor = System.Drawing.Color.PaleGreen
-        Me.TabPage2.Controls.Add(Me.txtCuit)
+        Me.TabPage2.Controls.Add(Me.txtCuil)
         Me.TabPage2.Controls.Add(Me.btnBuscarCuit)
         Me.TabPage2.Controls.Add(Me.Label15)
         Me.TabPage2.Controls.Add(Me.Label16)
@@ -186,13 +186,6 @@ Partial Class FrmRegistrarReserva
         Me.TabPage2.Size = New System.Drawing.Size(541, 89)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Persona Jurídica"
-        '
-        'txtCuit
-        '
-        Me.txtCuit.Location = New System.Drawing.Point(23, 24)
-        Me.txtCuit.Name = "txtCuit"
-        Me.txtCuit.Size = New System.Drawing.Size(121, 20)
-        Me.txtCuit.TabIndex = 8
         '
         'btnBuscarCuit
         '
@@ -577,6 +570,14 @@ Partial Class FrmRegistrarReserva
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Nª Reserva"
         '
+        'txtCuil
+        '
+        Me.txtCuil.Location = New System.Drawing.Point(23, 24)
+        Me.txtCuil.Mask = "00-00000000-0"
+        Me.txtCuil.Name = "txtCuil"
+        Me.txtCuil.Size = New System.Drawing.Size(121, 20)
+        Me.txtCuil.TabIndex = 12
+        '
         'FrmRegistrarReserva
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -616,7 +617,6 @@ Partial Class FrmRegistrarReserva
     Friend WithEvents txtNombre As System.Windows.Forms.TextBox
     Friend WithEvents Label11 As System.Windows.Forms.Label
     Friend WithEvents TabPage2 As System.Windows.Forms.TabPage
-    Friend WithEvents txtCuit As System.Windows.Forms.TextBox
     Friend WithEvents btnBuscarCuit As System.Windows.Forms.Button
     Friend WithEvents Label15 As System.Windows.Forms.Label
     Friend WithEvents Label16 As System.Windows.Forms.Label
@@ -660,4 +660,5 @@ Partial Class FrmRegistrarReserva
     Friend WithEvents txtNroReserva As System.Windows.Forms.TextBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents txtCuil As System.Windows.Forms.MaskedTextBox
 End Class
