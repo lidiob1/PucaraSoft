@@ -60,7 +60,7 @@ Public Class ClientesDA
             cmd.Parameters.AddWithValue("@Provincia", dts.Provincia)
             cmd.Parameters.AddWithValue("@Ciudad", dts.Ciudad)
             cmd.Parameters.AddWithValue("@habilitado", dts.habilitado)
-            cmd.Parameters.AddWithValue("@id_tipo_dni", dts.habilitado)
+            cmd.Parameters.AddWithValue("@id_tipo_dni", dts.Tipo_dni)
             cmd.Parameters.AddWithValue("@Nombre", dts.nombre)
             cmd.Parameters.AddWithValue("@Apellido", dts.apellido)
 
@@ -201,16 +201,22 @@ Public Class ClientesDA
     '--------------------------------------------------------------------------------
     ' Buscar nombre y apellido de cliente desde su numero de documento
     '--------------------------------------------------------------------------------
-    Public Function buscarCliente(ByVal nro_doc As Long) As DataRow
+    Public Function buscarCliente(ByVal nro_doc As String) As DataRow
+
         Dim dr As DataRow
+        conectado()
         da = New SqlDataAdapter("select Nombre,Apellido,id_tipo_dni,fecha_nac,fecha_alta,calle,telefono,celular,mail,NumeroCalle,Edificio,Piso,Dpto,CP,Barrio,Pais,Provincia,Ciudad from Cliente where nro_doc='" & nro_doc & "'", cnn)
         ds = New DataSet
+
         Try
+
+
             da.Fill(ds)
             dr = ds.Tables(0).Rows(0)
             Return dr
         Catch ex As Exception
-            Return Nothing
+            MsgBox(ex.Message)
+            'Return Nothing
         End Try
     End Function
     '--------------------------------------------------------------------------------

@@ -67,6 +67,7 @@
     <Compile Include="CanchaDA.vb" />
     <Compile Include="ClientesDA.vb" />
     <Compile Include="Conexion.vb" />
+    <Compile Include="HorarioDA.vb" />
     <Compile Include="LoginDA.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
