@@ -46,3 +46,15 @@ C:\Users\Sancho\Documents\GitHub\PucaraSoft\PucaraSoft\pucara2.1.4\CapaDA\bin\De
 C:\Users\Sancho\Documents\GitHub\PucaraSoft\PucaraSoft\pucara2.1.4\CapaDA\bin\Debug\CapaNE.dll
 C:\Users\Sancho\Documents\GitHub\PucaraSoft\PucaraSoft\pucara2.1.4\CapaDA\bin\Debug\CapaNE.pdb
 C:\Users\Sancho\Documents\GitHub\PucaraSoft\PucaraSoft\pucara2.1.4\CapaDA\bin\Debug\CapaNE.xml
+C:\Users\Lidio\Documents\GitHub\PucaraSoft\pucara2.1.4\CapaDA\bin\Debug\CapaDA.dll
+C:\Users\Lidio\Documents\GitHub\PucaraSoft\pucara2.1.4\CapaDA\bin\Debug\CapaDA.pdb
+C:\Users\Lidio\Documents\GitHub\PucaraSoft\pucara2.1.4\CapaDA\bin\Debug\CapaDA.xml
+C:\Users\Lidio\Documents\GitHub\PucaraSoft\pucara2.1.4\CapaDA\bin\Debug\CapaNE.dll
+C:\Users\Lidio\Documents\GitHub\PucaraSoft\pucara2.1.4\CapaDA\bin\Debug\CapaNE.pdb
+C:\Users\Lidio\Documents\GitHub\PucaraSoft\pucara2.1.4\CapaDA\bin\Debug\CapaNE.xml
+C:\Users\Lidio\Documents\GitHub\PucaraSoft\pucara2.1.4\CapaDA\obj\Debug\CapaDA.vbprojResolveAssemblyReference.cache
+C:\Users\Lidio\Documents\GitHub\PucaraSoft\pucara2.1.4\CapaDA\obj\Debug\CapaDA.Resources.resources
+C:\Users\Lidio\Documents\GitHub\PucaraSoft\pucara2.1.4\CapaDA\obj\Debug\CapaDA.vbproj.GenerateResource.Cache
+C:\Users\Lidio\Documents\GitHub\PucaraSoft\pucara2.1.4\CapaDA\obj\Debug\CapaDA.dll
+C:\Users\Lidio\Documents\GitHub\PucaraSoft\pucara2.1.4\CapaDA\obj\Debug\CapaDA.xml
+C:\Users\Lidio\Documents\GitHub\PucaraSoft\pucara2.1.4\CapaDA\obj\Debug\CapaDA.pdb

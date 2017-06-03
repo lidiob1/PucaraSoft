@@ -165,4 +165,18 @@ Public Class FrmRegistrarReserva
     Private Sub btnConsultarReservas_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnConsultarReservas.Click
         FrmConsultarReservas.ShowDialog()
     End Sub
+
+
+    '===================> VALIDACIONES PARA LOS CAMPOS DE ENTRADA <========================================
+
+    '=======================================================================================================
+    ' En el numero de documento solo se deben ingresar numeros
+    '=======================================================================================================
+    Private Sub txtNroDoc_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtNroDoc.KeyPress
+
+        e.Handled = Validaciones.validarSoloNumero(e)
+        If Validaciones.validarSoloNumero(e) Then
+            MsgBox("Debe Ingresar solo caracteres numéricos", MsgBoxStyle.Exclamation)
+        End If
+    End Sub
 End Class
