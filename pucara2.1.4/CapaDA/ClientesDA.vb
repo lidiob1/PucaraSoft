@@ -219,6 +219,26 @@ Public Class ClientesDA
             'Return Nothing
         End Try
     End Function
+    '**********************************BUSCAR CLIENTE JURIDICO******************
+    '***************
+    Public Function buscarClienteJURIDICO(ByVal nro_doc As String) As DataRow
+
+        Dim dr As DataRow
+        conectado()
+        da = New SqlDataAdapter("select RazonSocial,Fantasia,fecha_nac,calle,telefono,celular,mail,NumeroCalle,Edificio,Piso,Dpto,CP,Barrio,Pais,Provincia,Ciudad from Cliente where nro_doc='" & nro_doc & "'", cnn)
+        ds = New DataSet
+
+        Try
+
+
+            da.Fill(ds)
+            dr = ds.Tables(0).Rows(0)
+            Return dr
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            'Return Nothing
+        End Try
+    End Function
     '--------------------------------------------------------------------------------
     ' Buscar nombre y apellido de cliente
     '--------------------------------------------------------------------------------

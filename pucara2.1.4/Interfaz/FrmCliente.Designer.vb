@@ -81,7 +81,6 @@ Partial Class frmCliente
         Me.TxtFantasia = New System.Windows.Forms.TextBox()
         Me.TxtMail2 = New System.Windows.Forms.TextBox()
         Me.Label35 = New System.Windows.Forms.Label()
-        Me.Label34 = New System.Windows.Forms.Label()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.txtNroDoc = New System.Windows.Forms.TextBox()
         Me.Label55 = New System.Windows.Forms.Label()
@@ -131,7 +130,6 @@ Partial Class frmCliente
         Me.txtApellido = New System.Windows.Forms.TextBox()
         Me.txtMail = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.cbTipoDoc = New System.Windows.Forms.ComboBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
@@ -166,7 +164,7 @@ Partial Class frmCliente
         Me.GroupBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(1184, 367)
+        Me.GroupBox1.Size = New System.Drawing.Size(1184, 346)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Datos"
@@ -177,7 +175,7 @@ Partial Class frmCliente
         Me.GroupBox2.Controls.Add(Me.btnCancelar)
         Me.GroupBox2.Controls.Add(Me.btnEditar)
         Me.GroupBox2.Controls.Add(Me.btnGuardar)
-        Me.GroupBox2.Location = New System.Drawing.Point(858, 318)
+        Me.GroupBox2.Location = New System.Drawing.Point(858, 295)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(315, 44)
         Me.GroupBox2.TabIndex = 89
@@ -201,7 +199,7 @@ Partial Class frmCliente
         Me.btnCancelar.Location = New System.Drawing.Point(210, 15)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(96, 23)
-        Me.btnCancelar.TabIndex = 3
+        Me.btnCancelar.TabIndex = 2
         Me.btnCancelar.Text = "Cancelar"
         Me.btnCancelar.UseVisualStyleBackColor = True
         '
@@ -265,10 +263,10 @@ Partial Class frmCliente
         Me.GroupBox5.Controls.Add(Me.Label59)
         Me.GroupBox5.Controls.Add(Me.Label58)
         Me.GroupBox5.Controls.Add(Me.Label56)
+        Me.GroupBox5.Controls.Add(Me.DTPFecAlta2)
         Me.GroupBox5.Controls.Add(Me.GroupBox7)
         Me.GroupBox5.Controls.Add(Me.MtxtCuit)
         Me.GroupBox5.Controls.Add(Me.CHkJuridica)
-        Me.GroupBox5.Controls.Add(Me.DTPFecAlta2)
         Me.GroupBox5.Controls.Add(Me.DTPFecNac2)
         Me.GroupBox5.Controls.Add(Me.Label42)
         Me.GroupBox5.Controls.Add(Me.Label41)
@@ -283,10 +281,9 @@ Partial Class frmCliente
         Me.GroupBox5.Controls.Add(Me.TxtFantasia)
         Me.GroupBox5.Controls.Add(Me.TxtMail2)
         Me.GroupBox5.Controls.Add(Me.Label35)
-        Me.GroupBox5.Controls.Add(Me.Label34)
         Me.GroupBox5.Location = New System.Drawing.Point(591, 23)
         Me.GroupBox5.Name = "GroupBox5"
-        Me.GroupBox5.Size = New System.Drawing.Size(582, 294)
+        Me.GroupBox5.Size = New System.Drawing.Size(582, 268)
         Me.GroupBox5.TabIndex = 88
         Me.GroupBox5.TabStop = False
         '
@@ -295,7 +292,7 @@ Partial Class frmCliente
         Me.Label64.AutoSize = True
         Me.Label64.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label64.ForeColor = System.Drawing.Color.Red
-        Me.Label64.Location = New System.Drawing.Point(252, 266)
+        Me.Label64.Location = New System.Drawing.Point(291, 240)
         Me.Label64.Name = "Label64"
         Me.Label64.Size = New System.Drawing.Size(15, 20)
         Me.Label64.TabIndex = 93
@@ -626,15 +623,16 @@ Partial Class frmCliente
         'DTPFecAlta2
         '
         Me.DTPFecAlta2.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DTPFecAlta2.Location = New System.Drawing.Point(355, 264)
+        Me.DTPFecAlta2.Location = New System.Drawing.Point(388, 272)
         Me.DTPFecAlta2.Name = "DTPFecAlta2"
         Me.DTPFecAlta2.Size = New System.Drawing.Size(163, 22)
         Me.DTPFecAlta2.TabIndex = 7
+        Me.DTPFecAlta2.Visible = False
         '
         'DTPFecNac2
         '
         Me.DTPFecNac2.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DTPFecNac2.Location = New System.Drawing.Point(83, 264)
+        Me.DTPFecNac2.Location = New System.Drawing.Point(129, 238)
         Me.DTPFecNac2.Name = "DTPFecNac2"
         Me.DTPFecNac2.Size = New System.Drawing.Size(163, 22)
         Me.DTPFecNac2.TabIndex = 6
@@ -705,7 +703,7 @@ Partial Class frmCliente
         Me.Button1.Location = New System.Drawing.Point(144, 31)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(50, 23)
-        Me.Button1.TabIndex = 81
+        Me.Button1.TabIndex = 1
         Me.Button1.Text = "Buscar"
         Me.Button1.UseVisualStyleBackColor = True
         '
@@ -725,7 +723,7 @@ Partial Class frmCliente
         Me.Label36.AutoSize = True
         Me.Label36.Font = New System.Drawing.Font("Consolas", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label36.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label36.Location = New System.Drawing.Point(43, 242)
+        Me.Label36.Location = New System.Drawing.Point(309, 243)
         Me.Label36.Name = "Label36"
         Me.Label36.Size = New System.Drawing.Size(35, 15)
         Me.Label36.TabIndex = 62
@@ -736,18 +734,18 @@ Partial Class frmCliente
         Me.TxtRazSocial.Location = New System.Drawing.Point(199, 33)
         Me.TxtRazSocial.Name = "TxtRazSocial"
         Me.TxtRazSocial.Size = New System.Drawing.Size(344, 22)
-        Me.TxtRazSocial.TabIndex = 1
+        Me.TxtRazSocial.TabIndex = 2
         '
         'TxtFantasia
         '
         Me.TxtFantasia.Location = New System.Drawing.Point(108, 61)
         Me.TxtFantasia.Name = "TxtFantasia"
         Me.TxtFantasia.Size = New System.Drawing.Size(422, 22)
-        Me.TxtFantasia.TabIndex = 2
+        Me.TxtFantasia.TabIndex = 3
         '
         'TxtMail2
         '
-        Me.TxtMail2.Location = New System.Drawing.Point(83, 236)
+        Me.TxtMail2.Location = New System.Drawing.Point(350, 236)
         Me.TxtMail2.Name = "TxtMail2"
         Me.TxtMail2.Size = New System.Drawing.Size(223, 22)
         Me.TxtMail2.TabIndex = 5
@@ -755,20 +753,11 @@ Partial Class frmCliente
         'Label35
         '
         Me.Label35.AutoSize = True
-        Me.Label35.Location = New System.Drawing.Point(7, 270)
+        Me.Label35.Location = New System.Drawing.Point(11, 242)
         Me.Label35.Name = "Label35"
-        Me.Label35.Size = New System.Drawing.Size(70, 14)
+        Me.Label35.Size = New System.Drawing.Size(119, 14)
         Me.Label35.TabIndex = 69
-        Me.Label35.Text = "Fecha Nac"
-        '
-        'Label34
-        '
-        Me.Label34.AutoSize = True
-        Me.Label34.Location = New System.Drawing.Point(272, 270)
-        Me.Label34.Name = "Label34"
-        Me.Label34.Size = New System.Drawing.Size(77, 14)
-        Me.Label34.TabIndex = 70
-        Me.Label34.Text = "Fecha Alta"
+        Me.Label35.Text = "Inicio Actividad"
         '
         'GroupBox4
         '
@@ -795,13 +784,12 @@ Partial Class frmCliente
         Me.GroupBox4.Controls.Add(Me.txtApellido)
         Me.GroupBox4.Controls.Add(Me.txtMail)
         Me.GroupBox4.Controls.Add(Me.Label9)
-        Me.GroupBox4.Controls.Add(Me.Label10)
         Me.GroupBox4.Controls.Add(Me.Label5)
         Me.GroupBox4.Controls.Add(Me.cbTipoDoc)
         Me.GroupBox4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.GroupBox4.Location = New System.Drawing.Point(10, 23)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(576, 294)
+        Me.GroupBox4.Size = New System.Drawing.Size(576, 268)
         Me.GroupBox4.TabIndex = 87
         Me.GroupBox4.TabStop = False
         '
@@ -829,7 +817,7 @@ Partial Class frmCliente
         Me.Label54.AutoSize = True
         Me.Label54.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label54.ForeColor = System.Drawing.Color.Red
-        Me.Label54.Location = New System.Drawing.Point(266, 266)
+        Me.Label54.Location = New System.Drawing.Point(268, 238)
         Me.Label54.Name = "Label54"
         Me.Label54.Size = New System.Drawing.Size(15, 20)
         Me.Label54.TabIndex = 75
@@ -866,7 +854,7 @@ Partial Class frmCliente
         Me.GroupBox6.Location = New System.Drawing.Point(6, 78)
         Me.GroupBox6.Name = "GroupBox6"
         Me.GroupBox6.Size = New System.Drawing.Size(564, 125)
-        Me.GroupBox6.TabIndex = 57
+        Me.GroupBox6.TabIndex = 5
         Me.GroupBox6.TabStop = False
         Me.GroupBox6.Text = "Dirección"
         '
@@ -877,7 +865,7 @@ Partial Class frmCliente
         Me.CbPais.Location = New System.Drawing.Point(296, 72)
         Me.CbPais.Name = "CbPais"
         Me.CbPais.Size = New System.Drawing.Size(242, 22)
-        Me.CbPais.TabIndex = 7
+        Me.CbPais.TabIndex = 16
         '
         'Label53
         '
@@ -950,7 +938,7 @@ Partial Class frmCliente
         Me.TxtCiudad.Location = New System.Drawing.Point(297, 99)
         Me.TxtCiudad.Name = "TxtCiudad"
         Me.TxtCiudad.Size = New System.Drawing.Size(241, 22)
-        Me.TxtCiudad.TabIndex = 9
+        Me.TxtCiudad.TabIndex = 18
         '
         'Label49
         '
@@ -979,7 +967,7 @@ Partial Class frmCliente
         Me.TxtProvincia.Location = New System.Drawing.Point(74, 99)
         Me.TxtProvincia.Name = "TxtProvincia"
         Me.TxtProvincia.Size = New System.Drawing.Size(147, 22)
-        Me.TxtProvincia.TabIndex = 8
+        Me.TxtProvincia.TabIndex = 17
         '
         'Label47
         '
@@ -997,7 +985,7 @@ Partial Class frmCliente
         Me.TxtBarrio.Location = New System.Drawing.Point(74, 72)
         Me.TxtBarrio.Name = "TxtBarrio"
         Me.TxtBarrio.Size = New System.Drawing.Size(163, 22)
-        Me.TxtBarrio.TabIndex = 6
+        Me.TxtBarrio.TabIndex = 15
         '
         'Label46
         '
@@ -1015,7 +1003,7 @@ Partial Class frmCliente
         Me.TxtCP.Location = New System.Drawing.Point(496, 44)
         Me.TxtCP.Name = "TxtCP"
         Me.TxtCP.Size = New System.Drawing.Size(58, 22)
-        Me.TxtCP.TabIndex = 5
+        Me.TxtCP.TabIndex = 14
         '
         'Label45
         '
@@ -1033,7 +1021,7 @@ Partial Class frmCliente
         Me.TxtDpto.Location = New System.Drawing.Point(394, 45)
         Me.TxtDpto.Name = "TxtDpto"
         Me.TxtDpto.Size = New System.Drawing.Size(58, 22)
-        Me.TxtDpto.TabIndex = 4
+        Me.TxtDpto.TabIndex = 13
         '
         'Label44
         '
@@ -1051,7 +1039,7 @@ Partial Class frmCliente
         Me.txtPiso.Location = New System.Drawing.Point(289, 45)
         Me.txtPiso.Name = "txtPiso"
         Me.txtPiso.Size = New System.Drawing.Size(54, 22)
-        Me.txtPiso.TabIndex = 3
+        Me.txtPiso.TabIndex = 8
         '
         'Label43
         '
@@ -1069,7 +1057,7 @@ Partial Class frmCliente
         Me.TxtEdificio.Location = New System.Drawing.Point(75, 45)
         Me.TxtEdificio.Name = "TxtEdificio"
         Me.TxtEdificio.Size = New System.Drawing.Size(162, 22)
-        Me.TxtEdificio.TabIndex = 2
+        Me.TxtEdificio.TabIndex = 7
         '
         'Label32
         '
@@ -1087,14 +1075,14 @@ Partial Class frmCliente
         Me.TxtNumero.Location = New System.Drawing.Point(372, 17)
         Me.TxtNumero.Name = "TxtNumero"
         Me.TxtNumero.Size = New System.Drawing.Size(117, 22)
-        Me.TxtNumero.TabIndex = 1
+        Me.TxtNumero.TabIndex = 6
         '
         'txtCalle
         '
         Me.txtCalle.Location = New System.Drawing.Point(75, 18)
         Me.txtCalle.Name = "txtCalle"
         Me.txtCalle.Size = New System.Drawing.Size(231, 22)
-        Me.txtCalle.TabIndex = 0
+        Me.txtCalle.TabIndex = 5
         '
         'Label3
         '
@@ -1131,15 +1119,16 @@ Partial Class frmCliente
         'DTPFecAlta
         '
         Me.DTPFecAlta.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DTPFecAlta.Location = New System.Drawing.Point(364, 264)
+        Me.DTPFecAlta.Location = New System.Drawing.Point(346, 272)
         Me.DTPFecAlta.Name = "DTPFecAlta"
         Me.DTPFecAlta.Size = New System.Drawing.Size(170, 22)
         Me.DTPFecAlta.TabIndex = 9
+        Me.DTPFecAlta.Visible = False
         '
         'DTPFecNac
         '
         Me.DTPFecNac.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DTPFecNac.Location = New System.Drawing.Point(79, 264)
+        Me.DTPFecNac.Location = New System.Drawing.Point(80, 236)
         Me.DTPFecNac.Name = "DTPFecNac"
         Me.DTPFecNac.Size = New System.Drawing.Size(185, 22)
         Me.DTPFecNac.TabIndex = 8
@@ -1216,7 +1205,7 @@ Partial Class frmCliente
         Me.MtxtTel.Mask = "(9999)000-0000"
         Me.MtxtTel.Name = "MtxtTel"
         Me.MtxtTel.Size = New System.Drawing.Size(184, 22)
-        Me.MtxtTel.TabIndex = 5
+        Me.MtxtTel.TabIndex = 6
         '
         'Label7
         '
@@ -1235,14 +1224,14 @@ Partial Class frmCliente
         Me.MtxtCelular.Mask = "(9999)000-000000"
         Me.MtxtCelular.Name = "MtxtCelular"
         Me.MtxtCelular.Size = New System.Drawing.Size(227, 22)
-        Me.MtxtCelular.TabIndex = 6
+        Me.MtxtCelular.TabIndex = 7
         '
         'Label6
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Consolas", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label6.Location = New System.Drawing.Point(39, 243)
+        Me.Label6.Location = New System.Drawing.Point(294, 238)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(35, 15)
         Me.Label6.TabIndex = 6
@@ -1274,28 +1263,19 @@ Partial Class frmCliente
         '
         'txtMail
         '
-        Me.txtMail.Location = New System.Drawing.Point(80, 236)
+        Me.txtMail.Location = New System.Drawing.Point(331, 234)
         Me.txtMail.Name = "txtMail"
-        Me.txtMail.Size = New System.Drawing.Size(184, 22)
-        Me.txtMail.TabIndex = 7
+        Me.txtMail.Size = New System.Drawing.Size(239, 22)
+        Me.txtMail.TabIndex = 9
         '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(4, 270)
+        Me.Label9.Location = New System.Drawing.Point(10, 242)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(70, 14)
         Me.Label9.TabIndex = 16
         Me.Label9.Text = "Fecha Nac"
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(281, 270)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(77, 14)
-        Me.Label10.TabIndex = 17
-        Me.Label10.Text = "Fecha Alta"
         '
         'Label5
         '
@@ -1329,7 +1309,7 @@ Partial Class frmCliente
         Me.GroupBox3.Controls.Add(Me.CboCampo)
         Me.GroupBox3.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.GroupBox3.Location = New System.Drawing.Point(12, 385)
+        Me.GroupBox3.Location = New System.Drawing.Point(12, 361)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(1184, 263)
         Me.GroupBox3.TabIndex = 3
@@ -1420,7 +1400,7 @@ Partial Class frmCliente
         Me.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange
         Me.BackColor = System.Drawing.Color.SeaGreen
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(1228, 654)
+        Me.ClientSize = New System.Drawing.Size(1228, 627)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox1)
         Me.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
@@ -1463,7 +1443,6 @@ Partial Class frmCliente
     Friend WithEvents txtBuscar As System.Windows.Forms.TextBox
     Friend WithEvents CboCampo As System.Windows.Forms.ComboBox
     Friend WithEvents lkNoexiste As System.Windows.Forms.LinkLabel
-    Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents cbTipoDoc As System.Windows.Forms.ComboBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
@@ -1488,7 +1467,6 @@ Partial Class frmCliente
     Friend WithEvents TxtFantasia As System.Windows.Forms.TextBox
     Friend WithEvents TxtMail2 As System.Windows.Forms.TextBox
     Friend WithEvents Label35 As System.Windows.Forms.Label
-    Friend WithEvents Label34 As System.Windows.Forms.Label
     Friend WithEvents Label31 As System.Windows.Forms.Label
     Friend WithEvents Label33 As System.Windows.Forms.Label
     Friend WithEvents GroupBox4 As System.Windows.Forms.GroupBox

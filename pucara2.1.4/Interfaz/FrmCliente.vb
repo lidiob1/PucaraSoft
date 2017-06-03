@@ -126,6 +126,7 @@ Public Class frmCliente
         AlineadoDerecha()
         'limpiar()
         LimpiarCheckBox_cli()
+        Diferenciar_cli()
 
     End Sub
     '**************LIMPIAR CHKBOX HAB-INH***************
@@ -409,6 +410,13 @@ Public Class frmCliente
         btnGuardar.Visible = False
 
     End Sub
+    Public Sub Diferenciar_cli()
+        For Each fila As DataGridViewRow In dgvListado.Rows
+            If fila.Cells("Habilitado").Value = 0 Then
+                fila.DefaultCellStyle.BackColor = Color.Aquamarine
+            End If
+        Next
+    End Sub
     '************************************BOTON EDITAR********************
     Private Sub btnEditar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEditar.Click
         Dim result As DialogResult
@@ -661,6 +669,47 @@ Public Class frmCliente
             MessageBox.Show("No existe el cliente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End Try
     End Sub
+    '*****************************************BUSCAR CLIENTE JURIDICO***************************
+    '***************
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        buscarClienteJURIDICO()
+    End Sub
+    Private Sub buscarClienteJURIDICO()
+        Dim objCliente As New ClientesNE
+        'Dim objPresupuestoDA As New ClientesDA
+        Dim objClienteDA As New ClientesDA
+        Dim dr As DataRow
+
+        Try
+            objCliente.Nro_Doc = MtxtCuit.Text
+
+            dr = objClienteDA.buscarClienteJURIDICO(objCliente.Nro_Doc)
+
+            TxtRazSocial.Text = CStr(dr("RazonSocial"))
+            TxtFantasia.Text = CStr(dr("Fantasia"))
+            'cbTipoDoc.Text = dr("Id_Tipo_Dni")
+            TxtCalle2.Text = CStr(dr("Calle"))
+            TxtNumero2.Text = CStr(dr("NumeroCalle"))
+            TxtEdificio2.Text = CStr(dr("Edificio"))
+            TxtPiso2.Text = CStr(dr("Piso"))
+            TxtDPto2.Text = CStr(dr("Dpto"))
+            TxtCP2.Text = CStr(dr("CP"))
+            TxtBarrio2.Text = CStr(dr("Barrio"))
+            CbPais2.Text = CStr(dr("Pais"))
+            TxtProvincia2.Text = CStr(dr("Provincia"))
+            TxtCiudad2.Text = CStr(dr("Ciudad"))
+            MtxtTel2.Text = CStr(dr("Telefono"))
+            MtxtCelular2.Text = CStr(dr("Celular"))
+            TxtMail2.Text = CStr(dr("Mail"))
+            'DTPFecAlta2.Text = CStr(dr("Fecha_Alta"))
+            DTPFecNac2.Text = CStr(dr("Fecha_Nac"))
+
+        Catch ex As Exception
+            'MsgBox(ex.Message)
+            MessageBox.Show("No existe el cliente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End Try
+    End Sub
+
     '********************************BOTON INHABILITAR****************
     Private Sub BtnInhabilitar_cli_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnInhabilitar_cli.Click
         Dim result As DialogResult
@@ -672,7 +721,7 @@ Public Class frmCliente
                     Dim marcado As Boolean = Convert.ToBoolean(row.Cells("Inhabilitar").Value)
 
                     If marcado Then
-                        Dim oneKey As Integer = Convert.ToInt32(row.Cells("DNI").Value)
+                        Dim oneKey As String = Convert.ToString(row.Cells("DNI").Value)
                         Dim cdb As New ClientesNE
                         Dim func As New ClientesDA
                         cdb._Nro_Doc = oneKey
@@ -708,7 +757,7 @@ Public Class frmCliente
                     Dim marcado As Boolean = Convert.ToBoolean(row.Cells("Habilitar").Value)
 
                     If marcado Then
-                        Dim oneKey As Integer = Convert.ToInt32(row.Cells("DNI").Value)
+                        Dim oneKey As String = Convert.ToString(row.Cells("DNI").Value)
                         Dim vdb As New ClientesNE
                         Dim func As New ClientesDA
                         vdb._Nro_Doc = oneKey
@@ -849,6 +898,7 @@ Public Class frmCliente
     End Sub
     Public Sub FisicaChequeado()
         CHkJuridica.Checked = False
+        txtNroDoc.Focus()
 
         txtNroDoc.Enabled = True
         cbTipoDoc.Enabled = True
@@ -895,6 +945,7 @@ Public Class frmCliente
 
     Public Sub juridicaChequeado()
         CHkFisica.Checked = False
+        MtxtCuit.Focus()
 
         txtNroDoc.Enabled = False
         cbTipoDoc.Enabled = False
@@ -936,5 +987,6 @@ Public Class frmCliente
         DTPFecNac2.Enabled = True
     End Sub
 
+    
     
 End Class
