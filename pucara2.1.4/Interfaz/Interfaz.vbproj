@@ -93,10 +93,22 @@
     <Compile Include="FrmCliente.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmConsultaReservaxCliente.Designer.vb">
+      <DependentUpon>FrmConsultaReservaxCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmConsultaReservaxCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmConsultarReservas.Designer.vb">
       <DependentUpon>FrmConsultarReservas.vb</DependentUpon>
     </Compile>
     <Compile Include="FrmConsultarReservas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDisponibilidad.Designer.vb">
+      <DependentUpon>FrmDisponibilidad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDisponibilidad.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmLogin.Designer.vb">
@@ -141,6 +153,7 @@
     <Compile Include="FrmMenu.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Modulo\Validaciones.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -167,8 +180,14 @@
     <EmbeddedResource Include="FrmCliente.resx">
       <DependentUpon>FrmCliente.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmConsultaReservaxCliente.resx">
+      <DependentUpon>FrmConsultaReservaxCliente.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmConsultarReservas.resx">
       <DependentUpon>FrmConsultarReservas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDisponibilidad.resx">
+      <DependentUpon>FrmDisponibilidad.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.vb</DependentUpon>

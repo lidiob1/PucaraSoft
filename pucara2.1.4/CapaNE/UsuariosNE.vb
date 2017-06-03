@@ -1,6 +1,12 @@
 ﻿Public Class UsuariosNE
 
     Public id_usuario As String
+    Public nom_usuario As String
+    Public password As String
+    Public categoria As String
+    Public habilitado As Integer
+    Public id_permiso As Integer
+
     Public Property _Id_usuario() As String
         Get
             Return Id_usuario
@@ -10,7 +16,7 @@
         End Set
     End Property
 
-    Public nom_usuario As String
+
     Public Property _Nom_usuario() As String
         Get
             Return Nom_usuario
@@ -20,7 +26,7 @@
         End Set
     End Property
 
-    Public password As String
+
     Public Property _Password() As String
         Get
             Return password
@@ -30,7 +36,7 @@
         End Set
     End Property
 
-    Public categoria As String
+
     Public Property _Categoria() As String
         Get
             Return categoria
@@ -40,7 +46,7 @@
         End Set
     End Property
 
-    Public habilitado As Integer
+
     Public Property _Habilitado() As Integer
         Get
             Return habilitado
@@ -50,7 +56,7 @@
         End Set
     End Property
 
-    Public id_permiso As Integer
+
     Public Property _Id_permiso() As Integer
         Get
             Return id_permiso

@@ -47,19 +47,19 @@ Partial Class FrmConsultarReservas
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(647, 398)
+        Me.Button3.Location = New System.Drawing.Point(659, 407)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(88, 40)
-        Me.Button3.TabIndex = 8
+        Me.Button3.TabIndex = 13
         Me.Button3.Text = "Salir"
         Me.Button3.UseVisualStyleBackColor = True
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(18, 398)
+        Me.Button2.Location = New System.Drawing.Point(30, 407)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(88, 40)
-        Me.Button2.TabIndex = 9
+        Me.Button2.TabIndex = 14
         Me.Button2.Text = "Imprimir"
         Me.Button2.UseVisualStyleBackColor = True
         '
@@ -67,10 +67,10 @@ Partial Class FrmConsultarReservas
         '
         Me.GroupBox3.BackColor = System.Drawing.Color.PaleGreen
         Me.GroupBox3.Controls.Add(Me.DataGridView1)
-        Me.GroupBox3.Location = New System.Drawing.Point(18, 153)
+        Me.GroupBox3.Location = New System.Drawing.Point(30, 162)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(717, 239)
-        Me.GroupBox3.TabIndex = 7
+        Me.GroupBox3.TabIndex = 12
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Reservas"
         '
@@ -90,10 +90,10 @@ Partial Class FrmConsultarReservas
         Me.GroupBox2.Controls.Add(Me.DateTimePicker1)
         Me.GroupBox2.Controls.Add(Me.Label2)
         Me.GroupBox2.Controls.Add(Me.Label1)
-        Me.GroupBox2.Location = New System.Drawing.Point(325, 16)
+        Me.GroupBox2.Location = New System.Drawing.Point(337, 25)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(410, 123)
-        Me.GroupBox2.TabIndex = 6
+        Me.GroupBox2.TabIndex = 11
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Fecha"
         '
@@ -146,10 +146,10 @@ Partial Class FrmConsultarReservas
         Me.GroupBox1.Controls.Add(Me.CheckBox3)
         Me.GroupBox1.Controls.Add(Me.CheckBox2)
         Me.GroupBox1.Controls.Add(Me.CheckBox1)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
+        Me.GroupBox1.Location = New System.Drawing.Point(24, 21)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(307, 127)
-        Me.GroupBox1.TabIndex = 5
+        Me.GroupBox1.TabIndex = 10
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Estado"
         '
@@ -209,7 +209,7 @@ Partial Class FrmConsultarReservas
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(744, 448)
+        Me.ClientSize = New System.Drawing.Size(777, 466)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.GroupBox3)
