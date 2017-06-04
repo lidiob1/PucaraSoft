@@ -584,6 +584,22 @@ Public Class frmCliente
         Me.dgvListado.Columns(7).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
         Me.dgvListado.Columns(8).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
         Me.dgvListado.Columns(9).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+        Me.dgvListado.Columns(10).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+        Me.dgvListado.Columns(11).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+        Me.dgvListado.Columns(12).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+        Me.dgvListado.Columns(13).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+        Me.dgvListado.Columns(14).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+        Me.dgvListado.Columns(15).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+        Me.dgvListado.Columns(16).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+        Me.dgvListado.Columns(17).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+        Me.dgvListado.Columns(18).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+        Me.dgvListado.Columns(19).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+        Me.dgvListado.Columns(20).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+        Me.dgvListado.Columns(21).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+        Me.dgvListado.Columns(22).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+        Me.dgvListado.Columns(23).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+        Me.dgvListado.Columns(24).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+        Me.dgvListado.Columns(25).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
 
     End Sub
     '***********************VALIDACION DE MAIL**************************************************

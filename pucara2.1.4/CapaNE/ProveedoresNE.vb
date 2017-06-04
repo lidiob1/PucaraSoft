@@ -1,61 +1,91 @@
 ﻿Public Class ProveedoresNE
 
-    Public Tipo_prov As String
-    Public Property _Tipo_prov() As String
-        Get
-            Return Tipo_prov
-        End Get
-        Set(ByVal value As String)
-            Tipo_prov = value
-        End Set
-    End Property
-
-    Public cuit As String
+    Public Cuit As String
     Public Property _Cuit() As String
         Get
-            Return cuit
+            Return Cuit
         End Get
         Set(ByVal value As String)
-            cuit = value
+            Cuit = value
         End Set
     End Property
 
-    Public razon_social As String
-    Public Property _Razon_social() As String
+    Public Tipo_dni As String
+    Public Property _Tipo_dni() As String
         Get
-            Return razon_social
+            Return Tipo_dni
         End Get
         Set(ByVal value As String)
-            razon_social = value
+            Tipo_dni = value
         End Set
     End Property
 
-    Public direccion As String
-    Public Property _Direccion() As String
+    Public nombre As String
+    Public Property _Nombre() As String
         Get
-            Return direccion
+            Return nombre
         End Get
         Set(ByVal value As String)
-            direccion = value
+            nombre = value
         End Set
     End Property
 
-    Public telefono As Integer
-    Public Property _Telefono() As Integer
+    Public apellido As String
+    Public Property _Apellido() As String
+        Get
+            Return apellido
+        End Get
+        Set(ByVal value As String)
+            apellido = value
+        End Set
+    End Property
+
+    Public fecha_ini As Date
+    Public Property _Fecha_ini() As Date
+        Get
+            Return fecha_ini
+        End Get
+        Set(ByVal value As Date)
+            fecha_ini = value
+        End Set
+    End Property
+
+    Public fecha_alta As Date
+    Public Property _Fecha_alta() As Date
+        Get
+            Return fecha_alta
+        End Get
+        Set(ByVal value As Date)
+            fecha_alta = value
+        End Set
+    End Property
+
+    Public Calle As String
+    Public Property _Calle() As String
+        Get
+            Return Calle
+        End Get
+        Set(ByVal value As String)
+            Calle = value
+        End Set
+    End Property
+
+    Public telefono As String
+    Public Property _Telefono() As String
         Get
             Return telefono
         End Get
-        Set(ByVal value As Integer)
+        Set(ByVal value As String)
             telefono = value
         End Set
     End Property
 
-    Public celular As Integer
-    Public Property _Celular() As Integer
+    Public celular As String
+    Public Property _Celular() As String
         Get
             Return celular
         End Get
-        Set(ByVal value As Integer)
+        Set(ByVal value As String)
             celular = value
         End Set
     End Property
@@ -70,63 +100,164 @@
         End Set
     End Property
 
-    Public cod_postal As Integer
-    Public Property _Cod_postal() As Integer
-        Get
-            Return cod_postal
-        End Get
-        Set(ByVal value As Integer)
-            cod_postal = value
-        End Set
-    End Property
-
-    Public habilitado As String
-    Public Property _Habilitado() As String
+    Public habilitado As Integer
+    Public Property _Habilitado() As Integer
         Get
             Return habilitado
         End Get
-        Set(ByVal value As String)
+        Set(ByVal value As Integer)
             habilitado = value
         End Set
     End Property
-
-    Public fecha_ini As Date
-    Public Property _fecha_ini() As Date
+    Public Tipo_prov As String
+    Public Property _Tipo_prov() As String
         Get
-            Return fecha_ini
+            Return Tipo_prov
         End Get
-        Set(ByVal value As Date)
-            fecha_ini = value
+        Set(ByVal value As String)
+            Tipo_prov = value
+        End Set
+    End Property
+    Public NumCalle As Integer
+    Public Property _NumCalle() As Integer
+        Get
+            Return NumCalle
+        End Get
+        Set(ByVal value As Integer)
+            NumCalle = value
+        End Set
+    End Property
+    Public Edificio As String
+    Public Property _Edificio() As String
+        Get
+            Return Edificio
+        End Get
+        Set(ByVal value As String)
+            Edificio = value
         End Set
     End Property
 
-    Public fecha_alta As Date
-    Public Property _fecha_alta() As Date
+    Public Piso As String
+    Public Property _Piso() As String
         Get
-            Return fecha_alta
+            Return Piso
         End Get
-        Set(ByVal value As Date)
-            fecha_alta = value
+        Set(ByVal value As String)
+            Piso = value
         End Set
     End Property
+    Public Dpto As String
+    Public Property _Dpto() As String
+        Get
+            Return Dpto
+        End Get
+        Set(ByVal value As String)
+            Dpto = value
+        End Set
+    End Property
+    Public CP As String
+    Public Property _CP() As String
+        Get
+            Return CP
+        End Get
+        Set(ByVal value As String)
+            CP = value
+        End Set
+    End Property
+
+    Public Barrio As String
+    Public Property _Barrio() As String
+        Get
+            Return Barrio
+        End Get
+        Set(ByVal value As String)
+            Barrio = value
+        End Set
+    End Property
+
+    Public Pais As String
+    Public Property _Pais() As String
+        Get
+            Return Pais
+        End Get
+        Set(ByVal value As String)
+            Pais = value
+        End Set
+    End Property
+    Public Provincia As String
+    Public Property _Provincia() As String
+        Get
+            Return Provincia
+        End Get
+        Set(ByVal value As String)
+            Provincia = value
+        End Set
+    End Property
+    Public Ciudad As String
+    Public Property _Ciudad() As String
+        Get
+            Return Ciudad
+        End Get
+        Set(ByVal value As String)
+            Ciudad = value
+        End Set
+    End Property
+    Public RazonSocial As String
+    Public Property _RazonSocial() As String
+        Get
+            Return RazonSocial
+        End Get
+        Set(ByVal value As String)
+            RazonSocial = value
+        End Set
+    End Property
+    Public Fantasia As String
+    Public Property _Fantasia() As String
+        Get
+            Return Fantasia
+        End Get
+        Set(ByVal value As String)
+            Fantasia = value
+        End Set
+    End Property
+    Public Nro_Doc As String
+    Public Property _Nro_Doc() As String
+        Get
+            Return Nro_Doc
+        End Get
+        Set(ByVal value As String)
+            Nro_Doc = value
+        End Set
+    End Property
+    'constructores 1 en blanco y otro con los datos
     Public Sub New()
 
     End Sub
 
-    Public Sub New(ByVal Tipo_prov As String, ByVal cuit As Integer, ByVal razon_social As String, ByVal direccion As String, ByVal telefono As Integer, ByVal Celular As Integer, ByVal cod_postal As Integer, ByVal Mail As String, ByVal habilitado As Integer, ByVal fecha_ini As Date, ByVal fecha_alta As Date)
-
-        _Tipo_prov = Tipo_prov
-        _Cuit = cuit
-        _Razon_social = razon_social
-        _Direccion = direccion
-        _Telefono = telefono
+    Public Sub New(ByVal Cuit As String, ByVal Nro_Doc As String, ByVal Tipo_dni As String, ByVal Nombre As String, ByVal Apellido As String, ByVal Calle As String, ByVal Telefono As String, ByVal Celular As String, ByVal mail As String, ByVal fecha_ini As Date, ByVal fecha_alta As Date, ByVal habilitado As Integer, ByVal Tipo_prov As String, ByVal NumCalle As Integer, ByVal Edificio As String, ByVal Piso As String, ByVal Dpto As String, ByVal CP As String, ByVal Barrio As String, ByVal Pais As String, ByVal Provincia As String, ByVal Ciudad As String, ByVal RazonSocial As String, ByVal Fantasia As String)
+        _Cuit = Cuit
+        _Nro_Doc = Nro_Doc
+        _Tipo_dni = Tipo_dni
+        _Nombre = Nombre
+        _Apellido = Apellido
+        _Calle = Calle
+        _Telefono = Telefono
         _Celular = Celular
-        _Cod_postal = cod_postal
-        _Mail = Mail
+        _Mail = mail
+        _Fecha_ini = fecha_ini
+        _Fecha_alta = fecha_alta
         _Habilitado = habilitado
-        _fecha_ini = fecha_ini
-        _fecha_alta = fecha_alta
-
+        _Tipo_prov = Tipo_prov
+        _NumCalle = NumCalle
+        _Edificio = Edificio
+        _Piso = Piso
+        _Dpto = Dpto
+        _CP = CP
+        _Barrio = Barrio
+        _Pais = Pais
+        _Provincia = Provincia
+        _Ciudad = Ciudad
+        _RazonSocial = RazonSocial
+        _Fantasia = Fantasia
     End Sub
-
 End Class
