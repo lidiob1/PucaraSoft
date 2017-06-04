@@ -340,6 +340,7 @@ Public Class frmCliente
         
 
         If dgvListado.SelectedCells.Item(23).Value = 0 Then
+
             txtNroDoc.Enabled = False
             cbTipoDoc.Enabled = False
             txtNombre.Enabled = False
@@ -381,7 +382,8 @@ Public Class frmCliente
 
             BtnHabilitar_cli.Visible = True
             BtnInhabilitar_cli.Visible = False
-        Else
+        ElseIf dgvListado.SelectedCells.Item(23).Value = 1 And dgvListado.SelectedCells.Item(24).Value = 1 Then
+
             txtNroDoc.Enabled = True
             cbTipoDoc.Enabled = True
             txtNombre.Enabled = True
@@ -402,8 +404,69 @@ Public Class frmCliente
             TxtProvincia.Enabled = True
             TxtCiudad.Enabled = True
 
+            MtxtCuit.Enabled = False
+            TxtRazSocial.Enabled = False
+            TxtFantasia.Enabled = False
+            TxtCalle2.Enabled = False
+            TxtNumero2.Enabled = False
+            TxtEdificio2.Enabled = False
+            TxtPiso2.Enabled = False
+            TxtDPto2.Enabled = False
+            TxtCP2.Enabled = False
+            TxtBarrio2.Enabled = False
+            CbPais2.Enabled = False
+            TxtProvincia2.Enabled = False
+            TxtCiudad2.Enabled = False
+            MtxtTel2.Enabled = False
+            MtxtCelular2.Enabled = False
+            TxtMail2.Enabled = False
+            DTPFecAlta2.Enabled = False
+            DTPFecNac2.Enabled = False
             BtnHabilitar_cli.Visible = False
             BtnInhabilitar_cli.Visible = True
+        Else
+            txtNroDoc.Enabled = False
+            cbTipoDoc.Enabled = False
+            txtNombre.Enabled = False
+            txtApellido.Enabled = False
+            txtCalle.Enabled = False
+            MtxtTel.Enabled = False
+            MtxtCelular.Enabled = False
+            txtMail.Enabled = False
+            DTPFecNac.Enabled = False
+            DTPFecAlta.Enabled = False
+            TxtNumero.Enabled = False
+            TxtEdificio.Enabled = False
+            txtPiso.Enabled = False
+            TxtDpto.Enabled = False
+            TxtCP.Enabled = False
+            TxtBarrio.Enabled = False
+            CbPais.Enabled = False
+            TxtProvincia.Enabled = False
+            TxtCiudad.Enabled = False
+
+            MtxtCuit.Enabled = True
+            TxtRazSocial.Enabled = True
+            TxtFantasia.Enabled = True
+            TxtCalle2.Enabled = True
+            TxtNumero2.Enabled = True
+            TxtEdificio2.Enabled = True
+            TxtPiso2.Enabled = True
+            TxtDPto2.Enabled = True
+            TxtCP2.Enabled = True
+            TxtBarrio2.Enabled = True
+            CbPais2.Enabled = True
+            TxtProvincia2.Enabled = True
+            TxtCiudad2.Enabled = True
+            MtxtTel2.Enabled = True
+            MtxtCelular2.Enabled = True
+            TxtMail2.Enabled = True
+            DTPFecAlta2.Enabled = True
+            DTPFecNac2.Enabled = True
+
+            BtnHabilitar_cli.Visible = False
+            BtnInhabilitar_cli.Visible = True
+
         End If
 
         btnEditar.Visible = True
