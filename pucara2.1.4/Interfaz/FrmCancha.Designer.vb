@@ -51,6 +51,8 @@ Partial Class FrmCancha
         Me.BtnHabilitar_cancha = New System.Windows.Forms.Button()
         Me.BtnInhabilitar_cancha = New System.Windows.Forms.Button()
         Me.BtnModificar_cancha = New System.Windows.Forms.Button()
+        Me.TxtPrecio = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataListado_Cancha, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ErrorIcono, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -88,7 +90,7 @@ Partial Class FrmCancha
         Me.GroupBox1.Controls.Add(Me.CbInhabilitar_Cancha)
         Me.GroupBox1.Controls.Add(Me.Inexistente)
         Me.GroupBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.GroupBox1.Location = New System.Drawing.Point(20, 214)
+        Me.GroupBox1.Location = New System.Drawing.Point(20, 201)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(429, 231)
         Me.GroupBox1.TabIndex = 41
@@ -160,6 +162,8 @@ Partial Class FrmCancha
         'groupbox2
         '
         Me.groupbox2.BackColor = System.Drawing.Color.LightGreen
+        Me.groupbox2.Controls.Add(Me.Label2)
+        Me.groupbox2.Controls.Add(Me.TxtPrecio)
         Me.groupbox2.Controls.Add(Me.Label1)
         Me.groupbox2.Controls.Add(Me.CBTipCancha)
         Me.groupbox2.Controls.Add(Me.TxtNumCancha)
@@ -172,7 +176,7 @@ Partial Class FrmCancha
         Me.groupbox2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.groupbox2.Location = New System.Drawing.Point(20, 12)
         Me.groupbox2.Name = "groupbox2"
-        Me.groupbox2.Size = New System.Drawing.Size(429, 125)
+        Me.groupbox2.Size = New System.Drawing.Size(429, 112)
         Me.groupbox2.TabIndex = 44
         Me.groupbox2.TabStop = False
         Me.groupbox2.Text = "Cancha"
@@ -182,7 +186,7 @@ Partial Class FrmCancha
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Red
-        Me.Label1.Location = New System.Drawing.Point(390, 30)
+        Me.Label1.Location = New System.Drawing.Point(362, 28)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(15, 20)
         Me.Label1.TabIndex = 42
@@ -192,18 +196,18 @@ Partial Class FrmCancha
         '
         Me.CBTipCancha.FormattingEnabled = True
         Me.CBTipCancha.Items.AddRange(New Object() {"5 Vs 5", "7 Vs 7", "9 Vs 9", "11 Vs 11"})
-        Me.CBTipCancha.Location = New System.Drawing.Point(115, 56)
+        Me.CBTipCancha.Location = New System.Drawing.Point(166, 54)
         Me.CBTipCancha.Name = "CBTipCancha"
-        Me.CBTipCancha.Size = New System.Drawing.Size(269, 21)
+        Me.CBTipCancha.Size = New System.Drawing.Size(191, 21)
         Me.CBTipCancha.TabIndex = 41
         Me.CBTipCancha.Text = "...Seleccione una opcion..."
         '
         'TxtNumCancha
         '
         Me.TxtNumCancha.Enabled = False
-        Me.TxtNumCancha.Location = New System.Drawing.Point(115, 27)
+        Me.TxtNumCancha.Location = New System.Drawing.Point(166, 25)
         Me.TxtNumCancha.Name = "TxtNumCancha"
-        Me.TxtNumCancha.Size = New System.Drawing.Size(269, 20)
+        Me.TxtNumCancha.Size = New System.Drawing.Size(191, 20)
         Me.TxtNumCancha.TabIndex = 39
         '
         'Label10
@@ -211,7 +215,7 @@ Partial Class FrmCancha
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.Red
-        Me.Label10.Location = New System.Drawing.Point(391, 86)
+        Me.Label10.Location = New System.Drawing.Point(363, 84)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(15, 20)
         Me.Label10.TabIndex = 37
@@ -222,7 +226,7 @@ Partial Class FrmCancha
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.Red
-        Me.Label9.Location = New System.Drawing.Point(391, 58)
+        Me.Label9.Location = New System.Drawing.Point(363, 56)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(15, 20)
         Me.Label9.TabIndex = 36
@@ -231,25 +235,25 @@ Partial Class FrmCancha
         'DTPFecActPre
         '
         Me.DTPFecActPre.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DTPFecActPre.Location = New System.Drawing.Point(115, 86)
+        Me.DTPFecActPre.Location = New System.Drawing.Point(150, 118)
         Me.DTPFecActPre.Name = "DTPFecActPre"
         Me.DTPFecActPre.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.DTPFecActPre.Size = New System.Drawing.Size(269, 20)
+        Me.DTPFecActPre.Size = New System.Drawing.Size(118, 20)
         Me.DTPFecActPre.TabIndex = 35
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(19, 86)
+        Me.Label6.Location = New System.Drawing.Point(123, 84)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(90, 13)
+        Me.Label6.Size = New System.Drawing.Size(37, 13)
         Me.Label6.TabIndex = 33
-        Me.Label6.Text = "Fecha de Ingreso"
+        Me.Label6.Text = "Precio"
         '
         'LblNumCancha
         '
         Me.LblNumCancha.AutoSize = True
-        Me.LblNumCancha.Location = New System.Drawing.Point(10, 32)
+        Me.LblNumCancha.Location = New System.Drawing.Point(61, 30)
         Me.LblNumCancha.Name = "LblNumCancha"
         Me.LblNumCancha.Size = New System.Drawing.Size(99, 13)
         Me.LblNumCancha.TabIndex = 31
@@ -258,7 +262,7 @@ Partial Class FrmCancha
         'LblTipChancha
         '
         Me.LblTipChancha.AutoSize = True
-        Me.LblTipChancha.Location = New System.Drawing.Point(26, 58)
+        Me.LblTipChancha.Location = New System.Drawing.Point(77, 56)
         Me.LblTipChancha.Name = "LblTipChancha"
         Me.LblTipChancha.Size = New System.Drawing.Size(83, 13)
         Me.LblTipChancha.TabIndex = 30
@@ -273,7 +277,7 @@ Partial Class FrmCancha
         Me.GroupBox3.Controls.Add(Me.BtnHabilitar_cancha)
         Me.GroupBox3.Controls.Add(Me.BtnInhabilitar_cancha)
         Me.GroupBox3.Controls.Add(Me.BtnModificar_cancha)
-        Me.GroupBox3.Location = New System.Drawing.Point(20, 143)
+        Me.GroupBox3.Location = New System.Drawing.Point(20, 130)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(429, 65)
         Me.GroupBox3.TabIndex = 45
@@ -333,6 +337,23 @@ Partial Class FrmCancha
         Me.BtnModificar_cancha.Text = "Modificar"
         Me.BtnModificar_cancha.UseVisualStyleBackColor = True
         '
+        'TxtPrecio
+        '
+        Me.TxtPrecio.Location = New System.Drawing.Point(166, 82)
+        Me.TxtPrecio.Name = "TxtPrecio"
+        Me.TxtPrecio.Size = New System.Drawing.Size(110, 20)
+        Me.TxtPrecio.TabIndex = 43
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(282, 81)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(20, 24)
+        Me.Label2.TabIndex = 44
+        Me.Label2.Text = "$"
+        '
         'FrmCancha
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -381,4 +402,6 @@ Partial Class FrmCancha
     Friend WithEvents DataListado_Cancha As System.Windows.Forms.DataGridView
     Friend WithEvents Habilitar As System.Windows.Forms.DataGridViewCheckBoxColumn
     Friend WithEvents Inhabilitar As System.Windows.Forms.DataGridViewCheckBoxColumn
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents TxtPrecio As System.Windows.Forms.TextBox
 End Class

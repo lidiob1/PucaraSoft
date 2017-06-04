@@ -126,3 +126,5 @@ C:\Users\Lidio\Documents\GitHub\PucaraSoft\pucara2.1.4\Interfaz\obj\x86\Debug\In
 C:\Users\Lidio\Documents\GitHub\PucaraSoft\pucara2.1.4\Interfaz\obj\x86\Debug\Interfaz.FrmMenu.resources
 C:\Users\Lidio\Documents\GitHub\PucaraSoft\pucara2.1.4\Interfaz\obj\x86\Debug\Interfaz.Resources.resources
 C:\Users\Lidio\Documents\GitHub\PucaraSoft\pucara2.1.4\Interfaz\obj\x86\Debug\Interfaz.vbproj.GenerateResource.Cache
+C:\Users\Sancho\Documents\GitHub\PucaraSoft\PucaraSoft\pucara2.1.4\Interfaz\obj\x86\Debug\Interfaz.FrmConsultaReservaxCliente.resources
+C:\Users\Sancho\Documents\GitHub\PucaraSoft\PucaraSoft\pucara2.1.4\Interfaz\obj\x86\Debug\Interfaz.FrmDisponibilidad.resources

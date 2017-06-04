@@ -121,8 +121,8 @@ Public Class FrmCancha
         Return Fg_SoloNumeros
     End Function
     Private Sub TxtPreCancha_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
-        '  e.Handled = Fg_SoloNumeros(e.KeyChar, TxtPreCancha.Text & CChar(e.KeyChar))
-        'e.Handled = Char.IsNumber(e.KeyChar)
+        e.Handled = Fg_SoloNumeros(e.KeyChar, TxtPrecio.Text & CChar(e.KeyChar))
+        e.Handled = Char.IsNumber(e.KeyChar)
     End Sub
 
     Function Fg_SoloNumeros2(ByVal Digito As String, ByVal Texto As String) As Boolean
@@ -175,7 +175,7 @@ Public Class FrmCancha
 
                 dts._Num_cancha = TxtNumCancha.Text
                 dts._TamCancha = CBTipCancha.Text
-                'dts._Precio_cancha = TxtPreCancha.Text
+                dts._Precio_cancha = TxtPrecio.Text
                 dts._FechaActPrecio = DTPFecActPre.Text
                 dts._habilitado = 1
 

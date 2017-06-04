@@ -126,6 +126,7 @@ Public Class frmCliente
         AlineadoDerecha()
         'limpiar()
         LimpiarCheckBox_cli()
+        Diferenciar_cli()
 
     End Sub
     '**************LIMPIAR CHKBOX HAB-INH***************
@@ -339,6 +340,7 @@ Public Class frmCliente
         
 
         If dgvListado.SelectedCells.Item(23).Value = 0 Then
+
             txtNroDoc.Enabled = False
             cbTipoDoc.Enabled = False
             txtNombre.Enabled = False
@@ -380,7 +382,8 @@ Public Class frmCliente
 
             BtnHabilitar_cli.Visible = True
             BtnInhabilitar_cli.Visible = False
-        Else
+        ElseIf dgvListado.SelectedCells.Item(23).Value = 1 And dgvListado.SelectedCells.Item(24).Value = 1 Then
+
             txtNroDoc.Enabled = True
             cbTipoDoc.Enabled = True
             txtNombre.Enabled = True
@@ -401,13 +404,81 @@ Public Class frmCliente
             TxtProvincia.Enabled = True
             TxtCiudad.Enabled = True
 
+            MtxtCuit.Enabled = False
+            TxtRazSocial.Enabled = False
+            TxtFantasia.Enabled = False
+            TxtCalle2.Enabled = False
+            TxtNumero2.Enabled = False
+            TxtEdificio2.Enabled = False
+            TxtPiso2.Enabled = False
+            TxtDPto2.Enabled = False
+            TxtCP2.Enabled = False
+            TxtBarrio2.Enabled = False
+            CbPais2.Enabled = False
+            TxtProvincia2.Enabled = False
+            TxtCiudad2.Enabled = False
+            MtxtTel2.Enabled = False
+            MtxtCelular2.Enabled = False
+            TxtMail2.Enabled = False
+            DTPFecAlta2.Enabled = False
+            DTPFecNac2.Enabled = False
             BtnHabilitar_cli.Visible = False
             BtnInhabilitar_cli.Visible = True
+        Else
+            txtNroDoc.Enabled = False
+            cbTipoDoc.Enabled = False
+            txtNombre.Enabled = False
+            txtApellido.Enabled = False
+            txtCalle.Enabled = False
+            MtxtTel.Enabled = False
+            MtxtCelular.Enabled = False
+            txtMail.Enabled = False
+            DTPFecNac.Enabled = False
+            DTPFecAlta.Enabled = False
+            TxtNumero.Enabled = False
+            TxtEdificio.Enabled = False
+            txtPiso.Enabled = False
+            TxtDpto.Enabled = False
+            TxtCP.Enabled = False
+            TxtBarrio.Enabled = False
+            CbPais.Enabled = False
+            TxtProvincia.Enabled = False
+            TxtCiudad.Enabled = False
+
+            MtxtCuit.Enabled = True
+            TxtRazSocial.Enabled = True
+            TxtFantasia.Enabled = True
+            TxtCalle2.Enabled = True
+            TxtNumero2.Enabled = True
+            TxtEdificio2.Enabled = True
+            TxtPiso2.Enabled = True
+            TxtDPto2.Enabled = True
+            TxtCP2.Enabled = True
+            TxtBarrio2.Enabled = True
+            CbPais2.Enabled = True
+            TxtProvincia2.Enabled = True
+            TxtCiudad2.Enabled = True
+            MtxtTel2.Enabled = True
+            MtxtCelular2.Enabled = True
+            TxtMail2.Enabled = True
+            DTPFecAlta2.Enabled = True
+            DTPFecNac2.Enabled = True
+
+            BtnHabilitar_cli.Visible = False
+            BtnInhabilitar_cli.Visible = True
+
         End If
 
         btnEditar.Visible = True
         btnGuardar.Visible = False
 
+    End Sub
+    Public Sub Diferenciar_cli()
+        For Each fila As DataGridViewRow In dgvListado.Rows
+            If fila.Cells("Habilitado").Value = 0 Then
+                fila.DefaultCellStyle.BackColor = Color.Aquamarine
+            End If
+        Next
     End Sub
     '************************************BOTON EDITAR********************
     Private Sub btnEditar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEditar.Click
@@ -513,6 +584,22 @@ Public Class frmCliente
         Me.dgvListado.Columns(7).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
         Me.dgvListado.Columns(8).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
         Me.dgvListado.Columns(9).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+        Me.dgvListado.Columns(10).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+        Me.dgvListado.Columns(11).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+        Me.dgvListado.Columns(12).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+        Me.dgvListado.Columns(13).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+        Me.dgvListado.Columns(14).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+        Me.dgvListado.Columns(15).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+        Me.dgvListado.Columns(16).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+        Me.dgvListado.Columns(17).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+        Me.dgvListado.Columns(18).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+        Me.dgvListado.Columns(19).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+        Me.dgvListado.Columns(20).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+        Me.dgvListado.Columns(21).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+        Me.dgvListado.Columns(22).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+        Me.dgvListado.Columns(23).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+        Me.dgvListado.Columns(24).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+        Me.dgvListado.Columns(25).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
 
     End Sub
     '***********************VALIDACION DE MAIL**************************************************
@@ -661,6 +748,47 @@ Public Class frmCliente
             MessageBox.Show("No existe el cliente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End Try
     End Sub
+    '*****************************************BUSCAR CLIENTE JURIDICO***************************
+    '***************
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        buscarClienteJURIDICO()
+    End Sub
+    Private Sub buscarClienteJURIDICO()
+        Dim objCliente As New ClientesNE
+        'Dim objPresupuestoDA As New ClientesDA
+        Dim objClienteDA As New ClientesDA
+        Dim dr As DataRow
+
+        Try
+            objCliente.Nro_Doc = MtxtCuit.Text
+
+            dr = objClienteDA.buscarClienteJURIDICO(objCliente.Nro_Doc)
+
+            TxtRazSocial.Text = CStr(dr("RazonSocial"))
+            TxtFantasia.Text = CStr(dr("Fantasia"))
+            'cbTipoDoc.Text = dr("Id_Tipo_Dni")
+            TxtCalle2.Text = CStr(dr("Calle"))
+            TxtNumero2.Text = CStr(dr("NumeroCalle"))
+            TxtEdificio2.Text = CStr(dr("Edificio"))
+            TxtPiso2.Text = CStr(dr("Piso"))
+            TxtDPto2.Text = CStr(dr("Dpto"))
+            TxtCP2.Text = CStr(dr("CP"))
+            TxtBarrio2.Text = CStr(dr("Barrio"))
+            CbPais2.Text = CStr(dr("Pais"))
+            TxtProvincia2.Text = CStr(dr("Provincia"))
+            TxtCiudad2.Text = CStr(dr("Ciudad"))
+            MtxtTel2.Text = CStr(dr("Telefono"))
+            MtxtCelular2.Text = CStr(dr("Celular"))
+            TxtMail2.Text = CStr(dr("Mail"))
+            'DTPFecAlta2.Text = CStr(dr("Fecha_Alta"))
+            DTPFecNac2.Text = CStr(dr("Fecha_Nac"))
+
+        Catch ex As Exception
+            'MsgBox(ex.Message)
+            MessageBox.Show("No existe el cliente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End Try
+    End Sub
+
     '********************************BOTON INHABILITAR****************
     Private Sub BtnInhabilitar_cli_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnInhabilitar_cli.Click
         Dim result As DialogResult
@@ -672,7 +800,7 @@ Public Class frmCliente
                     Dim marcado As Boolean = Convert.ToBoolean(row.Cells("Inhabilitar").Value)
 
                     If marcado Then
-                        Dim oneKey As Integer = Convert.ToInt32(row.Cells("DNI").Value)
+                        Dim oneKey As String = Convert.ToString(row.Cells("DNI").Value)
                         Dim cdb As New ClientesNE
                         Dim func As New ClientesDA
                         cdb._Nro_Doc = oneKey
@@ -708,7 +836,7 @@ Public Class frmCliente
                     Dim marcado As Boolean = Convert.ToBoolean(row.Cells("Habilitar").Value)
 
                     If marcado Then
-                        Dim oneKey As Integer = Convert.ToInt32(row.Cells("DNI").Value)
+                        Dim oneKey As String = Convert.ToString(row.Cells("DNI").Value)
                         Dim vdb As New ClientesNE
                         Dim func As New ClientesDA
                         vdb._Nro_Doc = oneKey
@@ -849,6 +977,7 @@ Public Class frmCliente
     End Sub
     Public Sub FisicaChequeado()
         CHkJuridica.Checked = False
+        txtNroDoc.Focus()
 
         txtNroDoc.Enabled = True
         cbTipoDoc.Enabled = True
@@ -895,6 +1024,7 @@ Public Class frmCliente
 
     Public Sub juridicaChequeado()
         CHkFisica.Checked = False
+        MtxtCuit.Focus()
 
         txtNroDoc.Enabled = False
         cbTipoDoc.Enabled = False
@@ -936,5 +1066,6 @@ Public Class frmCliente
         DTPFecNac2.Enabled = True
     End Sub
 
+    
     
 End Class
