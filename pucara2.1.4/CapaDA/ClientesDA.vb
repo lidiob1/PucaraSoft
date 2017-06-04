@@ -216,7 +216,7 @@ Public Class ClientesDA
             Return dr
         Catch ex As Exception
             MsgBox(ex.Message)
-            'Return Nothing
+            Return Nothing
         End Try
     End Function
     '--------------------------------------------------------------------------------

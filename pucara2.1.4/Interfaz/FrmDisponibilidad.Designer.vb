@@ -61,7 +61,7 @@ Partial Class FrmDisponibilidad
         Me.Panel1.Controls.Add(Me.mc_calendario)
         Me.Panel1.Location = New System.Drawing.Point(12, 12)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(829, 460)
+        Me.Panel1.Size = New System.Drawing.Size(968, 460)
         Me.Panel1.TabIndex = 5
         '
         'cb_nro_cancha
@@ -145,7 +145,7 @@ Partial Class FrmDisponibilidad
         Me.dgv_canchas.MultiSelect = False
         Me.dgv_canchas.Name = "dgv_canchas"
         Me.dgv_canchas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgv_canchas.Size = New System.Drawing.Size(586, 444)
+        Me.dgv_canchas.Size = New System.Drawing.Size(730, 444)
         Me.dgv_canchas.TabIndex = 1
         '
         'colHoraInicio
@@ -206,7 +206,7 @@ Partial Class FrmDisponibilidad
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.Interfaz.My.Resources.Resources.Fondo
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(860, 492)
+        Me.ClientSize = New System.Drawing.Size(992, 492)
         Me.Controls.Add(Me.Panel1)
         Me.Name = "FrmDisponibilidad"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

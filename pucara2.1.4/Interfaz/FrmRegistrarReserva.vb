@@ -79,7 +79,7 @@ Public Class FrmRegistrarReserva
     ' Cargar el combobox de Tipo de Cancha
     '=======================================================================================================
     Private Sub CargarTipoCancha()
-        Dim objComboTipoCancha As New ReservaDA
+        Dim objComboTipoCancha As New CanchaDA
         ds = New DataSet()
         ds = objComboTipoCancha.cargarTipoCancha
         cboTipoCancha.DataSource = ds.Tables("tabTipoCancha")
