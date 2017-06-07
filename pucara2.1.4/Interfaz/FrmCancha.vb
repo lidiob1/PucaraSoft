@@ -371,9 +371,9 @@ Public Class FrmCancha
         BtnGuardar_Cancha.Visible = False
     End Sub
     '*************************************************HACER INVISIBLE ROWS****************************
-    Public Sub OcultarFilas()
+    Public Function OcultarFilas()
         DataListado_Cancha.Columns(4).Visible = False
-    End Sub
+    End Function
     Private Sub CbInhabilitar_Cancha_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CbInhabilitar_Cancha.CheckedChanged
         If CbInhabilitar_Cancha.CheckState = CheckState.Checked Then
             DataListado_Cancha.Columns.Item("Inhabilitar").Visible = True

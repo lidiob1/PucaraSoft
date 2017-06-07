@@ -33,7 +33,6 @@ Public Class LoginDA
             Return dr
         Catch ex As Exception
             'MsgBox(ex.Message, MsgBoxStyle.Critical, "ERROR")
-            Return Nothing
         End Try
     End Function
 End Class

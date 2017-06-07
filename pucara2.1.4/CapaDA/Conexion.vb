@@ -9,8 +9,11 @@ Public Class conexion
     Protected Function conectado()
 
         Try
-            cnn = New SqlConnection("Data Source=LIDIO-PC\SQLEXPRESS;Initial Catalog=Pucara;Integrated Security=True")            'Lidio
-            'cnn = New SqlConnection("Data source=(local);initial catalog=Pucara;integrated security=true") 'Sancho
+            'cnn = New SqlConnection("data source=DESKTOP-RA5UK2L\SQLSERVER;initial catalog= Pucara; integrated security = true")
+            'con = New SqlConnection("Server=(local);Database=Proyecto;Trusted_Connection=True")
+            ' conn = New SqlConnection("Data Source=LJBLANCO\SQLSERVER2008;Initial Catalog=LocalCuadros;Integrated Security=True")            'Lidio
+            'conn = New SqlConnection("Data source=DESKTOP-RA5UK2L\SQLSERVER;initial catalog=LocalCuadros;integrated security=true")       'Cristian
+            cnn = New SqlConnection("Data source=(local);initial catalog=Pucara;integrated security=true") 'Sancho
             cnn.Open()
             Return True
         Catch ex As Exception
@@ -40,8 +43,8 @@ Public Class conexion
     Public Function abrir() As SqlConnection
         Dim con As String
         Dim scon As SqlConnection
-        con = "Data Source=LIDIO-PC\SQLEXPRESS;Initial Catalog=Pucara;Integrated Security=True"
-        'con = "Data source=(local);initial catalog=Pucara;integrated security=true"
+        'con = "Data Source=LIDIO-PC;Initial Catalog=Pucara;Integrated Security=True"
+        con = "Data source=(local);initial catalog=Pucara;integrated security=true"
         scon = New SqlConnection(con)
         scon.Open()
         Return scon

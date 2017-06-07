@@ -47,7 +47,6 @@ Public Class ReservaDA
             Return dr
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
-            Return Nothing
         End Try
     End Function
 
@@ -60,6 +59,21 @@ Public Class ReservaDA
 
         Try
             da.Fill(ds, "tabEstado")
+        Catch ex As Exception
+            MsgBox(ex, MsgBoxStyle.Critical, "ERROR")
+        End Try
+        Return ds
+    End Function
+
+    '--------------------------------------------------------------------------------
+    ' Cargar combo Tipo Cancha
+    '--------------------------------------------------------------------------------
+    Public Function cargarTipoCancha() As DataSet
+        da = New SqlDataAdapter("Select id_tipo_cancha, descripcion from Tipo_Cancha", con)
+        ds = New DataSet
+
+        Try
+            da.Fill(ds, "tabTipoCancha")
         Catch ex As Exception
             MsgBox(ex, MsgBoxStyle.Critical, "ERROR")
         End Try
