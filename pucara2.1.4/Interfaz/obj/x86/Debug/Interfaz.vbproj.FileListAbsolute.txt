@@ -128,3 +128,34 @@ C:\Users\Lidio\Documents\GitHub\PucaraSoft\pucara2.1.4\Interfaz\obj\x86\Debug\In
 C:\Users\Lidio\Documents\GitHub\PucaraSoft\pucara2.1.4\Interfaz\obj\x86\Debug\Interfaz.vbproj.GenerateResource.Cache
 C:\Users\Sancho\Documents\GitHub\PucaraSoft\PucaraSoft\pucara2.1.4\Interfaz\obj\x86\Debug\Interfaz.FrmConsultaReservaxCliente.resources
 C:\Users\Sancho\Documents\GitHub\PucaraSoft\PucaraSoft\pucara2.1.4\Interfaz\obj\x86\Debug\Interfaz.FrmDisponibilidad.resources
+C:\Users\e94348602\Desktop\Mis documentos\CERVANTES\TESIS\PucaraSoft\pucara2.1.4\Interfaz\obj\x86\Debug\Interfaz.exe
+C:\Users\e94348602\Desktop\Mis documentos\CERVANTES\TESIS\PucaraSoft\pucara2.1.4\Interfaz\obj\x86\Debug\Interfaz.xml
+C:\Users\e94348602\Desktop\Mis documentos\CERVANTES\TESIS\PucaraSoft\pucara2.1.4\Interfaz\obj\x86\Debug\Interfaz.pdb
+C:\Users\e94348602\Desktop\Mis documentos\CERVANTES\TESIS\PucaraSoft\pucara2.1.4\Interfaz\bin\Debug\Interfaz.exe
+C:\Users\e94348602\Desktop\Mis documentos\CERVANTES\TESIS\PucaraSoft\pucara2.1.4\Interfaz\bin\Debug\Interfaz.pdb
+C:\Users\e94348602\Desktop\Mis documentos\CERVANTES\TESIS\PucaraSoft\pucara2.1.4\Interfaz\bin\Debug\Interfaz.xml
+C:\Users\e94348602\Desktop\Mis documentos\CERVANTES\TESIS\PucaraSoft\pucara2.1.4\Interfaz\bin\Debug\CapaDA.dll
+C:\Users\e94348602\Desktop\Mis documentos\CERVANTES\TESIS\PucaraSoft\pucara2.1.4\Interfaz\bin\Debug\CapaNE.dll
+C:\Users\e94348602\Desktop\Mis documentos\CERVANTES\TESIS\PucaraSoft\pucara2.1.4\Interfaz\bin\Debug\CapaDA.pdb
+C:\Users\e94348602\Desktop\Mis documentos\CERVANTES\TESIS\PucaraSoft\pucara2.1.4\Interfaz\bin\Debug\CapaDA.xml
+C:\Users\e94348602\Desktop\Mis documentos\CERVANTES\TESIS\PucaraSoft\pucara2.1.4\Interfaz\bin\Debug\CapaNE.pdb
+C:\Users\e94348602\Desktop\Mis documentos\CERVANTES\TESIS\PucaraSoft\pucara2.1.4\Interfaz\bin\Debug\CapaNE.xml
+C:\Users\e94348602\Desktop\Mis documentos\CERVANTES\TESIS\PucaraSoft\pucara2.1.4\Interfaz\obj\x86\Debug\Interfaz.vbprojResolveAssemblyReference.cache
+C:\Users\e94348602\Desktop\Mis documentos\CERVANTES\TESIS\PucaraSoft\pucara2.1.4\Interfaz\obj\x86\Debug\Interfaz.FrmCancha.resources
+C:\Users\e94348602\Desktop\Mis documentos\CERVANTES\TESIS\PucaraSoft\pucara2.1.4\Interfaz\obj\x86\Debug\Interfaz.FrmCanchasLibres.resources
+C:\Users\e94348602\Desktop\Mis documentos\CERVANTES\TESIS\PucaraSoft\pucara2.1.4\Interfaz\obj\x86\Debug\Interfaz.frmCliente.resources
+C:\Users\e94348602\Desktop\Mis documentos\CERVANTES\TESIS\PucaraSoft\pucara2.1.4\Interfaz\obj\x86\Debug\Interfaz.FrmConsultaReservaxCliente.resources
+C:\Users\e94348602\Desktop\Mis documentos\CERVANTES\TESIS\PucaraSoft\pucara2.1.4\Interfaz\obj\x86\Debug\Interfaz.FrmConsultarReservas.resources
+C:\Users\e94348602\Desktop\Mis documentos\CERVANTES\TESIS\PucaraSoft\pucara2.1.4\Interfaz\obj\x86\Debug\Interfaz.FrmDisponibilidad.resources
+C:\Users\e94348602\Desktop\Mis documentos\CERVANTES\TESIS\PucaraSoft\pucara2.1.4\Interfaz\obj\x86\Debug\Interfaz.FrmLogin.resources
+C:\Users\e94348602\Desktop\Mis documentos\CERVANTES\TESIS\PucaraSoft\pucara2.1.4\Interfaz\obj\x86\Debug\Interfaz.FrmModificarReserva.resources
+C:\Users\e94348602\Desktop\Mis documentos\CERVANTES\TESIS\PucaraSoft\pucara2.1.4\Interfaz\obj\x86\Debug\Interfaz.FrmProveedores.resources
+C:\Users\e94348602\Desktop\Mis documentos\CERVANTES\TESIS\PucaraSoft\pucara2.1.4\Interfaz\obj\x86\Debug\Interfaz.FrmRegistrarReserva.resources
+C:\Users\e94348602\Desktop\Mis documentos\CERVANTES\TESIS\PucaraSoft\pucara2.1.4\Interfaz\obj\x86\Debug\Interfaz.FrmSplash.resources
+C:\Users\e94348602\Desktop\Mis documentos\CERVANTES\TESIS\PucaraSoft\pucara2.1.4\Interfaz\obj\x86\Debug\Interfaz.FrmUsuario.resources
+C:\Users\e94348602\Desktop\Mis documentos\CERVANTES\TESIS\PucaraSoft\pucara2.1.4\Interfaz\obj\x86\Debug\Interfaz.FrmMenu.resources
+C:\Users\e94348602\Desktop\Mis documentos\CERVANTES\TESIS\PucaraSoft\pucara2.1.4\Interfaz\obj\x86\Debug\Interfaz.Resources.resources
+C:\Users\e94348602\Desktop\Mis documentos\CERVANTES\TESIS\PucaraSoft\pucara2.1.4\Interfaz\obj\x86\Debug\Interfaz.vbproj.GenerateResource.Cache
+C:\Users\Lidio\Desktop\PucaraSoft\pucara2.1.4\Interfaz\obj\x86\Debug\Interfaz.exe
+C:\Users\Lidio\Desktop\PucaraSoft\pucara2.1.4\Interfaz\obj\x86\Debug\Interfaz.xml
+C:\Users\Lidio\Desktop\PucaraSoft\pucara2.1.4\Interfaz\obj\x86\Debug\Interfaz.pdb

@@ -58,3 +58,15 @@ C:\Users\Lidio\Documents\GitHub\PucaraSoft\pucara2.1.4\CapaDA\obj\Debug\CapaDA.v
 C:\Users\Lidio\Documents\GitHub\PucaraSoft\pucara2.1.4\CapaDA\obj\Debug\CapaDA.dll
 C:\Users\Lidio\Documents\GitHub\PucaraSoft\pucara2.1.4\CapaDA\obj\Debug\CapaDA.xml
 C:\Users\Lidio\Documents\GitHub\PucaraSoft\pucara2.1.4\CapaDA\obj\Debug\CapaDA.pdb
+C:\Users\e94348602\Desktop\Mis documentos\CERVANTES\TESIS\PucaraSoft\pucara2.1.4\CapaDA\obj\Debug\CapaDA.vbprojResolveAssemblyReference.cache
+C:\Users\e94348602\Desktop\Mis documentos\CERVANTES\TESIS\PucaraSoft\pucara2.1.4\CapaDA\obj\Debug\CapaDA.Resources.resources
+C:\Users\e94348602\Desktop\Mis documentos\CERVANTES\TESIS\PucaraSoft\pucara2.1.4\CapaDA\obj\Debug\CapaDA.vbproj.GenerateResource.Cache
+C:\Users\e94348602\Desktop\Mis documentos\CERVANTES\TESIS\PucaraSoft\pucara2.1.4\CapaDA\obj\Debug\CapaDA.dll
+C:\Users\e94348602\Desktop\Mis documentos\CERVANTES\TESIS\PucaraSoft\pucara2.1.4\CapaDA\obj\Debug\CapaDA.xml
+C:\Users\e94348602\Desktop\Mis documentos\CERVANTES\TESIS\PucaraSoft\pucara2.1.4\CapaDA\obj\Debug\CapaDA.pdb
+C:\Users\e94348602\Desktop\Mis documentos\CERVANTES\TESIS\PucaraSoft\pucara2.1.4\CapaDA\bin\Debug\CapaDA.dll
+C:\Users\e94348602\Desktop\Mis documentos\CERVANTES\TESIS\PucaraSoft\pucara2.1.4\CapaDA\bin\Debug\CapaDA.pdb
+C:\Users\e94348602\Desktop\Mis documentos\CERVANTES\TESIS\PucaraSoft\pucara2.1.4\CapaDA\bin\Debug\CapaDA.xml
+C:\Users\e94348602\Desktop\Mis documentos\CERVANTES\TESIS\PucaraSoft\pucara2.1.4\CapaDA\bin\Debug\CapaNE.dll
+C:\Users\e94348602\Desktop\Mis documentos\CERVANTES\TESIS\PucaraSoft\pucara2.1.4\CapaDA\bin\Debug\CapaNE.pdb
+C:\Users\e94348602\Desktop\Mis documentos\CERVANTES\TESIS\PucaraSoft\pucara2.1.4\CapaDA\bin\Debug\CapaNE.xml

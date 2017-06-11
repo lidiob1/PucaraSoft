@@ -33,13 +33,6 @@ Partial Class FrmDisponibilidad
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.dgv_canchas = New System.Windows.Forms.DataGridView()
-        Me.colHoraInicio = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colHoraFin = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colTipoCancha = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colNroCancha = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colTipoReserva = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colCliente = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colNomCliente = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.mc_calendario = New System.Windows.Forms.MonthCalendar()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -140,58 +133,12 @@ Partial Class FrmDisponibilidad
         'dgv_canchas
         '
         Me.dgv_canchas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgv_canchas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colHoraInicio, Me.colHoraFin, Me.colTipoCancha, Me.colNroCancha, Me.colTipoReserva, Me.colCliente, Me.colNomCliente})
         Me.dgv_canchas.Location = New System.Drawing.Point(235, 8)
         Me.dgv_canchas.MultiSelect = False
         Me.dgv_canchas.Name = "dgv_canchas"
         Me.dgv_canchas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgv_canchas.Size = New System.Drawing.Size(730, 444)
+        Me.dgv_canchas.Size = New System.Drawing.Size(689, 429)
         Me.dgv_canchas.TabIndex = 1
-        '
-        'colHoraInicio
-        '
-        Me.colHoraInicio.Frozen = True
-        Me.colHoraInicio.HeaderText = "Hora de Inicio"
-        Me.colHoraInicio.Name = "colHoraInicio"
-        Me.colHoraInicio.ReadOnly = True
-        '
-        'colHoraFin
-        '
-        Me.colHoraFin.Frozen = True
-        Me.colHoraFin.HeaderText = "Hora de fin"
-        Me.colHoraFin.Name = "colHoraFin"
-        Me.colHoraFin.ReadOnly = True
-        '
-        'colTipoCancha
-        '
-        Me.colTipoCancha.HeaderText = "Tipo de cancha"
-        Me.colTipoCancha.Name = "colTipoCancha"
-        Me.colTipoCancha.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.colTipoCancha.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        '
-        'colNroCancha
-        '
-        Me.colNroCancha.HeaderText = "Nro. cancha"
-        Me.colNroCancha.Name = "colNroCancha"
-        Me.colNroCancha.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.colNroCancha.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        '
-        'colTipoReserva
-        '
-        Me.colTipoReserva.HeaderText = "Tipo de Reserva"
-        Me.colTipoReserva.Name = "colTipoReserva"
-        Me.colTipoReserva.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.colTipoReserva.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        '
-        'colCliente
-        '
-        Me.colCliente.HeaderText = "Cliente"
-        Me.colCliente.Name = "colCliente"
-        '
-        'colNomCliente
-        '
-        Me.colNomCliente.HeaderText = "Nombre del cliente"
-        Me.colNomCliente.Name = "colNomCliente"
         '
         'mc_calendario
         '
@@ -208,6 +155,7 @@ Partial Class FrmDisponibilidad
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(992, 492)
         Me.Controls.Add(Me.Panel1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmDisponibilidad"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Disponibilidad"
@@ -228,12 +176,5 @@ Partial Class FrmDisponibilidad
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents dgv_canchas As System.Windows.Forms.DataGridView
-    Friend WithEvents colHoraInicio As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents colHoraFin As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents colTipoCancha As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents colNroCancha As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents colTipoReserva As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents colCliente As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents colNomCliente As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents mc_calendario As System.Windows.Forms.MonthCalendar
 End Class

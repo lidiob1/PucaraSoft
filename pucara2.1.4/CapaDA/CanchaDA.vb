@@ -225,7 +225,44 @@ Public Class CanchaDA
         Return ds
     End Function
 
+    '--------------------------------------------------------------------------------
+    ' Buscamos id_tipo_cancha
+    '------------------------------------------------------------------------------
+    Public Function getIdTipoCancha(ByVal descripcion As String) As DataRow
+        Dim dr As DataRow
+        da = New SqlDataAdapter("select id_tipo_cancha from tipoCancha where descripcion like'%" & descripcion & "%'", con)
+        ds = New DataSet
 
+        Try
+            da.Fill(ds, "id_tipo_cancha")
+            dr = ds.Tables(0).Rows(0)
+            Return dr
+        Catch ex As Exception
+            MsgBox("No existe el tipo de cancha.", MsgBoxStyle.Critical, "Error")
+            Return Nothing
+        Finally
+            con.Close()
+        End Try
+    End Function
+
+    '--------------------------------------------------------------------------------
+    ' Buscamos nro_cancha
+    '------------------------------------------------------------------------------
+    Public Function getNroCancha(ByVal descripcion As String) As DataRow
+        Dim dr As DataRow
+        da = New SqlDataAdapter("select Num_cancha from Cancha where descripcion like'%" & descripcion & "%'", con)
+        ds = New DataSet
+
+        Try
+            da.Fill(ds, "Num_cancha")
+            dr = ds.Tables(0).Rows(0)
+            Return dr
+        Catch ex As Exception
+            Return Nothing
+        Finally
+            con.Close()
+        End Try
+    End Function
 
 End Class
 

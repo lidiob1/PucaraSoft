@@ -22,7 +22,7 @@ Public Class HorarioDA
     '--------------------------------------------------------------------------------
     Public Function mostrar_horario() As DataTable
         Try
-            com = New SqlCommand("select horario_desde, horario_hasta from horarios")
+            com = New SqlCommand("select horario_desde 'Horario desde', horario_hasta 'Horario hasta' from horarios")
             com.CommandType = CommandType.Text
             com.Connection = con
 

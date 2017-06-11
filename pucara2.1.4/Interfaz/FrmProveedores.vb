@@ -3,7 +3,7 @@ Imports CapaDA
 Imports System.Text.RegularExpressions
 Imports System.Data.SqlClient
 
-Public Class frmproveedores
+Public Class FrmProveedores
 
     Private dt As New DataTable
 
@@ -220,7 +220,7 @@ Public Class frmproveedores
                     dts.nombre = "-"
                     dts.apellido = "-"
 
-                    
+
 
                 ElseIf CHkFisica.Checked = True Then
 
@@ -345,7 +345,7 @@ Public Class frmproveedores
             CbPais.Text = dgvListado.SelectedCells.Item(20).Value
             TxtProvincia.Text = dgvListado.SelectedCells.Item(21).Value
             TxtCiudad.Text = dgvListado.SelectedCells.Item(22).Value
-           
+
         End If
 
 
@@ -1085,5 +1085,5 @@ Public Class frmproveedores
 
 
 
-    
+
 End Class

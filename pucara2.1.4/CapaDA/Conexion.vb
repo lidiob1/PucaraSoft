@@ -10,7 +10,8 @@ Public Class conexion
 
         Try
             cnn = New SqlConnection("Data Source=LIDIO-PC\SQLEXPRESS;Initial Catalog=Pucara;Integrated Security=True")            'Lidio
-            'cnn = New SqlConnection("Data source=(local);initial catalog=Pucara;integrated security=true") 'Sancho
+            'cnn = New SqlConnection("Data Source=NI528176\SQLEXPRESS;Initial Catalog=Pucara;Integrated Security=True")                               'Lidio
+            'cnn = New SqlConnection("Data source=(local);initial catalog=Pucara;integrated security=true")                       'Sancho
             cnn.Open()
             Return True
         Catch ex As Exception
@@ -40,8 +41,9 @@ Public Class conexion
     Public Function abrir() As SqlConnection
         Dim con As String
         Dim scon As SqlConnection
-        con = "Data Source=LIDIO-PC\SQLEXPRESS;Initial Catalog=Pucara;Integrated Security=True"
-        'con = "Data source=(local);initial catalog=Pucara;integrated security=true"
+        con = "Data Source=LIDIO-PC\SQLEXPRESS;Initial Catalog=Pucara;Integrated Security=True"     'Lidio
+        'con = "Data Source=NI528176\SQLEXPRESS;Initial Catalog=Pucara;Integrated Security=True"     'Lidio
+        'con = "Data source=(local);initial catalog=Pucara;integrated security=true"                'Sancho
         scon = New SqlConnection(con)
         scon.Open()
         Return scon

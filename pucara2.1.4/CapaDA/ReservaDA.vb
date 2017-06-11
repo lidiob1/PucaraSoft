@@ -80,4 +80,70 @@ Public Class ReservaDA
         End Try
         Return ds
     End Function
+
+    '--------------------------------------------------------------------------------
+    ' Cargar combo Tipo Cancha
+    '--------------------------------------------------------------------------------
+    Public Function buscarReservas(ByVal id_tipo_cancha As Integer, ByVal fecha_desde As Date, ByVal fechas_hasta As Date) As DataTable
+        Try
+            com = New SqlCommand("select r.fecha_reserva 'Fecha de reserva', r.hora_inicio 'Hora de inicio', r.hora_fin 'Hora de fin', r.nro_doc_cliente 'Nro. doc.', c.nombre 'Nombre', c.apellido 'Apellido', tr.descripcion 'Tipo de reserva', tc.descripcion 'Tipo de cancha'" & _
+                                 " from Reserva r, Cliente c, Tipo_Reserva tr, TipoCancha tc " & _
+                                 "where c.nro_doc = r.nro_doc_cliente and " & _
+                                 "r.tipo_reserva = tr.id_tipo_reserva and " & _
+                                 "r.id_tipo_cancha = tc.id_tipo_cancha and " & _
+                                 "r.id_tipo_cancha ='" & id_tipo_cancha & "'" & _
+            " and r.fecha_reserva BETWEEN '" & fecha_desde & "' and '" & fechas_hasta & "' order by r.fecha_reserva asc")
+            com.CommandType = CommandType.Text
+            com.Connection = con
+
+            If com.ExecuteNonQuery Then
+                Dim dt As New DataTable
+                Dim da As New SqlDataAdapter(com)
+                da.Fill(dt)
+                Return dt
+            Else
+                Return Nothing
+            End If
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return Nothing
+        Finally
+            con.Close()
+        End Try
+    End Function
+
+    '--------------------------------------------------------------------------------
+    ' Cargar reservas interfaz DISPONIBILIDAD
+    '--------------------------------------------------------------------------------
+    Public Function buscarDisponibilidad(ByVal fechaReserva As Date, ByVal id_tipo_cancha As Integer, ByVal nro_cancha As Integer)
+        Try
+            com = New SqlCommand("select r.nro_doc_cliente, c.nombre, c.apellido, r.hora_inicio, r.hora_fin" & _
+                                 " from Reserva r, Cliente c " & _
+                                 "where r.nro_doc_cliente = c.nro_doc") ' & _
+            '"r.fecha_reserva ='" & fechaReserva & "'" & _
+            '" and r.id_tipo_cancha ='" & id_tipo_cancha & "'" & _
+            '" and r.id_cancha ='" & nro_cancha & "' order by r.hora_inicio asc")
+
+            com.CommandType = CommandType.Text
+            com.Connection = con
+
+            If com.ExecuteNonQuery Then
+                Dim dt As New DataTable
+                Dim da As New SqlDataAdapter(com)
+                da.Fill(dt)
+                Return dt
+            Else
+                Return Nothing
+            End If
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return Nothing
+        Finally
+            con.Close()
+        End Try
+    End Function
+
+
 End Class

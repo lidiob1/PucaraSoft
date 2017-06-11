@@ -337,7 +337,7 @@ Public Class frmCliente
             TxtCiudad2.Text = dgvListado.SelectedCells.Item(22).Value
 
         End If
-        
+
 
         If dgvListado.SelectedCells.Item(23).Value = 0 Then
 
@@ -1066,6 +1066,6 @@ Public Class frmCliente
         DTPFecNac2.Enabled = True
     End Sub
 
-    
-    
+
+
 End Class

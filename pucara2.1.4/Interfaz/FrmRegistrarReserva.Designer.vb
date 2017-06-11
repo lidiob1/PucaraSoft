@@ -33,6 +33,7 @@ Partial Class FrmRegistrarReserva
         Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.txtCuil = New System.Windows.Forms.MaskedTextBox()
         Me.btnBuscarCuit = New System.Windows.Forms.Button()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
@@ -76,7 +77,6 @@ Partial Class FrmRegistrarReserva
         Me.txtNroReserva = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.txtCuil = New System.Windows.Forms.MaskedTextBox()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -186,6 +186,14 @@ Partial Class FrmRegistrarReserva
         Me.TabPage2.Size = New System.Drawing.Size(541, 89)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Persona Jurídica"
+        '
+        'txtCuil
+        '
+        Me.txtCuil.Location = New System.Drawing.Point(23, 24)
+        Me.txtCuil.Mask = "00-00000000-0"
+        Me.txtCuil.Name = "txtCuil"
+        Me.txtCuil.Size = New System.Drawing.Size(121, 20)
+        Me.txtCuil.TabIndex = 12
         '
         'btnBuscarCuit
         '
@@ -424,15 +432,16 @@ Partial Class FrmRegistrarReserva
         '
         'txtNroCancha
         '
-        Me.txtNroCancha.Location = New System.Drawing.Point(399, 105)
+        Me.txtNroCancha.Location = New System.Drawing.Point(119, 79)
         Me.txtNroCancha.Name = "txtNroCancha"
+        Me.txtNroCancha.ReadOnly = True
         Me.txtNroCancha.Size = New System.Drawing.Size(98, 20)
         Me.txtNroCancha.TabIndex = 16
         '
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(326, 108)
+        Me.Label13.Location = New System.Drawing.Point(35, 82)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(67, 13)
         Me.Label13.TabIndex = 15
@@ -549,6 +558,7 @@ Partial Class FrmRegistrarReserva
         Me.txtNroReserva.Enabled = False
         Me.txtNroReserva.Location = New System.Drawing.Point(119, 108)
         Me.txtNroReserva.Name = "txtNroReserva"
+        Me.txtNroReserva.ReadOnly = True
         Me.txtNroReserva.Size = New System.Drawing.Size(109, 20)
         Me.txtNroReserva.TabIndex = 2
         '
@@ -570,14 +580,6 @@ Partial Class FrmRegistrarReserva
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Nª Reserva"
         '
-        'txtCuil
-        '
-        Me.txtCuil.Location = New System.Drawing.Point(23, 24)
-        Me.txtCuil.Mask = "00-00000000-0"
-        Me.txtCuil.Name = "txtCuil"
-        Me.txtCuil.Size = New System.Drawing.Size(121, 20)
-        Me.txtCuil.TabIndex = 12
-        '
         'FrmRegistrarReserva
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -591,6 +593,7 @@ Partial Class FrmRegistrarReserva
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.GroupBox1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmRegistrarReserva"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Registrar Reserva"
